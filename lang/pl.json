@@ -1,0 +1,39 @@
+{
+  "SETTINGS.PendragonMacroShorthandN": "Skrócona Składnia Makr",
+  "SETTINGS.PendragonMacroShorthandL": "Włącz skróconą składnię makr, która umożliwia bezpośrednie odwoływanie się do atrybutów, na przykład @str zamiast @attributes.str.label. Wyłącz te ustawienie, jeśli potrzebujesz możliwości odwoływania się do pełnego modelu atrybutów, na przykład @attributes.str.label.",
+  "SETTINGS.PendragonInitFormulaN": "Wzór Inicjatywy",
+  "SETTINGS.PendragonInitFormulaL": "Wprowadź wzór inicjatywy, na przykład d20+@dex",
+
+  "PENDRAGON.ItemCreate": "Stwórz Przedmiot",
+  "PENDRAGON.ItemEdit": "Zmień Przedmiot",
+  "PENDRAGON.ItemDelete": "Usuń Przedmiot",
+  "PENDRAGON.ItemNew": "Nowy Przedmiot",
+
+  "PENDRAGON.NotifyInitFormulaUpdated": "Wzór inicjatywy został uaktualniony na",
+  "PENDRAGON.NotifyInitFormulaInvalid": "Wzór inicjatywy jest niepoprawny",
+  "PENDRAGON.NotifyGroupDuplicate": "Grupa atrybutów już istnieje.",
+  "PENDRAGON.NotifyGroupAttrDuplicate": "Grupa atrybutów już występuje jako pojedynczy atrybut.",
+  "PENDRAGON.NotifyGroupAlphanumeric": "Nazwa grupy atrybutów nie może zawierać spacji ani kropek.",
+  "PENDRAGON.NotifyGroupReserved": "Grupa atrybutów \"{key}\" jest zarezerwowana i nie może być użyta.",
+  "PENDRAGON.NotifyAttrDuplicate": "Klucz atrybutu już występuje jako grupa atrybutów.",
+  "PENDRAGON.NotifyAttrInvalid": "Klucz atrybutu nie może zawierać spacji ani kropek.",
+
+  "PENDRAGON.ResourceMin": "Min",
+  "PENDRAGON.ResourceValue": "Wartość",
+  "PENDRAGON.ResourceMax": "Maks",
+
+  "PENDRAGON.DefineTemplate": "Ustaw jako Szablon",
+  "PENDRAGON.UnsetTemplate": "Odepnij Szablon",
+  "PENDRAGON.NoTemplate": "Bez Szablonu",
+
+  "PENDRAGON.AttributeKey": "Klucz Atrybutu",
+  "PENDRAGON.AttributeValue": "Wartość",
+  "PENDRAGON.AttributeLabel": "Etykieta",
+  "PENDRAGON.AttributeDtype": "Typ Danych",
+
+  "PENDRAGON.DeleteGroup": "Usunąć grupę?",
+  "PENDRAGON.DeleteGroupContent": "Czy chcesz usunąć tę grupę? Spowoduje to usunięcie następującej grupy i wszystkich powiązanych z nią atrybutów: ",
+
+  "PENDRAGON.Create": "Stwórz",
+  "PENDRAGON.New": "Nowy"
+}

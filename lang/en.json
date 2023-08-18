@@ -1,0 +1,39 @@
+{
+  "SETTINGS.PendragonMacroShorthandN": "Shortened Macro Syntax",
+  "SETTINGS.PendragonMacroShorthandL": "Enable a shortened macro syntax which allows referencing attributes directly, for example @str instead of @attributes.str.value. Disable this setting if you need the ability to reference the full attribute model, for example @attributes.str.label.",
+  "SETTINGS.PendragonInitFormulaN": "Initiative Formula",
+  "SETTINGS.PendragonInitFormulaL": "Enter an initiative formula, such as d20+@dex",
+
+  "PENDRAGON.ItemCreate": "Create Item",
+  "PENDRAGON.ItemEdit": "Edit Item",
+  "PENDRAGON.ItemDelete": "Delete Item",
+  "PENDRAGON.ItemNew": "New Item",
+
+  "PENDRAGON.NotifyInitFormulaUpdated": "Initiative formula was updated to",
+  "PENDRAGON.NotifyInitFormulaInvalid": "Initiative formula was invalid",
+  "PENDRAGON.NotifyGroupDuplicate": "Attribute group already exists.",
+  "PENDRAGON.NotifyGroupAttrDuplicate": "Attribute group already exists as an attribute.",
+  "PENDRAGON.NotifyGroupAlphanumeric": "Attribute group names may not contain spaces or periods.",
+  "PENDRAGON.NotifyGroupReserved": "Attribute group \"{key}\" is reserved and cannot be used.",
+  "PENDRAGON.NotifyAttrDuplicate": "Attribute key already exists as a group.",
+  "PENDRAGON.NotifyAttrInvalid": "Attribute keys may not contain spaces or periods.",
+
+  "PENDRAGON.ResourceMin": "Min",
+  "PENDRAGON.ResourceValue": "Value",
+  "PENDRAGON.ResourceMax": "Max",
+
+  "PENDRAGON.DefineTemplate": "Define as Template",
+  "PENDRAGON.UnsetTemplate": "Unset Template",
+  "PENDRAGON.NoTemplate": "No Template",
+
+  "PENDRAGON.AttributeKey": "Attribute Key",
+  "PENDRAGON.AttributeValue": "Value",
+  "PENDRAGON.AttributeLabel": "Label",
+  "PENDRAGON.AttributeDtype": "Data Type",
+
+  "PENDRAGON.DeleteGroup": "Delete group?",
+  "PENDRAGON.DeleteGroupContent": "Do you wish to delete this group? This will delete the following group and all attributes included in it: ",
+
+  "PENDRAGON.Create": "Create",
+  "PENDRAGON.New": "New"
+}

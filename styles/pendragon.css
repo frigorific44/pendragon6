@@ -1,0 +1,245 @@
+.pendragon {
+  /* Sheet Tabs */
+  /* Items List */
+  /* Attributes */
+}
+.pendragon .window-content {
+  height: 100%;
+  padding: 5px;
+  overflow-y: hidden;
+}
+.pendragon form {
+  height: 100%;
+}
+.pendragon .sheet-header {
+  flex: 0 0 100px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.pendragon .sheet-header .profile-img {
+  flex: 0 0 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+.pendragon .sheet-header .header-fields {
+  flex: 1;
+  height: 100px;
+}
+.pendragon .sheet-header h1.charname {
+  height: 50px;
+  padding: 0px;
+  margin: 5px 0;
+  border-bottom: 0;
+}
+.pendragon .sheet-header h1.charname input {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.pendragon .resource {
+  width: 50%;
+  height: 40px;
+  margin-top: 10px;
+  float: left;
+  text-align: center;
+}
+.pendragon .resource input {
+  width: 100px;
+  height: 28px;
+}
+.pendragon .tabs {
+  flex: 0 0 40px;
+  border-top: 1px solid #AAA;
+  border-bottom: 1px solid #AAA;
+}
+.pendragon .tabs .item {
+  line-height: 40px;
+  font-weight: bold;
+}
+.pendragon .tabs .item.active {
+  text-decoration: underline;
+  text-shadow: none;
+}
+.pendragon .sheet-body {
+  overflow: hidden;
+}
+.pendragon .sheet-body .tab {
+  height: 100%;
+  overflow-y: auto;
+}
+.pendragon .editor,
+.pendragon .editor-content {
+  height: 100%;
+}
+.pendragon .item-list {
+  list-style: none;
+  margin: 7px 0;
+  padding: 0;
+  overflow-y: auto;
+}
+.pendragon .item-list .item {
+  min-height: 30px;
+  line-height: 24px;
+  padding: 3px 0;
+  border-bottom: 1px solid #BBB;
+  align-items: stretch;
+}
+.pendragon .item-list .item img {
+  flex: 0 0 24px;
+  margin-right: 5px;
+}
+.pendragon .item-list .item-name {
+  margin: 0;
+}
+.pendragon .item-list .item-controls {
+  flex: 0 0 36px;
+}
+.pendragon .item-list .item-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  flex: 2;
+  justify-content: flex-start;
+}
+.pendragon .item-list .item-button {
+  line-height: 1;
+  font-size: 11px;
+  flex: none;
+  width: auto;
+}
+.pendragon .attributes {
+  position: relative;
+}
+.pendragon .attributes .attribute-control,
+.pendragon .attributes .group-control {
+  flex: 0 0 20px;
+  text-align: center;
+  line-height: 28px;
+  border: none;
+}
+.pendragon .attributes .attribute-roll {
+  flex: 0 0 20px;
+  text-align: center;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pendragon .attributes .group-prefix {
+  height: 31px;
+  margin-right: 10px;
+}
+.pendragon .attributes .button {
+  width: 100%;
+  flex: 1;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px groove #f0f0e0;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 28px;
+  display: block;
+}
+.pendragon .attributes .attribute-key {
+  background: transparent;
+  border: none;
+}
+.pendragon .attributes-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  align-items: center;
+  padding: 0 5px;
+  margin: 5px 0;
+  background: #cfcdc2;
+  border: 1px solid #AAA;
+  border-radius: 2px;
+  text-align: left;
+  font-weight: bold;
+}
+.pendragon .attributes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pendragon .attributes-list li > * {
+  margin: 0 3px;
+  height: 28px;
+  line-height: 24px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #AAA;
+}
+.pendragon .attributes-list .attribute-col label {
+  font-size: 10px;
+  text-align: center;
+  line-height: 1;
+}
+.pendragon .attributes-list .attribute-col input {
+  font-size: 11px;
+  text-align: center;
+  line-height: 1;
+  height: 50%;
+}
+.pendragon .attribute input[type="text"]::placeholder,
+.pendragon .group-header input[type="text"]::placeholder {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+}
+.pendragon .attribute input[type="text"]:focus::placeholder,
+.pendragon .group-header input[type="text"]:focus::placeholder {
+  opacity: 1;
+}
+.pendragon .group-controls {
+  margin: 5px;
+}
+.pendragon .groups-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pendragon .group {
+  margin: 5px 0 0;
+  padding: 0;
+}
+.pendragon .group-header {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #AAA;
+  border-radius: 2px;
+  padding: 2px 5px;
+}
+.pendragon .group-key,
+.pendragon .group-label {
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  background: transparent;
+  border-radius: 0;
+  margin-right: 6px;
+}
+.pendragon .group-key {
+  opacity: 0.75;
+}
+.pendragon .group-label {
+  flex: 2;
+}
+.pendragon .group-dtype {
+  height: 24px;
+  flex: 0 0 116px;
+  margin: 0 5px;
+}
+.pendragon.sheet.actor {
+  min-width: 560px;
+  min-height: 420px;
+}
+.pendragon.sheet.item {
+  min-width: 460px;
+  min-height: 400px;
+}
