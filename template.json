@@ -4,15 +4,201 @@
   "htmlFields": ["biography"],
   "character": {
     "biography": "",
-    "stats": {
-      "main": {
-        "Size": 1,
-        "Dexterity": 2,
-        "Strength": 3,
-        "Constitution": 4,
-        "Appearance": 5
+    "characteristics": {
+      "siz": {
+        "value": null,
+        "short": "PENDRAGON.SIZ",
+        "label": "PENDRAGON.Size"
+      },
+      "dex": {
+        "value": null,
+        "short": "PENDRAGON.DEX",
+        "label": "PENDRAGON.Dexterity"
+      },
+      "str": {
+        "value": null,
+        "short": "PENDRAGON.STR",
+        "label": "PENDRAGON.Strength"
+      },
+      "con": {
+        "value": null,
+        "short": "PENDRAGON.CON",
+        "label": "PENDRAGON.Constituion"
+      },
+      "app": {
+        "value": null,
+        "short": "PENDRAGON.APP",
+        "label": "PENDRAGON.Appearance"
       }
-    }
+    },
+    "health": {
+      "hitPoints": {
+        "value": null,
+        "max": null,
+        "short": "PENDRAGON.HP",
+        "label": "PENDRAGON.HitPoints"
+      },
+      "knockdown": {
+        "value": null,
+        "label": "PENDRAGON.Knockdown"
+      },
+      "majorWound": {
+        "value": null,
+        "label": "PENDRAGON.MajorWound"
+      },
+      "unconcious": {
+        "value": null,
+        "label": "PENDRAGON.Unconcious"
+      },
+      "debilitated": {
+        "value": false,
+        "label": "PENDRAGON.Debilitated"
+      },
+      "deterioration": {
+        "value": null,
+        "label": "PENDRAGON.Deterioration"
+      },
+      "aggravated": {
+        "value": null,
+        "label": "PENDRAGON.Aggravated"
+      },
+      "wounds": {
+        "list": {},
+        "label": "PENDRAGON.Wounds"
+      }
+    },
+    "traits": [
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Chaste"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Lustful"
+        }
+      },
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Energetic"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Lazy"
+        }
+      },
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Forgiving"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Vengeful"
+        }
+      },
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Generous"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Selfish"
+        }
+      },
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Honest"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Deceitful"
+        }
+      },
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Just"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Arbitrary"
+        }
+      },
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Merciful"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Cruel"
+        }
+      },
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Modest"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Proud"
+        }
+      },
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Prudent"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Reckless"
+        }
+      },
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Spiritual"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Worldly"
+        }
+      },
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Temperate"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Indulgent"
+        }
+      },
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Trusting"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Suspicious"
+        }
+      },
+      {
+        "chaste": {
+          "value": 10,
+          "label": "PENDRAGON.Valorous"
+        },
+        "lustful": {
+          "value": 10,
+          "label": "PENDRAGON.Cowardly"
+        }
+      }
+    ]
   }
 },
 "Item": {

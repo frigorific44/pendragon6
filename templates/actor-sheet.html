@@ -20,10 +20,10 @@
 
         {{!-- Biography Tab --}}
         <div class="tab description" data-group="primary" data-tab="description">
-            {{#each systemData.stats.main as |statVal statKey|}}
+            {{#each systemData.characteristics as |characteristic key|}}
                 <div class="resource">
-                    <label for="systemData.stats.main.{{statKey}}">{{localize (concat "PENDRAGON." statKey)}}</label>
-                    <input type="text" name="systemData.stats.main.{{statKey}}" value="{{statVal}}"/>
+                    <label for="systemData.characteristics.{{key}}">{{localize characteristic.short}}</label>
+                    <input type="number" name="systemData.characteristics.{{key}}" value="{{characteristic.value}}"/>
                 </div>
             {{/each}}
             {{editor biographyHTML target="system.biography" button=true editable=editable engine="prosemirror"}}

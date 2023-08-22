@@ -170,3 +170,4 @@ Number of dice determined by the weapon, minus the armor of the recipient.
 - Initiative?
 - Creating Drag-and-Drop macros in the macrobar?
 - Token tracked values
+- If there is no "short" label, just insert "label"
