@@ -35,5 +35,11 @@
   "PENDRAGON.DeleteGroupContent": "Do you wish to delete this group? This will delete the following group and all attributes included in it: ",
 
   "PENDRAGON.Create": "Create",
-  "PENDRAGON.New": "New"
+  "PENDRAGON.New": "New",
+
+  "PENDRAGON.Size": "SIZ",
+  "PENDRAGON.Dexterity": "DEX",
+  "PENDRAGON.Strength": "STR",
+  "PENDRAGON.Constitution": "CON",
+  "PENDRAGON.Appearance": "APP"
 }

@@ -4,6 +4,15 @@
   "htmlFields": ["biography"],
   "character": {
     "biography": "",
+    "stats": {
+      "main": {
+        "Size": 1,
+        "Dexterity": 2,
+        "Strength": 3,
+        "Constitution": 4,
+        "Appearance": 5
+      }
+    },
     "health": {
       "value": 10,
       "min": 0,

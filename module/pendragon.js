@@ -94,6 +94,13 @@ Hooks.once("init", async function() {
     return value.slugify({strict: true});
   });
 
+  /**
+   * Concatenate a list of strings.
+   */
+  Handlebars.registerHelper('concat', function(a, b) {
+    return a + b;
+  });
+
   // Preload template partials
   await preloadHandlebarsTemplates();
 });
