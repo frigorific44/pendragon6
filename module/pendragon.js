@@ -8,8 +8,6 @@ import { PendragonActor } from "./actor.js";
 import { PendragonItem } from "./item.js";
 import { PendragonItemSheet } from "./item-sheet.js";
 import { PendragonActorSheet } from "./actor-sheet.js";
-import { preloadHandlebarsTemplates } from "./templates.js";
-import { createPendragonMacro } from "./macro.js";
 import { PendragonToken, PendragonTokenDocument } from "./token.js";
 
 /* -------------------------------------------- */
@@ -32,8 +30,7 @@ Hooks.once("init", async function() {
   };
 
   game.pendragon = {
-    PendragonActor,
-    createPendragonMacro
+    PendragonActor
   };
 
   // Define custom Document classes
@@ -41,6 +38,11 @@ Hooks.once("init", async function() {
   CONFIG.Item.documentClass = PendragonItem;
   CONFIG.Token.documentClass = PendragonTokenDocument;
   CONFIG.Token.objectClass = PendragonToken;
+
+  CONFIG.Combat.initiative = {
+    formula: "1d20",
+    decimals: 2
+  }
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
@@ -58,35 +60,6 @@ Hooks.once("init", async function() {
     config: true
   });
 
-  // Register initiative setting.
-  game.settings.register("pendragon", "initFormula", {
-    name: "SETTINGS.PendragonInitFormulaN",
-    hint: "SETTINGS.PendragonInitFormulaL",
-    scope: "world",
-    type: String,
-    default: "1d20",
-    config: true,
-    onChange: formula => _pendragonUpdateInit(formula, true)
-  });
-
-  // Retrieve and assign the initiative formula setting.
-  const initFormula = game.settings.get("pendragon", "initFormula");
-  _pendragonUpdateInit(initFormula);
-
-  /**
-   * Update the initiative formula.
-   * @param {string} formula - Dice formula to evaluate.
-   * @param {boolean} notify - Whether or not to post nofications.
-   */
-  function _pendragonUpdateInit(formula, notify = false) {
-    const isValid = Roll.validate(formula);
-    if ( !isValid ) {
-      if ( notify ) ui.notifications.error(`${game.i18n.localize("PENDRAGON.NotifyInitFormulaInvalid")}: ${formula}`);
-      return;
-    }
-    CONFIG.Combat.initiative.formula = formula;
-  }
-
   /**
    * Slugify a string.
    */
@@ -101,14 +74,12 @@ Hooks.once("init", async function() {
     return a + b;
   });
 
-  // Preload template partials
-  await preloadHandlebarsTemplates();
 });
 
 /**
  * Macrobar hook.
  */
-Hooks.on("hotbarDrop", (bar, data, slot) => createPendragonMacro(data, slot));
+// Hooks.on("hotbarDrop", (bar, data, slot) => createPendragonMacro(data, slot));
 
 /**
  * Adds the actor template context menu.

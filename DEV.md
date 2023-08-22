@@ -164,3 +164,9 @@ Roll 1d20 against the stat, with modifiers
 #### Damage Rolls
 
 Number of dice determined by the weapon, minus the armor of the recipient.
+
+## In Question
+
+- Initiative?
+- Creating Drag-and-Drop macros in the macrobar?
+- Token tracked values

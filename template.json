@@ -12,19 +12,7 @@
         "Constitution": 4,
         "Appearance": 5
       }
-    },
-    "health": {
-      "value": 10,
-      "min": 0,
-      "max": 10
-    },
-    "power": {
-      "value": 5,
-      "min": 0,
-      "max": 5
-    },
-    "attributes": {},
-    "groups": {}
+    }
   }
 },
 "Item": {
@@ -33,9 +21,7 @@
   "item": {
     "description": "",
     "quantity": 1,
-    "weight": 0,
-    "attributes": {},
-    "groups": {}
+    "weight": 0
   }
 }
 }
