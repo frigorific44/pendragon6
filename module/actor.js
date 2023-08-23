@@ -22,7 +22,6 @@ export class PendragonActor extends Actor {
 
     // Copy the actor's system data
     const data = this.toObject(false).system;
-    const shorthand = game.settings.get("pendragon", "macroShorthand");
 
     return data;
   }

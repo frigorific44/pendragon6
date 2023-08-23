@@ -50,16 +50,6 @@ Hooks.once("init", async function() {
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("pendragon", PendragonItemSheet, { makeDefault: true });
 
-  // Register system settings
-  game.settings.register("pendragon", "macroShorthand", {
-    name: "SETTINGS.PendragonMacroShorthandN",
-    hint: "SETTINGS.PendragonMacroShorthandL",
-    scope: "world",
-    type: Boolean,
-    default: true,
-    config: true
-  });
-
   /**
    * Slugify a string.
    */

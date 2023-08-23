@@ -24,7 +24,6 @@ export class PendragonActorSheet extends ActorSheet {
   /** @inheritdoc */
   async getData(options) {
     const context = await super.getData(options);
-    context.shorthand = !!game.settings.get("pendragon", "macroShorthand");
     context.systemData = context.data.system;
     context.biographyHTML = await TextEditor.enrichHTML(context.systemData.biography, {
       secrets: this.document.isOwner,
