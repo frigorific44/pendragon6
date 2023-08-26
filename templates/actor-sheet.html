@@ -13,6 +13,7 @@
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
+        <a class="item" data-tab="traits">Traits & Skills</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -20,13 +21,39 @@
 
         {{!-- Biography Tab --}}
         <div class="tab description" data-group="primary" data-tab="description">
-            {{#each systemData.characteristics as |characteristic key|}}
+            <div class="characteristics">
+                {{#each data.system.characteristics as |characteristic key|}}
                 <div class="resource">
-                    <label for="systemData.characteristics.{{key}}">{{localize characteristic.short}}</label>
-                    <input type="number" name="systemData.characteristics.{{key}}" value="{{characteristic.value}}"/>
+                    <label for="system.characteristics.{{key}}.value">{{localize characteristic.short}}</label>
+                    <input type="text" name="system.characteristics.{{key}}.value" value="{{characteristic.value}}"/>
                 </div>
-            {{/each}}
+                {{/each}}
+            </div>
             {{editor biographyHTML target="system.biography" button=true editable=editable engine="prosemirror"}}
+        </div>
+        <div class="tab description" data-group="primary" data-tab="traits">
+            <div class="traits">
+                {{#each data.system.traits}}
+                <div class="trait">
+                    {{#each this}}
+                        {{#if @first}}
+                        <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                        <div class="trait-label-cont text-right">
+                            <label>{{localize this.label}}</label>
+                        </div>
+                        <input type="text" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}"/>
+                        {{/if}}
+                        {{#if @last}}
+                        <input type="text" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}"/>
+                        <div class="trait-label-cont text-left">
+                            <label>{{localize this.label}}</label>                            
+                        </div>
+                        <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                        {{/if}}
+                    {{/each}}
+                </div>
+                {{/each}}
+            </div>
         </div>
     </section>
 </form>

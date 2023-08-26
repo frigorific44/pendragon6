@@ -67,138 +67,164 @@
         "label": "PENDRAGON.Wounds"
       }
     },
-    "traits": [
-      {
+    "traits": {
+      "0": {
         "chaste": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Chaste"
         },
         "lustful": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Lustful"
         }
       },
-      {
-        "chaste": {
+      "1": {
+        "energetic": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Energetic"
         },
-        "lustful": {
+        "lazy": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Lazy"
         }
       },
-      {
-        "chaste": {
+      "2": {
+        "forgiving": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Forgiving"
         },
-        "lustful": {
+        "vengeful": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Vengeful"
         }
       },
-      {
-        "chaste": {
+      "3": {
+        "generous": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Generous"
         },
-        "lustful": {
+        "selfish": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Selfish"
         }
       },
-      {
-        "chaste": {
+      "4": {
+        "honest": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Honest"
         },
-        "lustful": {
+        "deceitful": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Deceitful"
         }
       },
-      {
-        "chaste": {
+      "5": {
+        "just": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Just"
         },
-        "lustful": {
+        "arbitrary": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Arbitrary"
         }
       },
-      {
-        "chaste": {
+      "6": {
+        "merciful": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Merciful"
         },
-        "lustful": {
+        "cruel": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Cruel"
         }
       },
-      {
-        "chaste": {
+      "7": {
+        "modest": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Modest"
         },
-        "lustful": {
+        "proud": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Proud"
         }
       },
-      {
-        "chaste": {
+      "8": {
+        "prudent": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Prudent"
         },
-        "lustful": {
+        "reckless": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Reckless"
         }
       },
-      {
-        "chaste": {
+      "9": {
+        "spiritual": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Spiritual"
         },
-        "lustful": {
+        "worldly": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Worldly"
         }
       },
-      {
-        "chaste": {
+      "10": {
+        "temperate": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Temperate"
         },
-        "lustful": {
+        "indulgent": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Indulgent"
         }
       },
-      {
-        "chaste": {
+      "11": {
+        "trusting": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Trusting"
         },
-        "lustful": {
+        "suspicious": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Suspicious"
         }
       },
-      {
-        "chaste": {
+      "12": {
+        "valorous": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Valorous"
         },
-        "lustful": {
+        "cowardly": {
+          "isChecked": false,
           "value": 10,
           "label": "PENDRAGON.Cowardly"
         }
       }
-    ]
+    }
   }
 },
 "Item": {
