@@ -7,3 +7,6 @@ node_modules/
 package-lock.json
 
 pendragon6.lock
+
+# Extra files related to development, but not the codebase
+extra/
