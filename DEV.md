@@ -36,7 +36,7 @@ Appearance: Integer
 
 Movement: Integer
 
-Armor Points: Integer, **PADDING + ARMOR + HELMET**
+Armor Points: Integer, **PADDING + ARMOR + HELMET + SHIELD**
 
 - Padding
   - Type: String
@@ -47,8 +47,10 @@ Armor Points: Integer, **PADDING + ARMOR + HELMET**
 - Helmet
   - Type: String
   - Armor: Integer
+- Shield
+  - Type: String
+  - Armor: Integer
 
-Healing Rate: Integer, **STR + CON / 10**
 
 #### Health
 
@@ -56,6 +58,8 @@ Hit Points
 
 - Value: Integer
 - Max: Integer, Equal to **SIZ + CON**
+
+Healing Rate: Integer, **STR + CON / 10**
 
 Knockdown: Integer, Equal to **SIZ**
 
@@ -139,11 +143,35 @@ Weapon skills begin at **DEX/2**
 - Sword
 - Thrown Weapon
 
+#### Weapons
+
+Weapon
+
+- name: String
+- skill: StringKey
+- damage: Formula
+
 #### Passions
+
+Passion
+
+- checked: Boolean
+- name: String
+- value: Integer
+
+#### Joust Score
+
+Wins: Integer
+
+Losses: Integer
 
 #### Horses
 
 #### Equipment
+
+#### History/Events
+
+#### Glory
 
 #### Squire
 
