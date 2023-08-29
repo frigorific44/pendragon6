@@ -39,6 +39,9 @@
   height: 100%;
   margin: 0;
 }
+.pendragon input[type="checkbox"] {
+  transform: scale(0.75);
+}
 .pendragon .resource {
   width: 100%;
   height: 40px;
@@ -52,20 +55,27 @@
 }
 .pendragon .characteristics input,
 .pendragon .traits input {
-  width: 50px;
+  width: 28px;
   height: 28px;
 }
-.pendragon .traits .trait {
+.pendragon .traits .trait-duals {
   display: flex;
+  align-items: center;
 }
-.pendragon .traits .trait .trait-label-cont {
-  width: 100px;
+.pendragon .traits .trait-duals .trait-label-cont {
+  width: 80px;
+  display: flex;
+  align-items: center;
 }
-.pendragon .text-right {
-  text-align: right;
+.pendragon .traits .trait-duals .trait-plus {
+  width: 20px;
+  height: 20px;
 }
-.pendragon .text-left {
-  text-align: left;
+.pendragon .justify-end {
+  justify-content: flex-end;
+}
+.pendragon .justify-start {
+  justify-content: flex-start;
 }
 .pendragon .tabs {
   flex: 0 0 40px;

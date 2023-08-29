@@ -42,6 +42,10 @@
     }
   }
 
+  input[type="checkbox"] {
+    transform: scale(0.75)
+  }
+
   .resource {
     width: 100%;
     height: 40px;
@@ -56,26 +60,33 @@
 
   .characteristics, .traits {
     input {
-      width: 50px;
+      width: 28px;
       height: 28px;
     }
   }
 
   .traits {
-    .trait{
+    .trait-duals {
       display: flex;
+      align-items: center;
       .trait-label-cont {
-        width: 100px
+        width: 80px;
+        display: flex;
+        align-items: center;
+      }
+      .trait-plus {
+        width: 20px;
+        height: 20px;
       }
     }
   }
 
-  .text-right {
-    text-align: right;
+  .justify-end {
+    justify-content: flex-end;
   }
 
-  .text-left {
-    text-align: left;
+  .justify-start {
+    justify-content: flex-start;
   }
 
   /* Sheet Tabs */
