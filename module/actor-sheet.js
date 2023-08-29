@@ -37,10 +37,44 @@ export class PendragonActorSheet extends ActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
-    // Everything below here is only needed if the sheet is editable
-    if ( !this.isEditable ) return;
+    html.find(".traits").on("click", ".rollable", this._onTraitRoll.bind(this));
+    html.find(".traits").on("click", ".trait-plus", this._onTraitAdd.bind(this));
   }
 
   /* -------------------------------------------- */
+
+  /**
+   * Listen for roll buttons on traits.
+   * @param {MouseEvent} event  The originating left click
+   */
+  _onTraitRoll(event) {
+    event.preventDefault();
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+
+    if (dataset.label && dataset.value) {
+      let roll = new Roll("d20", this.actor.getRollData());
+      let label = `Rolling ${dataset.label}, under ${dataset.value}`;
+      return roll.toMessage({
+        user: game.user.id,
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        flavor: label
+      });
+    }
+  }
+  
+  /**
+   * Listen for add buttons on traits.
+   * @param {MouseEvent} event  The originating left click
+   */
+  _onTraitAdd(event) {
+    event.preventDefault();
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+
+    if (dataset.dual && dataset.trait) {
+      this.actor.shiftOneTowardsTrait(dataset.dual, dataset.trait);
+    }
+  }
 
 }
