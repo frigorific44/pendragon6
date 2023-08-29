@@ -224,6 +224,167 @@
           "label": "PENDRAGON.Cowardly"
         }
       }
+    },
+    "skills": {
+      "general": {
+        "awareness": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.awareness"
+        },
+        "chirugery": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Chirugery"
+        },
+        "compose": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Compose"
+        },
+        "courtesy": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Courtesy"
+        },
+        "dancing": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Dancing"
+        },
+        "falconry": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Falconry"
+        },
+        "fashion": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Fashion"
+        },
+        "firstAid": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.FirstAid"
+        },
+        "flirting": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Flirting"
+        },
+        "folklore": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Folklore"
+        },
+        "gaming": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Gaming"
+        },
+        "hunting": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Hunting"
+        },
+        "intrigue": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Intrigue"
+        },
+        "literacy": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Literacy"
+        },
+        "orate": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Orate"
+        },
+        "play": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Play"
+        },
+        "recognize": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Recognize"
+        },
+        "religion": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Religion"
+        },
+        "sing": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Sing"
+        },
+        "stewardship": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Stewardship"
+        }
+      },
+      "combat": {
+        "battle": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Battle"
+        },
+        "bow": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Bow"
+        },
+        "brawling": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Brawling"
+        },
+        "charge": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Charge"
+        },
+        "crossbow": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Crossbow"
+        },
+        "hafted": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Hafted"
+        },
+        "twoHandedHafted": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.TwoHandedHafted"
+        },
+        "horsemanship": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Horsemanship"
+        },
+        "spear": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Spear"
+        },
+        "sword": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.Sword"
+        },
+        "thrownWeapon": {
+          "isChecked": false,
+          "value": 0,
+          "label": "PENDRAGON.ThrownWeapon"
+        }
+      }
     }
   }
 },
