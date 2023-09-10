@@ -31,6 +31,8 @@
             </div>
             {{editor biographyHTML target="system.biography" button=true editable=editable engine="prosemirror"}}
         </div>
+
+        {{!-- Traits Tab --}}
         <div class="tab description" data-group="primary" data-tab="traits">
             <div class="traits">
                 {{#each data.system.traits}}
@@ -39,7 +41,7 @@
                         {{#if @first}}
                         <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
                         <div class="trait-label-cont justify-end">
-                            <label class="trait rollable" data-label="localize this.label" data-value="{{this.value}}">{{localize this.label}}</label>
+                            <label class="trait rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
                         </div>
                         <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
                         <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
