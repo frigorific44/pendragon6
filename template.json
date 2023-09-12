@@ -230,7 +230,7 @@
         "awareness": {
           "isChecked": false,
           "value": 0,
-          "label": "PENDRAGON.awareness"
+          "label": "PENDRAGON.Awareness"
         },
         "chirugery": {
           "isChecked": false,
