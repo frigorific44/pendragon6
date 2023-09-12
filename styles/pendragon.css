@@ -89,25 +89,15 @@
 .pendragon .combat {
   right: 0;
 }
-.pendragon .skill-row {
+.pendragon .skills {
   display: grid;
   grid-template-columns: 28px 1fr 28px;
   column-gap: 0.5em;
   justify-items: center;
   align-items: center;
 }
-.pendragon .skill-row * {
-  grid-row: 1;
-}
-.pendragon .skill-row label {
+.pendragon .skills label {
   justify-self: end;
-  grid-column: 2;
-}
-.pendragon .skill-row input [type="checkbox"] {
-  grid-column: 1;
-}
-.pendragon .skill-row input [type="number"] {
-  grid-column: 3;
 }
 .pendragon .trait-row {
   display: grid;
@@ -124,17 +114,6 @@
 }
 .pendragon .trait-row .right {
   justify-self: start;
-}
-.pendragon .row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.pendragon .justify-end {
-  justify-content: flex-end;
-}
-.pendragon .justify-start {
-  justify-content: flex-start;
 }
 .pendragon .tabs {
   flex: 0 0 40px;

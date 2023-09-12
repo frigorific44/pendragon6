@@ -54,13 +54,11 @@
                 </div>
                 {{/each}}
             </div>
-            <div class="general-skills">
+            <div class="general-skills skills">
                 {{#each data.system.skills.general}}
-                <div class="skill-row">
-                    <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
-                    <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
-                    <input type="number" name="system.skills.general.{{@key}}.value" value="{{this.value}}"/>
-                </div>
+                <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
+                <input type="number" name="system.skills.general.{{@key}}.value" value="{{this.value}}"/>
                 {{/each}}
             </div>
         </div>

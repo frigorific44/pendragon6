@@ -97,20 +97,14 @@
     right: 0;
   }
 
-  .skill-row {
+  .skills {
     display: grid;
     grid-template-columns: 28px 1fr 28px;
     column-gap: 0.5em;
     justify-items: center;
     align-items: center;
-    * {grid-row: 1;}
     label {
       justify-self: end;
-      grid-column: 2;
-    }
-    input {
-      [type="checkbox"] {grid-column: 1;}
-      [type="number"] {grid-column: 3;}
     }
   }
 
@@ -129,20 +123,6 @@
     .right {
       justify-self: start;
     }
-  }
-
-  .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .justify-end {
-    justify-content: flex-end;
-  }
-
-  .justify-start {
-    justify-content: flex-start;
   }
 
   /* Sheet Tabs */
