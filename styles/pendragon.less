@@ -58,27 +58,54 @@
     }
   }
 
-  .characteristics, .traits {
-    input {
-      width: 28px;
+  .traits-and-skills {
+    position: relative;
+    input[type="number"] {
       height: 28px;
+      width: 28px;
+      text-align: center;
+    }
+    div {
+      background-color: white;
     }
   }
 
+  .general-skills, .traits, .combat {
+    outline: black solid 2px;
+    margin: 1em;
+  }
+
+  .general-skills, .combat {
+    position: absolute;
+    top: 0;
+  }
+
+  .general-skills {
+    left: 0;
+  }
+
   .traits {
-    .trait-duals {
+    max-width: 300px;
+    margin: 1em auto;
+    .trait-label-cont {
+      width: 70px;
       display: flex;
       align-items: center;
-      .trait-label-cont {
-        width: 80px;
-        display: flex;
-        align-items: center;
-      }
-      .trait-plus {
-        width: 20px;
-        height: 20px;
-      }
     }
+    .trait-plus {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .combat {
+    right: 0;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .justify-end {

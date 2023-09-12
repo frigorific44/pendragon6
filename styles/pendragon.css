@@ -53,23 +53,51 @@
   width: 50px;
   height: 28px;
 }
-.pendragon .characteristics input,
-.pendragon .traits input {
-  width: 28px;
+.pendragon .traits-and-skills {
+  position: relative;
+}
+.pendragon .traits-and-skills input[type="number"] {
   height: 28px;
+  width: 28px;
+  text-align: center;
 }
-.pendragon .traits .trait-duals {
+.pendragon .traits-and-skills div {
+  background-color: white;
+}
+.pendragon .general-skills,
+.pendragon .traits,
+.pendragon .combat {
+  outline: black solid 2px;
+  margin: 1em;
+}
+.pendragon .general-skills,
+.pendragon .combat {
+  position: absolute;
+  top: 0;
+}
+.pendragon .general-skills {
+  left: 0;
+}
+.pendragon .traits {
+  max-width: 300px;
+  margin: 1em auto;
+}
+.pendragon .traits .trait-label-cont {
+  width: 70px;
   display: flex;
   align-items: center;
 }
-.pendragon .traits .trait-duals .trait-label-cont {
-  width: 80px;
-  display: flex;
-  align-items: center;
-}
-.pendragon .traits .trait-duals .trait-plus {
+.pendragon .traits .trait-plus {
   width: 20px;
   height: 20px;
+}
+.pendragon .combat {
+  right: 0;
+}
+.pendragon .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .pendragon .justify-end {
   justify-content: flex-end;
