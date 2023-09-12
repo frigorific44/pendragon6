@@ -85,11 +85,25 @@
   }
 
   .traits {
-    max-width: 350px;
+    width: fit-content;
     margin: 1em auto;
     .trait-plus {
       width: 20px;
       height: 20px;
+    }
+    display: grid;
+    grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    label {
+      margin: 0 0.5em;
+    }
+    .left {
+      justify-self: end;
+    }
+    .right {
+      justify-self: start;
     }
   }
 
@@ -105,23 +119,6 @@
     align-items: center;
     label {
       justify-self: end;
-    }
-  }
-
-  .trait-row {
-    display: grid;
-    grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    label {
-      margin: 0 0.5em;
-    }
-    .left {
-      justify-self: end;
-    }
-    .right {
-      justify-self: start;
     }
   }
 

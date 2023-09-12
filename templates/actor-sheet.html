@@ -36,22 +36,20 @@
         <div class="tab traits-and-skills" data-group="primary" data-tab="traits">
             <div class="traits">
                 {{#each data.system.traits}}
-                <div class="trait-row">
-                    {{#each this}}
-                    {{#if @first}}
-                    <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
-                    <label class="trait rollable left" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
-                    <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
-                    <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
-                    {{/if}}
-                    {{#if @last}}
-                    <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
-                    <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
-                    <label class="trait rollable right" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>                            
-                    <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
-                    {{/if}}
-                    {{/each}}
-                </div>
+                {{#each this}}
+                {{#if @first}}
+                <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                <label class="trait rollable left" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
+                <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
+                <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
+                {{/if}}
+                {{#if @last}}
+                <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
+                <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
+                <label class="trait rollable right" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>                            
+                <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                {{/if}}
+                {{/each}}
                 {{/each}}
             </div>
             <div class="general-skills skills">

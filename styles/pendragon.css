@@ -79,12 +79,26 @@
   left: 0;
 }
 .pendragon .traits {
-  max-width: 350px;
+  width: fit-content;
   margin: 1em auto;
+  display: grid;
+  grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 }
 .pendragon .traits .trait-plus {
   width: 20px;
   height: 20px;
+}
+.pendragon .traits label {
+  margin: 0 0.5em;
+}
+.pendragon .traits .left {
+  justify-self: end;
+}
+.pendragon .traits .right {
+  justify-self: start;
 }
 .pendragon .combat {
   right: 0;
@@ -98,22 +112,6 @@
 }
 .pendragon .skills label {
   justify-self: end;
-}
-.pendragon .trait-row {
-  display: grid;
-  grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-}
-.pendragon .trait-row label {
-  margin: 0 0.5em;
-}
-.pendragon .trait-row .left {
-  justify-self: end;
-}
-.pendragon .trait-row .right {
-  justify-self: start;
 }
 .pendragon .tabs {
   flex: 0 0 40px;
