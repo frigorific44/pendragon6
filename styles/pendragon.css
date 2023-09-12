@@ -94,6 +94,26 @@
 .pendragon .combat {
   right: 0;
 }
+.pendragon .skill-row {
+  display: grid;
+  grid-template-columns: 28px 1fr 28px;
+  column-gap: 0.5em;
+  justify-items: center;
+  align-items: center;
+}
+.pendragon .skill-row label {
+  justify-self: end;
+  grid-row: 1;
+  grid-column: 2;
+}
+.pendragon .skill-row input [type="checkbox"] {
+  grid-row: 1;
+  grid-column: 1;
+}
+.pendragon .skill-row input [type="number"] {
+  grid-row: 1;
+  grid-column: 3;
+}
 .pendragon .row {
   display: flex;
   align-items: center;

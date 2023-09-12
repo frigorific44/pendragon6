@@ -60,10 +60,10 @@
             </div>
             <div class="general-skills">
                 {{#each data.system.skills.general}}
-                <div class="row">
+                <div class="skill-row">
                     <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
                     <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
-                    <input type="number" name="system.skills.general.{{@key}}.value" value="system.skills.general.{{@key}}.value"/>
+                    <input type="number" name="system.skills.general.{{@key}}.value" value="{{this.value}}"/>
                 </div>
                 {{/each}}
             </div>

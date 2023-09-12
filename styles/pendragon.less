@@ -102,6 +102,29 @@
     right: 0;
   }
 
+  .skill-row {
+    display: grid;
+    grid-template-columns: 28px 1fr 28px;
+    column-gap: 0.5em;
+    justify-items: center;
+    align-items: center;
+    label {
+      justify-self: end;
+      grid-row: 1;
+      grid-column: 2;
+    }
+    input {
+      [type="checkbox"] {
+        grid-row: 1;
+        grid-column: 1;
+      }
+      [type="number"] {
+        grid-row: 1;
+        grid-column: 3;
+      }
+    }
+  }
+
   .row {
     display: flex;
     align-items: center;
