@@ -12,51 +12,53 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="traits">Traits & Skills</a>
+        <a class="item" data-tab="play">Play</a>
+        <a class="item" data-tab="combat">Combat</a>
+        <a class="item" data-tab="possessions">Possessions</a>
     </nav>
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
-        {{!-- Biography Tab --}}
-        <div class="tab description" data-group="primary" data-tab="description">
-            <div class="characteristics">
+        {{!-- Play Tab --}}
+        <div class="tab traits-and-skills" data-group="primary" data-tab="play">
+            <div class="flex-container">
+                <div class="traits">
+                    {{#each data.system.traits}}
+                    {{#each this}}
+                    {{#if @first}}
+                    <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                    <label class="trait rollable left" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
+                    <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
+                    <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
+                    {{/if}}
+                    {{#if @last}}
+                    <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
+                    <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
+                    <label class="trait rollable right" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>                            
+                    <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                    {{/if}}
+                    {{/each}}
+                    {{/each}}
+                </div>
+                <div class="general-skills skills">
+                    {{#each data.system.skills.general}}
+                    <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                    <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
+                    <input type="number" name="system.skills.general.{{@key}}.value" value="{{this.value}}"/>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+        {{!-- Combat Tab --}}
+        <div class="tab description" data-group="primary" data-tab="combat">
+            <div class="flex-container">
                 {{#each data.system.characteristics as |characteristic key|}}
                 <div class="resource">
                     <label for="system.characteristics.{{key}}.value">{{localize characteristic.short}}</label>
-                    <input type="text" name="system.characteristics.{{key}}.value" value="{{characteristic.value}}"/>
+                    <input type="number" name="system.characteristics.{{key}}.value" value="{{characteristic.value}}"/>
                 </div>
-                {{/each}}
-            </div>
-            {{editor biographyHTML target="system.biography" button=true editable=editable engine="prosemirror"}}
-        </div>
-
-        {{!-- Traits Tab --}}
-        <div class="tab traits-and-skills" data-group="primary" data-tab="traits">
-            <div class="traits">
-                {{#each data.system.traits}}
-                {{#each this}}
-                {{#if @first}}
-                <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
-                <label class="trait rollable left" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
-                <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
-                <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
-                {{/if}}
-                {{#if @last}}
-                <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
-                <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
-                <label class="trait rollable right" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>                            
-                <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
-                {{/if}}
-                {{/each}}
-                {{/each}}
-            </div>
-            <div class="general-skills skills">
-                {{#each data.system.skills.general}}
-                <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
-                <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
-                <input type="number" name="system.skills.general.{{@key}}.value" value="{{this.value}}"/>
                 {{/each}}
             </div>
             <div class="combat-skills skills">
@@ -66,6 +68,11 @@
                 <input type="number" name="system.skills.combat.{{@key}}.value" value="{{this.value}}"/>
                 {{/each}}
             </div>
+        </div>
+
+        {{!-- Possessions Tab --}}
+        <div class="tab possessions" data-group="primary" data-tab="possessions">
+
         </div>
     </section>
 </form>

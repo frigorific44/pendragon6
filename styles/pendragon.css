@@ -39,6 +39,11 @@
   height: 100%;
   margin: 0;
 }
+.pendragon input[type="number"] {
+  height: 28px;
+  width: 28px;
+  text-align: center;
+}
 .pendragon input[type="checkbox"] {
   transform: scale(0.75);
 }
@@ -47,42 +52,14 @@
   height: 40px;
   margin-top: 10px;
   float: left;
-  text-align: center;
-}
-.pendragon .resource input {
-  width: 50px;
-  height: 28px;
-}
-.pendragon .traits-and-skills {
-  position: relative;
-}
-.pendragon .traits-and-skills input[type="number"] {
-  height: 28px;
-  width: 28px;
-  text-align: center;
-}
-.pendragon .traits-and-skills div {
-  background-color: white;
+  width: max-content;
 }
 .pendragon .general-skills,
 .pendragon .traits,
 .pendragon .combat-skills {
   outline: black solid 2px;
 }
-.pendragon .general-skills,
-.pendragon .combat-skills {
-  position: absolute;
-  margin: 1em;
-  top: 0;
-}
-.pendragon .general-skills {
-  left: 0;
-}
 .pendragon .traits {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 1em auto;
   width: fit-content;
   display: grid;
   grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
@@ -103,18 +80,26 @@
 .pendragon .traits .right {
   justify-self: start;
 }
-.pendragon .combat-skills {
-  right: 0;
-}
 .pendragon .skills {
   display: grid;
   grid-template-columns: 28px 1fr 28px;
   column-gap: 0.5em;
   justify-items: center;
   align-items: center;
+  width: fit-content;
 }
 .pendragon .skills label {
   justify-self: end;
+}
+.pendragon .characteristics {
+  display: flex;
+  justify-content: space-around;
+}
+.pendragon .flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 .pendragon .tabs {
   flex: 0 0 40px;
@@ -135,6 +120,7 @@
 .pendragon .sheet-body .tab {
   height: 100%;
   overflow-y: auto;
+  padding: 0.25em;
 }
 .pendragon .editor,
 .pendragon .editor-content {
