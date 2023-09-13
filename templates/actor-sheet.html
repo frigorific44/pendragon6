@@ -59,6 +59,13 @@
                 <input type="number" name="system.skills.general.{{@key}}.value" value="{{this.value}}"/>
                 {{/each}}
             </div>
+            <div class="combat-skills skills">
+                {{#each data.system.skills.combat}}
+                <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
+                <input type="number" name="system.skills.combat.{{@key}}.value" value="{{this.value}}"/>
+                {{/each}}
+            </div>
         </div>
     </section>
 </form>

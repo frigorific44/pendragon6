@@ -70,13 +70,13 @@
     }
   }
 
-  .general-skills, .traits, .combat {
+  .general-skills, .traits, .combat-skills {
     outline: black solid 2px;
-    margin: 1em;
   }
 
-  .general-skills, .combat {
+  .general-skills, .combat-skills {
     position: absolute;
+    margin: 1em;
     top: 0;
   }
 
@@ -85,8 +85,11 @@
   }
 
   .traits {
-    width: fit-content;
+    position: absolute;
+    left: 0;
+    right: 0;
     margin: 1em auto;
+    width: fit-content;
     .trait-plus {
       width: 20px;
       height: 20px;
@@ -107,7 +110,7 @@
     }
   }
 
-  .combat {
+  .combat-skills {
     right: 0;
   }
 

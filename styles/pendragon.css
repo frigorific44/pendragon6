@@ -66,21 +66,24 @@
 }
 .pendragon .general-skills,
 .pendragon .traits,
-.pendragon .combat {
+.pendragon .combat-skills {
   outline: black solid 2px;
-  margin: 1em;
 }
 .pendragon .general-skills,
-.pendragon .combat {
+.pendragon .combat-skills {
   position: absolute;
+  margin: 1em;
   top: 0;
 }
 .pendragon .general-skills {
   left: 0;
 }
 .pendragon .traits {
-  width: fit-content;
+  position: absolute;
+  left: 0;
+  right: 0;
   margin: 1em auto;
+  width: fit-content;
   display: grid;
   grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
   justify-content: center;
@@ -100,7 +103,7 @@
 .pendragon .traits .right {
   justify-self: start;
 }
-.pendragon .combat {
+.pendragon .combat-skills {
   right: 0;
 }
 .pendragon .skills {
