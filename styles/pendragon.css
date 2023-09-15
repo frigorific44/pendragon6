@@ -11,7 +11,7 @@
   height: 100%;
 }
 .pendragon .sheet-header {
-  flex: 0 0 100px;
+  flex: 0 0 150px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -21,12 +21,12 @@
 }
 .pendragon .sheet-header .profile-img {
   flex: 0 0 100px;
-  height: 100px;
+  height: 150px;
   margin-right: 10px;
 }
 .pendragon .sheet-header .header-fields {
   flex: 1;
-  height: 100px;
+  height: 150px;
 }
 .pendragon .sheet-header h1.charname {
   height: 50px;
@@ -38,6 +38,28 @@
   width: 100%;
   height: 100%;
   margin: 0;
+}
+.pendragon .sheet-header .personal {
+  width: 300px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 0.2em;
+  align-content: space-between;
+}
+.pendragon .sheet-header .personal div {
+  display: flex;
+  align-items: baseline;
+}
+.pendragon .sheet-header .personal label {
+  font-size: 0.8em;
+  padding-right: 0.5em;
+}
+.pendragon .sheet-header .personal input {
+  height: 1.2em;
+  font-size: 1em;
+}
+.pendragon .sheet-header .personal #features {
+  grid-column: 1 / span 2;
 }
 .pendragon input[type="number"] {
   height: 28px;
@@ -107,7 +129,7 @@
   border-bottom: 1px solid #AAA;
 }
 .pendragon .tabs .item {
-  line-height: 40px;
+  line-height: 20px;
   font-weight: bold;
 }
 .pendragon .tabs .item.active {

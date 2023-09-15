@@ -7,6 +7,14 @@
             <h1 class="charname">
                 <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
             </h1>
+            <div class="personal">
+                {{#each data.system.personal}}
+                <div {{#ifEquals @key "distinctiveFeatures"}}id="features"{{/ifEquals}}>
+                    <label>{{localize this.label}}</label>
+                    <input type="text" name="system.personal.{{@key}}.value" value="{{this.value}}" />
+                </div>
+                {{/each}}
+            </div>
         </div>
     </header>
 

@@ -4,6 +4,36 @@
   "htmlFields": ["biography"],
   "character": {
     "biography": "",
+    "personal": {
+      "age": {
+        "value": null,
+        "label": "PENDRAGON.Age"
+      },
+      "culture": {
+        "value": null,
+        "label": "PENDRAGON.Culture"
+      },
+      "religion": {
+        "value": null,
+        "label": "PENDRAGON.CurrentReligion"
+      },
+      "homeland": {
+        "value": null,
+        "label": "PENDRAGON.Homeland"
+      },
+      "currentClass": {
+        "value": null,
+        "label": "PENDRAGON.CurrentClass"
+      },
+      "currentLord": {
+        "value": null,
+        "label": "PENDRAGON.CurrentLord"
+      },
+      "distinctiveFeatures": {
+        "value": null,
+        "label": "PENDRAGON.DistinctiveFeatures"
+      }
+    },
     "characteristics": {
       "siz": {
         "value": null,

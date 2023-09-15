@@ -11,6 +11,14 @@
   "PENDRAGON.Create": "Create",
   "PENDRAGON.New": "New",
 
+  "PENDRAGON.Age": "Age",
+  "PENDRAGON.Culture": "Culture",
+  "PENDRAGON.CurrentReligion": "Religion",
+  "PENDRAGON.Homeland": "Homeland",
+  "PENDRAGON.CurrentClass": "Class",
+  "PENDRAGON.CurrentLord": "Lord",
+  "PENDRAGON.DistinctiveFeatures": "Distinctive Features",
+
   "PENDRAGON.Size": "Size",
   "PENDRAGON.SIZ": "SIZ",
   "PENDRAGON.Dexterity": "Dexterity",
