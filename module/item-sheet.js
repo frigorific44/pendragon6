@@ -10,7 +10,6 @@ export class PendragonItemSheet extends ItemSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["pendragon", "sheet", "item"],
-      template: "systems/pendragon6/templates/item-sheet.html",
       width: 520,
       height: 480,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}],
@@ -19,6 +18,15 @@ export class PendragonItemSheet extends ItemSheet {
   }
 
   /* -------------------------------------------- */
+  
+  /**
+   * Return a dynamic reference to the HTML template path used to render this Item Sheet
+   * @return {string}
+   */
+  get template() {
+    const path = "systems/pendragon6/templates/items";
+    return `${path}/${this.item.type}-sheet.html`;
+  }
 
   /** @inheritdoc */
   async getData(options) {

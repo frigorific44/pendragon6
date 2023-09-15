@@ -419,12 +419,23 @@
   }
 },
 "Item": {
-  "types": ["item"],
+  "types": ["item","passion"],
   "htmlFields": ["description"],
+  "templates": {
+    "base": {
+      "description": ""
+    }
+  },
   "item": {
-    "description": "",
+    "templates": ["base"],
     "quantity": 1,
     "weight": 0
+  },
+  "passion": {
+    "templates": ["base"],
+    "target": "",
+    "isChecked": false,
+    "value": null
   }
 }
 }
