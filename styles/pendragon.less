@@ -83,11 +83,12 @@
     width: max-content;
   }
 
-  .general-skills, .traits, .combat-skills {
+  .pen-container {
     outline: black solid 2px;
+    margin: 1em;
   }
 
-  .traits {
+  #traits {
     width: fit-content;
     .trait-plus {
       width: 20px;
@@ -133,7 +134,11 @@
     align-items: flex-start;
   }
 
-  .passions {
+  #general-skills {
+    
+  }
+
+  #passions {
     display: grid;
     grid-template-columns: 28px 28px 1fr 28px 28px 28px;
     column-gap: 0.5em;
@@ -142,6 +147,16 @@
     .item-create {
       grid-column: 1 / span 4;
     } 
+  }
+
+  #play-grid {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+  }
+
+  .pendragon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 
   /* Sheet Tabs */

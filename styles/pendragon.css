@@ -76,12 +76,11 @@
   float: left;
   width: max-content;
 }
-.pendragon .general-skills,
-.pendragon .traits,
-.pendragon .combat-skills {
+.pendragon .pen-container {
   outline: black solid 2px;
+  margin: 1em;
 }
-.pendragon .traits {
+.pendragon #traits {
   width: fit-content;
   display: grid;
   grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
@@ -89,17 +88,17 @@
   justify-items: center;
   align-items: center;
 }
-.pendragon .traits .trait-plus {
+.pendragon #traits .trait-plus {
   width: 20px;
   height: 20px;
 }
-.pendragon .traits label {
+.pendragon #traits label {
   margin: 0 0.5em;
 }
-.pendragon .traits .left {
+.pendragon #traits .left {
   justify-self: end;
 }
-.pendragon .traits .right {
+.pendragon #traits .right {
   justify-self: start;
 }
 .pendragon .skills {
@@ -123,15 +122,23 @@
   flex-wrap: wrap;
   align-items: flex-start;
 }
-.pendragon .passions {
+.pendragon #passions {
   display: grid;
   grid-template-columns: 28px 28px 1fr 28px 28px 28px;
   column-gap: 0.5em;
   justify-items: center;
   align-items: center;
 }
-.pendragon .passions .item-create {
+.pendragon #passions .item-create {
   grid-column: 1 / span 4;
+}
+.pendragon #play-grid {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+}
+.pendragon .pendragon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .pendragon .tabs {
   flex: 0 0 40px;

@@ -29,51 +29,53 @@
     <section class="sheet-body">
 
         {{!-- Play Tab --}}
-        <div class="tab" data-group="primary" data-tab="play">
-            <div class="flex-container">
-                <div class="traits">
-                    {{#each data.system.traits}}
-                    {{#each this}}
-                    {{#if @first}}
-                    <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
-                    <label class="trait rollable left" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
-                    <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
-                    <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
-                    {{/if}}
-                    {{#if @last}}
-                    <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
-                    <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
-                    <label class="trait rollable right" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>                            
-                    <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
-                    {{/if}}
-                    {{/each}}
-                    {{/each}}
+        <div class="tab play" data-group="primary" data-tab="play">
+            <div id="play-grid">
+                <div class="flex-container">
+                    <div id="traits" class="pen-container">
+                        {{#each data.system.traits}}
+                        {{#each this}}
+                        {{#if @first}}
+                        <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                        <label class="trait rollable left" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
+                        <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
+                        <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
+                        {{/if}}
+                        {{#if @last}}
+                        <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
+                        <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
+                        <label class="trait rollable right" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>                            
+                        <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                        {{/if}}
+                        {{/each}}
+                        {{/each}}
+                    </div>
+                    <div id="passions" class="pen-container">
+                        {{#each inventory}}
+                        {{#each this}}
+                            <input class="item-checkbox" type="checkbox" data-item-id="{{this._id}}" {{#if this.system.isChecked}}checked{{/if}}/>
+                            <img src="{{this.img}}" title="{{this.name}}"/>
+                            <label>{{this.name}}{{#if this.system.target}} ({{this.system.target}}){{/if}}</label>
+                            <input type="number" value="{{this.system.value}}"/>
+                            <button class="item-edit" data-item-id="{{this._id}}">=</button>
+                            <button class="item-delete" data-item-id="{{this._id}}">-</button>
+                        {{/each}}
+                        {{/each}}
+                        <button class="item-create" data-type="passion">+</button>
+                    </div>
                 </div>
-                <div class="general-skills skills">
+                <div id="general-skills" class="skills pen-container" >
                     {{#each data.system.skills.general}}
                     <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
                     <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
                     <input type="number" name="system.skills.general.{{@key}}.value" value="{{this.value}}"/>
                     {{/each}}
                 </div>
-                <div class="passions">
-                    {{#each inventory}}
-                    {{#each this}}
-                        <input class="item-checkbox" type="checkbox" data-item-id="{{this._id}}" {{#if this.system.isChecked}}checked{{/if}}/>
-                        <img src="{{this.img}}" title="{{this.name}}"/>
-                        <label>{{this.name}} ({{this.system.target}})</label>
-                        <input type="number" value="{{this.system.value}}"/>
-                        <button class="item-edit" data-item-id="{{this._id}}">=</button>
-                        <button class="item-delete" data-item-id="{{this._id}}">-</button>
-                    {{/each}}
-                    {{/each}}
-                    <button class="item-create" data-type="passion">+</button>
-                </div>
             </div>
         </div>
 
         {{!-- Combat Tab --}}
-        <div class="tab description" data-group="primary" data-tab="combat">
+        <div class="tab combat" data-group="primary" data-tab="combat">
             <div class="flex-container">
                 {{#each data.system.characteristics as |characteristic key|}}
                 <div class="resource">
@@ -82,7 +84,7 @@
                 </div>
                 {{/each}}
             </div>
-            <div class="combat-skills skills">
+            <div class="combat-skills skills pen-container">
                 {{#each data.system.skills.combat}}
                 <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
                 <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
