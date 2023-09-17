@@ -14,7 +14,7 @@ export class PendragonActorSheet extends ActorSheet {
       width: 600,
       height: 600,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}],
-      scrollY: [".biography"],
+      scrollY: [".play", ".combat", ".possessions"],
       dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}]
     });
   }
@@ -118,6 +118,8 @@ export class PendragonActorSheet extends ActorSheet {
       });
     }
   }
+
+  /* -------------------------------------------- */
   
   /**
    * Listen for add buttons on traits.
@@ -133,6 +135,14 @@ export class PendragonActorSheet extends ActorSheet {
     }
   }
 
+  /* -------------------------------------------- */
+
+  /**
+   * Listen for item creation input events and
+   * create the item type with default values.
+   * @param {MouseEvent} event 
+   * @returns {Item}
+   */
   async _onItemCreate(event) {
     event.preventDefault();
     const element = event.currentTarget;
@@ -147,5 +157,7 @@ export class PendragonActorSheet extends ActorSheet {
     delete itemData.data["type"];
     return this.actor.createEmbeddedDocuments("Item", [itemData]);
   }
+
+  /* -------------------------------------------- */
 
 }
