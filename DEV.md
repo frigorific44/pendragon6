@@ -193,6 +193,10 @@ Roll 1d20 against the stat, with modifiers
 
 Number of dice determined by the weapon, minus the armor of the recipient.
 
+## To-Do
+
+- Delete confirmation dialogue
+
 ## In Question
 
 - Initiative?
