@@ -133,6 +133,17 @@
     align-items: flex-start;
   }
 
+  .passions {
+    display: grid;
+    grid-template-columns: 28px 28px 1fr 28px 28px 28px;
+    column-gap: 0.5em;
+    justify-items: center;
+    align-items: center;
+    .item-create {
+      grid-column: 1 / span 4;
+    } 
+  }
+
   /* Sheet Tabs */
   .tabs {
     flex: 0 0 40px;

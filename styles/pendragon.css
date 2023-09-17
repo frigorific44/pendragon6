@@ -123,6 +123,16 @@
   flex-wrap: wrap;
   align-items: flex-start;
 }
+.pendragon .passions {
+  display: grid;
+  grid-template-columns: 28px 28px 1fr 28px 28px 28px;
+  column-gap: 0.5em;
+  justify-items: center;
+  align-items: center;
+}
+.pendragon .passions .item-create {
+  grid-column: 1 / span 4;
+}
 .pendragon .tabs {
   flex: 0 0 40px;
   border-top: 1px solid #AAA;

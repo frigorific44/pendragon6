@@ -29,7 +29,7 @@
     <section class="sheet-body">
 
         {{!-- Play Tab --}}
-        <div class="tab traits-and-skills" data-group="primary" data-tab="play">
+        <div class="tab" data-group="primary" data-tab="play">
             <div class="flex-container">
                 <div class="traits">
                     {{#each data.system.traits}}
@@ -55,6 +55,19 @@
                     <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
                     <input type="number" name="system.skills.general.{{@key}}.value" value="{{this.value}}"/>
                     {{/each}}
+                </div>
+                <div class="passions">
+                    {{#each inventory}}
+                    {{#each this}}
+                        <input class="item-checkbox" type="checkbox" data-item-id="{{this._id}}" {{#if this.system.isChecked}}checked{{/if}}/>
+                        <img src="{{this.img}}" title="{{this.name}}"/>
+                        <label>{{this.name}} ({{this.system.target}})</label>
+                        <input type="number" value="{{this.system.value}}"/>
+                        <button class="item-edit" data-item-id="{{this._id}}">=</button>
+                        <button class="item-delete" data-item-id="{{this._id}}">-</button>
+                    {{/each}}
+                    {{/each}}
+                    <button class="item-create" data-type="passion">+</button>
                 </div>
             </div>
         </div>
