@@ -76,69 +76,53 @@
   float: left;
   width: max-content;
 }
-.pendragon .pen-container {
-  outline: black solid 2px;
-  margin: 1em;
-}
-.pendragon #traits {
-  width: fit-content;
-  display: grid;
-  grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-}
-.pendragon #traits .trait-plus {
-  width: 20px;
-  height: 20px;
-}
-.pendragon #traits label {
-  margin: 0 0.5em;
-}
-.pendragon #traits .left {
-  justify-self: end;
-}
-.pendragon #traits .right {
-  justify-self: start;
-}
-.pendragon .skills {
-  display: grid;
-  grid-template-columns: 28px 1fr 28px;
-  column-gap: 0.5em;
-  justify-items: center;
-  align-items: center;
-  width: fit-content;
-}
-.pendragon .skills label {
-  justify-self: end;
-}
-.pendragon .characteristics {
-  display: flex;
-  justify-content: space-around;
-}
 .pendragon .flex-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: flex-start;
 }
-.pendragon #passions {
+.pendragon .pen-container {
+  outline: black solid 2px;
+  margin: 1em;
+}
+.pendragon .container-grid {
   display: grid;
-  grid-template-columns: 28px 28px 1fr 28px 28px 28px;
-  column-gap: 0.5em;
+  width: fit-content;
+  justify-content: center;
   justify-items: center;
   align-items: center;
+  column-gap: 0.5em;
 }
-.pendragon #passions .item-create {
-  grid-column: 1 / span 4;
+.pendragon .skills {
+  grid-template-columns: 28px 1fr 28px;
+}
+.pendragon .skills label {
+  justify-self: end;
 }
 .pendragon #play-grid {
   display: grid;
+  align-items: start;
   grid-template-columns: 1fr min-content;
 }
-.pendragon .pendragon-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+.pendragon #play-grid #traits {
+  grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
+}
+.pendragon #play-grid #traits .trait-plus {
+  width: 20px;
+  height: 20px;
+}
+.pendragon #play-grid #traits .left {
+  justify-self: end;
+}
+.pendragon #play-grid #traits .right {
+  justify-self: start;
+}
+.pendragon #play-grid #passions {
+  grid-template-columns: 28px 28px 1fr 28px 28px 28px;
+}
+.pendragon #play-grid #passions .item-create {
+  grid-column: 1 / span 4;
 }
 .pendragon .tabs {
   flex: 0 0 40px;

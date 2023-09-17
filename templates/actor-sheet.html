@@ -32,7 +32,7 @@
         <div class="tab play" data-group="primary" data-tab="play">
             <div id="play-grid">
                 <div class="flex-container">
-                    <div id="traits" class="pen-container">
+                    <div id="traits" class="pen-container container-grid">
                         {{#each data.system.traits}}
                         {{#each this}}
                         {{#if @first}}
@@ -50,7 +50,7 @@
                         {{/each}}
                         {{/each}}
                     </div>
-                    <div id="passions" class="pen-container">
+                    <div id="passions" class="pen-container container-grid">
                         {{#each inventory}}
                         {{#each this}}
                             <input class="item-checkbox" type="checkbox" data-item-id="{{this._id}}" {{#if this.system.isChecked}}checked{{/if}}/>
@@ -64,7 +64,7 @@
                         <button class="item-create" data-type="passion">+</button>
                     </div>
                 </div>
-                <div id="general-skills" class="skills pen-container" >
+                <div id="general-skills" class="skills pen-container container-grid" >
                     {{#each data.system.skills.general}}
                     <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
                     <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
@@ -84,7 +84,7 @@
                 </div>
                 {{/each}}
             </div>
-            <div class="combat-skills skills pen-container">
+            <div class="combat-skills skills pen-container container-grid">
                 {{#each data.system.skills.combat}}
                 <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
                 <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>

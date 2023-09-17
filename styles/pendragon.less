@@ -83,50 +83,6 @@
     width: max-content;
   }
 
-  .pen-container {
-    outline: black solid 2px;
-    margin: 1em;
-  }
-
-  #traits {
-    width: fit-content;
-    .trait-plus {
-      width: 20px;
-      height: 20px;
-    }
-    display: grid;
-    grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    label {
-      margin: 0 0.5em;
-    }
-    .left {
-      justify-self: end;
-    }
-    .right {
-      justify-self: start;
-    }
-  }
-
-  .skills {
-    display: grid;
-    grid-template-columns: 28px 1fr 28px;
-    column-gap: 0.5em;
-    justify-items: center;
-    align-items: center;
-    width: fit-content;
-    label {
-      justify-self: end;
-    }
-  }
-
-  .characteristics {
-    display: flex;
-    justify-content: space-around;
-  }
-
   .flex-container {
     display: flex;
     justify-content: space-around;
@@ -134,29 +90,53 @@
     align-items: flex-start;
   }
 
-  #general-skills {
-    
+  .pen-container {
+    outline: black solid 2px;
+    margin: 1em;
   }
 
-  #passions {
+  .container-grid {
     display: grid;
-    grid-template-columns: 28px 28px 1fr 28px 28px 28px;
-    column-gap: 0.5em;
+    width: fit-content;
+    justify-content: center;
     justify-items: center;
     align-items: center;
-    .item-create {
-      grid-column: 1 / span 4;
-    } 
+    column-gap: 0.5em;
+  }
+
+  .skills {
+    grid-template-columns: 28px 1fr 28px;
+    label {
+      justify-self: end;
+    }
   }
 
   #play-grid {
     display: grid;
+    align-items: start;
     grid-template-columns: 1fr min-content;
-  }
-
-  .pendragon-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    #traits {
+      grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
+      .trait-plus {
+        width: 20px;
+        height: 20px;
+      }
+      .left {
+        justify-self: end;
+      }
+      .right {
+        justify-self: start;
+      }
+    }
+    #general-skills {
+      
+    }
+    #passions {
+      grid-template-columns: 28px 28px 1fr 28px 28px 28px;
+      .item-create {
+        grid-column: 1 / span 4;
+      } 
+    }
   }
 
   /* Sheet Tabs */
