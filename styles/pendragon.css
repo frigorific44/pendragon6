@@ -124,6 +124,9 @@
 .pendragon #play-grid #passions .item-create {
   grid-column: 1 / span 4;
 }
+.pendragon #weapon-attacks {
+  grid-template-columns: 28px 1fr 1fr 28px 28px 28px;
+}
 .pendragon .tabs {
   flex: 0 0 40px;
   border-top: 1px solid #AAA;

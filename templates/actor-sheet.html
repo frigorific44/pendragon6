@@ -51,15 +51,13 @@
                         {{/each}}
                     </div>
                     <div id="passions" class="pen-container container-grid">
-                        {{#each inventory}}
-                        {{#each this}}
+                        {{#each inventory.passion}}
                             <input class="item-checkbox" type="checkbox" data-item-id="{{this._id}}" {{#if this.system.isChecked}}checked{{/if}}/>
                             <img src="{{this.img}}" title="{{this.name}}"/>
                             <label>{{this.name}}{{#if this.system.target}} ({{this.system.target}}){{/if}}</label>
                             <input type="number" value="{{this.system.value}}"/>
                             <button class="item-edit" data-item-id="{{this._id}}">=</button>
                             <button class="item-delete" data-item-id="{{this._id}}">-</button>
-                        {{/each}}
                         {{/each}}
                         <button class="item-create" data-type="passion">+</button>
                     </div>
@@ -84,12 +82,25 @@
                 </div>
                 {{/each}}
             </div>
-            <div class="combat-skills skills pen-container container-grid">
-                {{#each data.system.skills.combat}}
-                <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
-                <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
-                <input type="number" name="system.skills.combat.{{@key}}.value" value="{{this.value}}"/>
-                {{/each}}
+            <div class="flex-container">
+                <div id="combat-skills" class="skills pen-container container-grid">
+                    {{#each data.system.skills.combat}}
+                    <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                    <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
+                    <input type="number" name="system.skills.combat.{{@key}}.value" value="{{this.value}}"/>
+                    {{/each}}
+                </div>
+                <div id="weapon-attacks" class="pen-container container-grid">
+                    {{#each inventory.weapon}}
+                    <img src="{{this.img}}" title="{{this.name}}"/>
+                    <label>{{this.name}}</label>
+                    <label>{{this.system.skill.value}}</label>
+                    <label>{{this.system.formula.value}}</label>
+                    <button class="item-edit" data-item-id="{{this._id}}">=</button>
+                    <button class="item-delete" data-item-id="{{this._id}}">-</button>
+                    {{/each}}
+                    <button class="item-create" data-type="weapon">+</button>
+                </div>
             </div>
         </div>
 

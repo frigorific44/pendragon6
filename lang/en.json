@@ -13,11 +13,15 @@
 
   "PENDRAGON.NewItemName": "New Item",
   "PENDRAGON.NewPassionName": "New Passion",
+  "PENDRAGON.NewWeaponName": "New Weapon",
 
   "PENDRAGON.Experience": "Experience",
   "PENDRAGON.Value": "Value",
 
   "PENDRAGON.PassionTarget": "Target of Passion",
+
+  "PENDRAGON.Formula": "Formula",
+  "PENDRAGON.Skill": "Skill",
 
   "PENDRAGON.Age": "Age",
   "PENDRAGON.Culture": "Culture",

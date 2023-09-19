@@ -419,7 +419,7 @@
   }
 },
 "Item": {
-  "types": ["item","passion"],
+  "types": ["item","passion","weapon"],
   "htmlFields": ["description"],
   "templates": {
     "base": {
@@ -436,6 +436,17 @@
     "target": "",
     "isChecked": false,
     "value": null
+  },
+  "weapon": {
+    "templates": ["base"],
+    "skill": {
+      "value": null,
+      "label": "PENDRAGON.Skill"
+    },
+    "formula": {
+      "value": "",
+      "label": "PENDRAGON.Formula"
+    } 
   }
 }
 }
