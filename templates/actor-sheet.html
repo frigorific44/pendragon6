@@ -7,10 +7,12 @@
             <h1 class="charname">
                 <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
             </h1>
+
+            {{!-- Personal --}}
             <div class="personal">
                 {{#each data.system.personal}}
                 <div {{#ifEquals @key "distinctiveFeatures"}}id="features"{{/ifEquals}}>
-                    <label>{{localize this.label}}</label>
+                    <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
                     <input type="text" name="system.personal.{{@key}}.value" value="{{this.value}}" />
                 </div>
                 {{/each}}
@@ -62,10 +64,14 @@
                         <button class="item-create" data-type="passion">+</button>
                     </div>
                 </div>
+
+                {{!-- General Skills --}}
                 <div id="general-skills" class="skills pen-container container-grid" >
                     {{#each data.system.skills.general}}
                     <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
-                    <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
+                    <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
+                        {{localize (concat "PENDRAGON." (capital @key))}}
+                    </label>
                     <input type="number" name="system.skills.general.{{@key}}.value" value="{{this.value}}"/>
                     {{/each}}
                 </div>
@@ -75,21 +81,31 @@
         {{!-- Combat Tab --}}
         <div class="tab combat" data-group="primary" data-tab="combat">
             <div class="flex-container">
-                {{#each data.system.characteristics as |characteristic key|}}
+
+                {{!-- Characteristics --}}
+                {{#each data.system.characteristics}}
                 <div class="resource">
-                    <label for="system.characteristics.{{key}}.value">{{localize characteristic.short}}</label>
-                    <input type="number" name="system.characteristics.{{key}}.value" value="{{characteristic.value}}"/>
+                    <label for="system.characteristics.{{@key}}.value">
+                        {{localize (concat "PENDRAGON." (capital @key) "Short")}}
+                    </label>
+                    <input type="number" name="system.characteristics.{{@key}}.value" value="{{this.value}}"/>
                 </div>
                 {{/each}}
             </div>
             <div class="flex-container">
+
+                {{!-- Combat Skills --}}
                 <div id="combat-skills" class="skills pen-container container-grid">
                     {{#each data.system.skills.combat}}
                     <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
-                    <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">{{localize this.label}}</label>
+                    <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
+                        {{localize (concat "PENDRAGON." (capital @key))}}
+                    </label>
                     <input type="number" name="system.skills.combat.{{@key}}.value" value="{{this.value}}"/>
                     {{/each}}
                 </div>
+
+                {{!-- Weapon Attacks --}}
                 <div id="weapon-attacks" class="pen-container container-grid">
                     {{#each inventory.weapon}}
                     <img src="{{this.img}}" title="{{this.name}}"/>

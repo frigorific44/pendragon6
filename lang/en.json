@@ -32,15 +32,15 @@
   "PENDRAGON.DistinctiveFeatures": "Distinctive Features",
 
   "PENDRAGON.Size": "Size",
-  "PENDRAGON.SIZ": "SIZ",
+  "PENDRAGON.SizeShort": "SIZ",
   "PENDRAGON.Dexterity": "Dexterity",
-  "PENDRAGON.DEX": "DEX",
+  "PENDRAGON.DexterityShort": "DEX",
   "PENDRAGON.Strength": "Strength",
-  "PENDRAGON.STR": "STR",
+  "PENDRAGON.StrengthShort": "STR",
   "PENDRAGON.Constitution": "Constituion",
-  "PENDRAGON.CON": "CON",
+  "PENDRAGON.ConstitutionShort": "CON",
   "PENDRAGON.Appearance": "Appearance",
-  "PENDRAGON.APP": "APP",
+  "PENDRAGON.AppearanceShort": "APP",
 
   "PENDRAGON.HitPoints": "Hit Points",
   "PENDRAGON.HP": "HP",
@@ -78,6 +78,9 @@
   "PENDRAGON.Suspicious": "Suspicious",
   "PENDRAGON.Valorous": "Valorous",
   "PENDRAGON.Cowardly": "Cowardly",
+
+  "PENDRAGON.CombatSkills": "Combat Skills",
+  "PENDRAGON.GeneralSkills": "Skills",
 
   "PENDRAGON.Awareness": "Awareness",
   "PENDRAGON.Chirugery": "Chirugery",

@@ -3,11 +3,14 @@
  * Author: PhloxenMoxen
  */
 
+// Import configuration
+import { PENDRAGON } from "./config.js";
 // Import Modules
 import { PendragonActor } from "./actor.js";
 import { PendragonItem } from "./item.js";
 import { PendragonItemSheet } from "./item-sheet.js";
 import { PendragonActorSheet } from "./actor-sheet.js";
+import { CharacterData } from "./models/character.js"
 import { PendragonToken, PendragonTokenDocument } from "./token.js";
 
 /* -------------------------------------------- */
@@ -28,6 +31,7 @@ Hooks.once("init", async function() {
     formula: "1d20",
     decimals: 2
   };
+  CONFIG.PENDRAGON = PENDRAGON;
 
   game.pendragon = {
     PendragonActor
@@ -38,11 +42,7 @@ Hooks.once("init", async function() {
   CONFIG.Item.documentClass = PendragonItem;
   CONFIG.Token.documentClass = PendragonTokenDocument;
   CONFIG.Token.objectClass = PendragonToken;
-
-  CONFIG.Combat.initiative = {
-    formula: "1d20",
-    decimals: 2
-  }
+  CONFIG.Actor.dataModels.character = CharacterData;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
@@ -58,18 +58,19 @@ Hooks.once("init", async function() {
   });
 
   /**
-   * Concatenate a list of strings.
-   */
-  Handlebars.registerHelper('concat', function(a, b) {
-    return a + b;
-  });
-
-  /**
-   * 
+   * Equals block helper.
    */
   Handlebars.registerHelper("ifEquals", function(arg1, arg2, options) {
     return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
   });
+
+  /**
+   * Capitalize a string.
+   */
+  Handlebars.registerHelper("capital", function(value) {
+    return value.charAt(0).toUpperCase() + value.slice(1);
+  });
+
 
 });
 
