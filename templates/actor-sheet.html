@@ -39,7 +39,7 @@
                         {{#each data.system.traits}}
                         {{#each this}}
                         {{#if @first}}
-                        <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                        <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
                         <label class="trait rollable left" data-label="{{localize this.label}}" data-value="{{this.value}}">
                             {{localize (concat "PENDRAGON." (capital @key))}}
                         </label>
@@ -52,7 +52,7 @@
                         <label class="trait rollable right" data-label="{{localize this.label}}" data-value="{{this.value}}">
                             {{localize (concat "PENDRAGON." (capital @key))}}
                         </label>                            
-                        <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                        <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
                         {{/if}}
                         {{/each}}
                         {{/each}}
@@ -61,7 +61,7 @@
                     {{!-- Passions --}}
                     <div id="passions" class="pen-container container-grid">
                         {{#each inventory.passion}}
-                            <input class="item-checkbox" type="checkbox" data-item-id="{{this._id}}" {{#if this.system.isChecked}}checked{{/if}}/>
+                            <input class="item-checkbox" type="checkbox" data-item-id="{{this._id}}" {{checked this.system.isChecked}}/>
                             <img src="{{this.img}}" title="{{this.name}}"/>
                             <label>{{this.name}}{{#if this.system.target}} ({{this.system.target}}){{/if}}</label>
                             <input type="number" value="{{this.system.value}}"/>
@@ -75,7 +75,7 @@
                 {{!-- General Skills --}}
                 <div id="general-skills" class="skills pen-container container-grid" >
                     {{#each data.system.skills.general}}
-                    <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                    <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{checked this.isChecked}}/>
                     <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
                         {{localize (concat "PENDRAGON." (capital @key))}}
                     </label>
@@ -104,7 +104,7 @@
                 {{!-- Combat Skills --}}
                 <div id="combat-skills" class="skills pen-container container-grid">
                     {{#each data.system.skills.combat}}
-                    <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{#if this.isChecked}}checked{{/if}}/>
+                    <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{checked this.isChecked}}/>
                     <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
                         {{localize (concat "PENDRAGON." (capital @key))}}
                     </label>
