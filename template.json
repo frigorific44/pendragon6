@@ -1,40 +1,14 @@
 {
 "Actor": {
   "types": ["character"],
-  "htmlFields": ["biography"],
-  "character": {
-    "biography": ""
-  }
+  "htmlFields": [],
+  "character": {}
 },
 "Item": {
   "types": ["item","passion","weapon"],
   "htmlFields": ["description"],
-  "templates": {
-    "base": {
-      "description": ""
-    }
-  },
-  "item": {
-    "templates": ["base"],
-    "quantity": 1,
-    "weight": 0
-  },
-  "passion": {
-    "templates": ["base"],
-    "target": "",
-    "isChecked": false,
-    "value": null
-  },
-  "weapon": {
-    "templates": ["base"],
-    "skill": {
-      "value": null,
-      "label": "PENDRAGON.Skill"
-    },
-    "formula": {
-      "value": "",
-      "label": "PENDRAGON.Formula"
-    } 
-  }
+  "item": {},
+  "passion": {},
+  "weapon": {}
 }
 }

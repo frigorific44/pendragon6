@@ -6,12 +6,20 @@
                 <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
             </h1>
             <h3 class="flexrow">
-                <label>{{localize data.system.skill.label}}</label>
-                <input type="text" name="system.skill.value" value="{{data.system.skill.value}}" />
+                <label>{{localize "PENDRAGON.Skill"}}</label>
+                <select name="system.skill">
+                {{#select item.system.skill}}
+                    {{#each skillOptions}}
+                    <option value="{{this}}">
+                        {{localize (concat "PENDRAGON." (capital this))}}
+                    </option>
+                    {{/each}}
+                {{/select}}
+                </select>
             </h3>
             <div class="flexrow">
-                <label>{{localize data.system.formula.label}}</label>
-                <input type="text" name="system.formula.value" value="{{data.system.formula.value}}" />
+                <label>{{localize "PENDRAGON.Formula"}}</label>
+                <input type="text" name="system.formula" value="{{data.system.formula}}" />
             </div>
         </div>
     </header>

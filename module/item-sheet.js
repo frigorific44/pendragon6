@@ -36,7 +36,20 @@ export class PendragonItemSheet extends ItemSheet {
       secrets: this.document.isOwner,
       async: true
     });
+
+    this._prepareWeaponData(context);
+
     return context;
+  }
+
+  /* -------------------------------------------- */
+
+  /**
+   * Prepare data for Weapon Items.
+   * @param {Object} sheetData 
+   */
+  _prepareWeaponData(sheetData) {
+    sheetData.skillOptions = CONFIG.PENDRAGON.combat_skills;
   }
 
   /* -------------------------------------------- */
