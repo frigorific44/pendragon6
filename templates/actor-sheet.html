@@ -128,6 +128,28 @@
                     {{/each}}
                     <button class="item-create" data-type="weapon">+</button>
                 </div>
+
+                {{!-- Wounds --}}
+                <table id="wounds" class="pen-table">
+                    <thead>
+                        <tr>
+                            <th>{{localize "PENDRAGON.DamageShort"}}</th>
+                            <th>{{localize "PENDRAGON.Wound"}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each data.system.wounds}}
+                        <tr>
+                            <td>
+                                <input type="number" name="system.wounds.{{@key}}.damage" value="{{this.damage}}"/>
+                            </td>
+                            <td>
+                                <input type="text" name="system.wounds.{{@key}}.description" value="{{this.description}}" />
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
             </div>
         </div>
 

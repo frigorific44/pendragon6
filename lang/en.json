@@ -50,6 +50,9 @@
   "PENDRAGON.Debilitated": "Debilitated",
   "PENDRAGON.Deterioration": "Deterioration Damage",
   "PENDRAGON.Aggravated": "Aggravated Damage",
+  "PENDRAGON.Wound": "Wound",
+  "PENDRAGON.Damage": "Damage",
+  "PENDRAGON.DamageShort": "DMG",
   "PENDRAGON.Wounds": "Wounds",
 
   "PENDRAGON.Chaste": "Chaste",

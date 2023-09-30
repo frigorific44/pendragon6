@@ -6,7 +6,7 @@ export class CharacterData extends foundry.abstract.DataModel {
         return {
             personal: new MappingField(new foundry.data.fields.SchemaField({
                 value: new foundry.data.fields.StringField({
-                    required: true, nullable: false, min: 0, initial: ""
+                    required: true, nullable: false, initial: ""
                 })
             }), {initialKeys: CONFIG.PENDRAGON.personal, initialKeysOnly: true}),
             characteristics: new MappingField(new foundry.data.fields.SchemaField({
@@ -43,6 +43,18 @@ export class CharacterData extends foundry.abstract.DataModel {
                         required: true, nullable: false, initial: false
                     })
                 }), {initialKeys: CONFIG.PENDRAGON.general_skills, initialKeysOnly: true})
+            }),
+            wounds: new foundry.data.fields.SchemaField({
+                ...Array(CONFIG.PENDRAGON.maxWounds).fill(0).map((x) =>
+                    new foundry.data.fields.SchemaField({
+                        damage: new foundry.data.fields.NumberField({
+                            required: true, nullable: false, integer: true, initial: 0
+                        }),
+                        description: new foundry.data.fields.StringField({
+                            required: true, nullable: false, initial: ""
+                        })
+                    })
+                )
             })
         }
     }

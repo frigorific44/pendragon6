@@ -3,6 +3,12 @@
 // Namespace Configuration Values
 export const PENDRAGON = {};
 
+/**
+ * The maximum number of wounds that can be represented on the character sheet.
+ * @type {Number}
+ */
+PENDRAGON.maxWounds = 8;
+
 
 /**
  * The set of personal features of a character.
@@ -16,7 +22,7 @@ PENDRAGON.personal = [
     "currentClass",
     "currentLord",
     "distinctiveFeatures"
-]
+];
 
 /**
  * The set of Traits used within the system.
@@ -36,7 +42,7 @@ PENDRAGON.traits = [
     ["temperate", "indulgent"],
     ["trusting", "suspicious"],
     ["valorous", "cowardly"]
-]
+];
 
 /**
  * The set of Characteristics used within the system.
@@ -48,7 +54,7 @@ PENDRAGON.characteristics = [
     "strength",
     "constitution",
     "appearance"
-]
+];
 
 /**
  * The set of Skills used within the system.
@@ -75,7 +81,7 @@ PENDRAGON.general_skills = [
     "religion",
     "sing",
     "stewardship"
-]
+];
 PENDRAGON.combat_skills = [
     "battle",
     "bow",
@@ -88,4 +94,4 @@ PENDRAGON.combat_skills = [
     "spear",
     "sword",
     "thrownWeapon"
-]
+];
