@@ -65,6 +65,13 @@
     }
   }
 
+  input[type="text"] {
+    background: #0000;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid;
+  }
+
   input[type="number"] {
     height: 28px;
     width: 28px;
@@ -141,6 +148,13 @@
 
   #weapon-attacks {
     grid-template-columns: 28px 1fr 28px 1fr 28px 28px;
+  }
+
+  #wounds {
+    thead > tr {
+      :nth-child(1) { width: 25%;}
+      :nth-child(2) { width: 75%;}
+    }
   }
 
   /* Sheet Tabs */

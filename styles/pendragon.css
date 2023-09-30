@@ -61,6 +61,12 @@
 .pendragon .sheet-header .personal #features {
   grid-column: 1 / span 2;
 }
+.pendragon input[type="text"] {
+  background: #0000;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid;
+}
 .pendragon input[type="number"] {
   height: 28px;
   width: 28px;
@@ -126,6 +132,12 @@
 }
 .pendragon #weapon-attacks {
   grid-template-columns: 28px 1fr 28px 1fr 28px 28px;
+}
+.pendragon #wounds thead > tr :nth-child(1) {
+  width: 25%;
+}
+.pendragon #wounds thead > tr :nth-child(2) {
+  width: 75%;
 }
 .pendragon .tabs {
   flex: 0 0 40px;
