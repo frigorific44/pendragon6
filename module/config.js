@@ -95,3 +95,14 @@ PENDRAGON.combat_skills = [
     "sword",
     "thrownWeapon"
 ];
+
+/**
+ * Armor components which make up the total Armor Points
+ * @type {Array}
+ */
+PENDRAGON.armor_parts = [
+    "padding",
+    "armor",
+    "helmet",
+    "shield"
+]

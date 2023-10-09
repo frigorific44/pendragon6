@@ -39,27 +39,30 @@
   height: 100%;
   margin: 0;
 }
-.pendragon .sheet-header .personal {
+.pendragon .sheet-header #personal {
   width: 300px;
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-gap: 0.2em;
   align-content: space-between;
 }
-.pendragon .sheet-header .personal div {
+.pendragon .sheet-header #personal div {
   display: flex;
   align-items: baseline;
 }
-.pendragon .sheet-header .personal label {
+.pendragon .sheet-header #personal label {
   font-size: 0.8em;
   padding-right: 0.5em;
 }
-.pendragon .sheet-header .personal input {
+.pendragon .sheet-header #personal input {
   height: 1.2em;
   font-size: 1em;
 }
-.pendragon .sheet-header .personal #features {
+.pendragon .sheet-header #personal #features {
   grid-column: 1 / span 2;
+}
+.pendragon .sheet-header #joust .flex-container {
+  align-items: baseline;
 }
 .pendragon input[type="text"] {
   background: #0000;
@@ -100,6 +103,23 @@
   align-items: center;
   column-gap: 0.5em;
 }
+.pendragon .parent-relative {
+  position: relative;
+}
+.pendragon .dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.pendragon .show {
+  display: block;
+}
+.pendragon .align-right {
+  right: 0;
+}
+.pendragon .align-left {
+  left: 0;
+}
 .pendragon .skills {
   grid-template-columns: 28px 1fr 28px;
 }
@@ -128,16 +148,25 @@
   grid-template-columns: 28px 28px 1fr 28px 28px 28px;
 }
 .pendragon #play-grid #passions .item-create {
-  grid-column: 1 / span 4;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.pendragon #armor-parts {
+  grid-template-columns: 1fr 28px 28px;
+  margin: 0;
 }
 .pendragon #weapon-attacks {
-  grid-template-columns: 28px 1fr 28px 1fr 28px 28px;
+  grid-template-columns: 28px 1fr 28px auto 28px 28px;
+}
+.pendragon #weapon-attacks .item-create {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.pendragon #wounds {
+  width: 12em;
 }
 .pendragon #wounds thead > tr :nth-child(1) {
-  width: 25%;
-}
-.pendragon #wounds thead > tr :nth-child(2) {
-  width: 75%;
+  width: 30px;
 }
 .pendragon .tabs {
   flex: 0 0 40px;

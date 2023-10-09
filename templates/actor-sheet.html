@@ -1,20 +1,35 @@
 <form class="flexcol {{cssClass}}" autocomplete="off">
+    {{log this}}
     {{!-- Sheet Header --}}
     <header class="sheet-header">
-        <img class="profile-img" src="{{data.img}}" data-edit="img" title="{{data.name}}" height="100" width="100" />
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
         <div class="header-fields">
             <h1 class="charname">
-                <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
+                <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
             </h1>
 
-            {{!-- Personal --}}
-            <div class="personal">
-                {{#each data.system.personal}}
-                <div {{#ifEquals @key "distinctiveFeatures"}}id="features"{{/ifEquals}}>
-                    <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
-                    <input type="text" name="system.personal.{{@key}}.value" value="{{this.value}}" />
+            <div class="flex-container">
+
+                {{!-- Personal --}}
+                <div id="personal">
+                    {{#each actor.system.personal}}
+                    <div {{#ifEquals @key "distinctiveFeatures"}}id="features"{{/ifEquals}}>
+                        <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
+                        <input type="text" name="system.personal.{{@key}}.value" value="{{this.value}}" />
+                    </div>
+                    {{/each}}
                 </div>
-                {{/each}}
+
+                {{!-- Scores --}}
+                <div id="joust">
+                    <h3>{{localize "PENDRAGON.JoustScore"}}</h3>
+                    <div class="flex-container">
+                        <h4>{{localize "PENDRAGON.Wins"}}</h4>
+                        <input type="number" name="system.joust.wins" value="{{actor.system.joust.wins}}"/>
+                        <h4>{{localize "PENDRAGON.Loses"}}</h4>
+                        <input type="number" name="system.joust.loses" value="{{actor.system.joust.loses}}"/>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -36,7 +51,7 @@
 
                     {{!-- Traits --}}
                     <div id="traits" class="pen-container container-grid">
-                        {{#each data.system.traits}}
+                        {{#each actor.system.traits}}
                         {{#each this}}
                         {{#if @first}}
                         <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
@@ -74,7 +89,7 @@
 
                 {{!-- General Skills --}}
                 <div id="general-skills" class="skills pen-container container-grid" >
-                    {{#each data.system.skills.general}}
+                    {{#each actor.system.skills.general}}
                     <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{checked this.isChecked}}/>
                     <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
                         {{localize (concat "PENDRAGON." (capital @key))}}
@@ -90,7 +105,7 @@
             <div class="flex-container">
 
                 {{!-- Characteristics --}}
-                {{#each data.system.characteristics}}
+                {{#each actor.system.characteristics}}
                 <div class="resource">
                     <label for="system.characteristics.{{@key}}.value">
                         {{localize (concat "PENDRAGON." (capital @key) "Short")}}
@@ -98,12 +113,34 @@
                     <input type="number" name="system.characteristics.{{@key}}.value" value="{{this.value}}"/>
                 </div>
                 {{/each}}
+
+                {{!-- Movement and Armor --}}
+                <div class="flexcol">
+                    <span>
+                        {{localize "PENDRAGON.Movement"}} {{actor.system.derived.movement}}
+                    </span>
+                    <span class="parent-relative">
+                        {{localize "PENDRAGON.Armor"}} {{actor.system.armor.total}}
+                        <a class="dropdown">
+                            <i class="fas fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-content align-right">
+                            <div id="armor-parts" class="container-grid pen-container">
+                                {{#each actor.system.armor.parts}}
+                                <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
+                                <input type="number" name="system.armor.parts.{{@key}}.value" value="{{this.value}}"/>
+                                <input type="checkbox" name="system.armor.parts.{{@key}}.worn" {{checked this.worn}}/>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </span>
+                </div>
             </div>
             <div class="flex-container">
 
                 {{!-- Combat Skills --}}
                 <div id="combat-skills" class="skills pen-container container-grid">
-                    {{#each data.system.skills.combat}}
+                    {{#each actor.system.skills.combat}}
                     <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{checked this.isChecked}}/>
                     <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
                         {{localize (concat "PENDRAGON." (capital @key))}}
@@ -118,7 +155,7 @@
                     <img src="{{this.img}}" title="{{this.name}}"/>
                     <label>{{this.name}}</label>
                     <label>
-                        {{#with (lookup ../data.system.skills.combat system.skill)}}
+                        {{#with (lookup ../actor.system.skills.combat system.skill)}}
                         {{value}}
                         {{/with}}
                     </label>
@@ -130,7 +167,7 @@
                 </div>
 
                 {{!-- Wounds --}}
-                <table id="wounds" class="pen-table">
+                <table id="wounds" class="pen-table pen-container">
                     <thead>
                         <tr>
                             <th>{{localize "PENDRAGON.DamageShort"}}</th>
@@ -138,7 +175,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{#each data.system.wounds}}
+                        {{#each actor.system.wounds}}
                         <tr>
                             <td>
                                 <input type="number" name="system.wounds.{{@key}}.damage" value="{{this.damage}}"/>

@@ -19,7 +19,6 @@ export class PendragonActorSheet extends ActorSheet {
     });
   }
 
-  /* -------------------------------------------- */
 
   /** @inheritdoc */
   async getData(options) {
@@ -34,8 +33,6 @@ export class PendragonActorSheet extends ActorSheet {
 
     return context;
   }
-
-  /* -------------------------------------------- */
 
   /**
    * Organize and classify Items for Character sheets.
@@ -84,6 +81,11 @@ export class PendragonActorSheet extends ActorSheet {
       item.update(updateData);
     });
 
+    // Dropdown display toggle
+    html.find('.dropdown').on("click", ev => {
+      $(ev.currentTarget).siblings(".dropdown-content").toggleClass("show");
+    });
+
     // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
 
@@ -96,8 +98,6 @@ export class PendragonActorSheet extends ActorSheet {
       this.actor.deleteEmbeddedDocuments("Item",[itemId]);
     });
   }
-
-  /* -------------------------------------------- */
 
   /**
    * Listen for roll buttons on traits.
@@ -118,8 +118,6 @@ export class PendragonActorSheet extends ActorSheet {
       });
     }
   }
-
-  /* -------------------------------------------- */
   
   /**
    * Listen for add buttons on traits.
@@ -134,8 +132,6 @@ export class PendragonActorSheet extends ActorSheet {
       this.actor.shiftOneTowardsTrait(dataset.dual, dataset.trait);
     }
   }
-
-  /* -------------------------------------------- */
 
   /**
    * Listen for item creation input events and
@@ -157,7 +153,5 @@ export class PendragonActorSheet extends ActorSheet {
     delete itemData.data["type"];
     return this.actor.createEmbeddedDocuments("Item", [itemData]);
   }
-
-  /* -------------------------------------------- */
 
 }

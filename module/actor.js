@@ -8,7 +8,8 @@ export class PendragonActor extends Actor {
 
   /** @inheritdoc */
   prepareDerivedData() {
-    super.prepareDerivedData();
+    this._prepareDerivedStatistics();
+    this._prepareArmor();
   }
 
   /* -------------------------------------------- */
@@ -24,6 +25,35 @@ export class PendragonActor extends Actor {
     const data = this.toObject(false).system;
 
     return data;
+  }
+
+  /* -------------------------------------------- */
+
+  /**
+   * Prepare derived statistics.
+   */
+  _prepareDerivedStatistics() {
+    this.system.hp.max = this.system.characteristics.size.value + this.system.characteristics.constitution.value;
+
+    this.system.derived = {};
+    this.system.derived.healing = Math.round((this.system.characteristics.strength.value + this.system.characteristics.constitution.value) / 10);
+    this.system.derived.knockdown = this.system.characteristics.size.value;
+    this.system.derived.majorWound = this.system.characteristics.constitution.value;
+    this.system.derived.unconscious = Math.round(this.system.hp.max / 4);
+
+    this.system.derived.movement = Math.round((this.system.characteristics.strength.value + this.system.characteristics.dexterity.value) / 10);
+  }
+
+  /* -------------------------------------------- */
+
+  /**
+   * Prepare the armor total
+   */
+  _prepareArmor() {
+    this.system.armor.total = Object.values(this.system.armor.parts).reduce((accumulator, current) => {
+      let currVal = current.worn ? current.value : 0;
+      return accumulator + currVal;
+    }, 0);
   }
 
   /* -------------------------------------------- */

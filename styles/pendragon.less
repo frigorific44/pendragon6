@@ -41,7 +41,7 @@
       }
     }
 
-    .personal {
+    #personal {
       width: 300px;
       display: grid;
       grid-template-columns: 2fr 3fr;
@@ -61,6 +61,12 @@
       }
       #features {
         grid-column: 1 / span 2;
+      }
+    }
+
+    #joust {
+      .flex-container {
+        align-items: baseline;
       }
     }
   }
@@ -111,6 +117,22 @@
     column-gap: 0.5em;
   }
 
+  .parent-relative {
+    position: relative;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .show {display:block;}
+
+  .align-right {right: 0;}
+
+  .align-left {left: 0;}
+
   .skills {
     grid-template-columns: 28px 1fr 28px;
     label {
@@ -141,19 +163,29 @@
     #passions {
       grid-template-columns: 28px 28px 1fr 28px 28px 28px;
       .item-create {
-        grid-column: 1 / span 4;
+        grid-column-start: 1;
+        grid-column-end: -1;
       } 
     }
   }
 
+  #armor-parts {
+    grid-template-columns: 1fr 28px 28px;
+    margin: 0;
+  }
+
   #weapon-attacks {
-    grid-template-columns: 28px 1fr 28px 1fr 28px 28px;
+    grid-template-columns: 28px 1fr 28px auto 28px 28px;
+    .item-create {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    } 
   }
 
   #wounds {
+    width: 12em;
     thead > tr {
-      :nth-child(1) { width: 25%;}
-      :nth-child(2) { width: 75%;}
+      :nth-child(1) { width: 30px;}
     }
   }
 

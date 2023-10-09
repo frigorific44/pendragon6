@@ -31,6 +31,10 @@
   "PENDRAGON.CurrentLord": "Lord",
   "PENDRAGON.DistinctiveFeatures": "Distinctive Features",
 
+  "PENDRAGON.JoustScore": "Joust Score",
+  "PENDRAGON.Wins": "Wins",
+  "PENDRAGON.Loses": "Loses",
+
   "PENDRAGON.Size": "Size",
   "PENDRAGON.SizeShort": "SIZ",
   "PENDRAGON.Dexterity": "Dexterity",
@@ -41,6 +45,12 @@
   "PENDRAGON.ConstitutionShort": "CON",
   "PENDRAGON.Appearance": "Appearance",
   "PENDRAGON.AppearanceShort": "APP",
+
+  "PENDRAGON.Movement": "Movement",
+  "PENDRAGON.Armor": "Armor",
+  "PENDRAGON.Padding": "Padding",
+  "PENDRAGON.Helmet": "Helmet",
+  "PENDRAGON.Shield": "Shield",
 
   "PENDRAGON.HitPoints": "Hit Points",
   "PENDRAGON.HP": "HP",
