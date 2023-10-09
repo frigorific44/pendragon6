@@ -78,6 +78,9 @@ export class CharacterData extends foundry.abstract.DataModel {
             }),
             armor: new SchemaField({
                 parts: new MappingField(new SchemaField({
+                    type: new StringField({
+                        required: true, nullable: false, initial: ""
+                    }),
                     worn: new BooleanField({
                         required: true, nullable: false, initial: true
                     }),
