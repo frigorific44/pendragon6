@@ -81,11 +81,6 @@ export class PendragonActorSheet extends ActorSheet {
       item.update(updateData);
     });
 
-    // Dropdown display toggle
-    html.find('.dropdown').on("click", ev => {
-      $(ev.currentTarget).siblings(".dropdown-content").toggleClass("show");
-    });
-
     // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
 

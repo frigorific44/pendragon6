@@ -103,23 +103,6 @@
   align-items: center;
   column-gap: 0.5em;
 }
-.pendragon .parent-relative {
-  position: relative;
-}
-.pendragon .dropdown-content {
-  display: none;
-  position: absolute;
-  z-index: 1;
-}
-.pendragon .show {
-  display: block;
-}
-.pendragon .align-right {
-  right: 0;
-}
-.pendragon .align-left {
-  left: 0;
-}
 .pendragon .skills {
   grid-template-columns: 28px 1fr 28px;
 }

@@ -119,20 +119,11 @@
                     <span>
                         {{localize "PENDRAGON.Movement"}} {{actor.system.derived.movement}}
                     </span>
-                    <span class="parent-relative">
+                    <span>
                         {{localize "PENDRAGON.Armor"}} {{actor.system.armor.total}}
-                        <a class="dropdown">
+                        <a>
                             <i class="fas fa-caret-down"></i>
                         </a>
-                        <div class="dropdown-content align-right">
-                            <div id="armor-parts" class="container-grid pen-container">
-                                {{#each actor.system.armor.parts}}
-                                <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
-                                <input type="number" name="system.armor.parts.{{@key}}.value" value="{{this.value}}"/>
-                                <input type="checkbox" name="system.armor.parts.{{@key}}.worn" {{checked this.worn}}/>
-                                {{/each}}
-                            </div>
-                        </div>
                     </span>
                 </div>
             </div>
