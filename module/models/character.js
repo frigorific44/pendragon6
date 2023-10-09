@@ -56,6 +56,43 @@ export class CharacterData extends foundry.abstract.DataModel {
                         })
                     })
                 )
+            }),
+            hp: new SchemaField({
+                value: new NumberField({
+                    required: true, nullable: false, integer: true, min: 0, initial: 1
+                }),
+                max: new NumberField({
+                    required: true, nullable: false, integer: true, min: 1, initial: 1
+                }),
+            }),
+            debilitated: new BooleanField({
+                required: true, nullable: false, initial: false
+            }),
+            damage: new SchemaField({
+                aggravated: new NumberField({
+                    required: true, nullable: false, integer: true, min: 0, initial: 0
+                }),
+                deterioration: new NumberField({
+                    required: true, nullable: false, integer: true, min: 0, initial: 0
+                })
+            }),
+            armor: new SchemaField({
+                parts: new MappingField(new SchemaField({
+                    worn: new BooleanField({
+                        required: true, nullable: false, initial: true
+                    }),
+                    value: new NumberField({
+                        required: true, nullable: false, integer: true, initial: 0
+                    })
+                }), {initialKeys: CONFIG.PENDRAGON.armor_parts, initialKeysOnly: true})
+            }),
+            joust: new SchemaField({
+                wins: new NumberField({
+                    required: true, nullable: false, integer: true, min: 0, initial: 0
+                }),
+                loses: new NumberField({
+                    required: true, nullable: false, integer: true, min: 0, initial: 0
+                })
             })
         }
     }
