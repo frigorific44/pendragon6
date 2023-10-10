@@ -1,4 +1,4 @@
-
+import ArmorDialogue from "./armor-dialogue.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -83,6 +83,12 @@ export class PendragonActorSheet extends ActorSheet {
 
     // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
+
+    // Open Armor Component edit dialogue
+    html.find(".armor-components").on("click", ev => {
+      ev.preventDefault();
+      new ArmorDialogue(this.actor).render(true);
+    })
 
     // Add item
     html.find('.item-create').on("click", this._onItemCreate.bind(this));

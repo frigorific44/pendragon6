@@ -1,0 +1,12 @@
+<div class="{{cssClass}}">
+    {{#each parts}}
+    <div>
+        <h3>{{localize (concat "PENDRAGON." (capital @key))}}</h2>
+        <div class="flexrow" data-part="{{@key}}">
+            <input type="text" value="{{this.type}}" data-field="type" />
+            <input type="number" value="{{this.value}}" data-field="value" />
+            <input type="checkbox" {{checked this.worn}} data-field="worn" />
+        </div>
+    </div>
+    {{/each}}
+</div>
