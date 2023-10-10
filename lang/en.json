@@ -1,4 +1,6 @@
 {
+  "PENDRAGON.Type": "Type",
+
   "PENDRAGON.ItemCreate": "Create Item",
   "PENDRAGON.ItemEdit": "Edit Item",
   "PENDRAGON.ItemDelete": "Delete Item",
