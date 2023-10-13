@@ -43,7 +43,7 @@
   "PENDRAGON.DexterityShort": "DEX",
   "PENDRAGON.Strength": "Strength",
   "PENDRAGON.StrengthShort": "STR",
-  "PENDRAGON.Constitution": "Constituion",
+  "PENDRAGON.Constitution": "Constitution",
   "PENDRAGON.ConstitutionShort": "CON",
   "PENDRAGON.Appearance": "Appearance",
   "PENDRAGON.AppearanceShort": "APP",
@@ -56,7 +56,8 @@
   "PENDRAGON.ArmorComponents": "Armor Components",
 
   "PENDRAGON.HitPoints": "Hit Points",
-  "PENDRAGON.HP": "HP",
+  "PENDRAGON.HitPointsShort": "HP",
+  "PENDRAGON.Healing": "Healing",
   "PENDRAGON.Knockdown": "Knockdown",
   "PENDRAGON.MajorWound": "Major Wound",
   "PENDRAGON.Unconcious": "Unconcious",
