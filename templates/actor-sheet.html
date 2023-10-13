@@ -108,7 +108,9 @@
                 {{#each actor.system.characteristics}}
                 <div class="resource">
                     <label for="system.characteristics.{{@key}}.value">
-                        {{localize (concat "PENDRAGON." (capital @key) "Short")}}
+                        <abbr title="{{localize (concat "PENDRAGON." (capital @key) )}}">
+                            {{localize (concat "PENDRAGON." (capital @key) "Short")}}
+                        </abbr>
                     </label>
                     <input type="number" name="system.characteristics.{{@key}}.value" value="{{this.value}}"/>
                 </div>
@@ -157,11 +159,37 @@
                     <button class="item-create" data-type="weapon">+</button>
                 </div>
 
+                {{!-- Health --}}
+                <div id="health" class="pen-container">
+                    <h3>
+                        <abbr title="{{localize "PENDRAGON.HitPoints"}}">
+                            {{localize "PENDRAGON.HitPointsShort"}}
+                        </abbr>
+                        <input type="number" name="system.hp.value" value="{{actor.system.hp.value}}"/> / {{actor.system.hp.max}}
+                    </h3>
+                    <h5>
+                        Debilitated
+                        <input type="checkbox" name="system.debilitated" {{checked actor.system.debilitated}}/>
+                    </h5>
+                    <h4>
+                        Aggravated
+                        <input type="number" name="system.damage.aggravated" value="{{actor.system.damage.aggravated}}"/>
+                    </h4>
+                    <h4>
+                        Deterioration
+                        <input type="number" name="system.damage.deterioration" value="{{actor.system.damage.deterioration}}"/>
+                    </h4>
+                    <h5>{{localize "PENDRAGON.Healing"}}: {{actor.system.derived.healing}}</h4>
+                    <h5>{{localize "PENDRAGON.Knockdown"}}: {{actor.system.derived.knockdown}}</h4>
+                    <h5>{{localize "PENDRAGON.MajorWound"}}: {{actor.system.derived.majorWound}}</h4>
+                    <h5>{{localize "PENDRAGON.Unconcious"}}: {{actor.system.derived.unconscious}}</h4>
+                </div>
+
                 {{!-- Wounds --}}
                 <table id="wounds" class="pen-table pen-container">
                     <thead>
                         <tr>
-                            <th>{{localize "PENDRAGON.DamageShort"}}</th>
+                            <th><abbr title="{{localize "PENDRAGON.Damage"}}">{{localize "PENDRAGON.DamageShort"}}</abbr></th>
                             <th>{{localize "PENDRAGON.Wound"}}</th>
                         </tr>
                     </thead>
