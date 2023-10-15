@@ -1,6 +1,13 @@
 .pendragon {
+  /* || UTILITIES */
   /* Sheet Tabs */
   /* Items List */
+}
+.pendragon .self-left {
+  justify-self: start;
+}
+.pendragon .self-right {
+  justify-self: end;
 }
 .pendragon .window-content {
   height: 100%;
@@ -121,12 +128,6 @@
   width: 20px;
   height: 20px;
 }
-.pendragon #play-grid #traits .left {
-  justify-self: end;
-}
-.pendragon #play-grid #traits .right {
-  justify-self: start;
-}
 .pendragon #play-grid #passions {
   grid-template-columns: 28px 28px 1fr 28px 28px 28px;
 }
@@ -145,11 +146,22 @@
   grid-column-start: 1;
   grid-column-end: -1;
 }
+.pendragon #health-derived {
+  grid-template-columns: 1fr 28px;
+}
 .pendragon #wounds {
   width: 12em;
 }
 .pendragon #wounds thead > tr :nth-child(1) {
   width: 30px;
+}
+.pendragon .tab.combat .flex-combat:nth-of-type(1) {
+  flex: 1 1 50%;
+  max-width: max-content;
+}
+.pendragon .tab.combat .flex-combat:nth-of-type(2) {
+  flex: 2 1 50%;
+  max-width: max-content;
 }
 .pendragon .tabs {
   flex: 0 0 40px;

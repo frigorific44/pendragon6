@@ -1,4 +1,8 @@
 .pendragon {
+  /* || UTILITIES */
+  .self-left {justify-self: start;}
+  .self-right {justify-self: end;}
+
   .window-content {
     height: 100%;
     padding: 5px;
@@ -134,12 +138,6 @@
         width: 20px;
         height: 20px;
       }
-      .left {
-        justify-self: end;
-      }
-      .right {
-        justify-self: start;
-      }
     }
     #general-skills {
       
@@ -158,6 +156,8 @@
     margin: 0;
   }
 
+
+
   #weapon-attacks {
     grid-template-columns: 28px 1fr 28px auto 28px 28px;
     .item-create {
@@ -166,10 +166,25 @@
     } 
   }
 
+  #health-derived {
+    grid-template-columns: 1fr 28px;
+  }
+
   #wounds {
     width: 12em;
     thead > tr {
       :nth-child(1) { width: 30px;}
+    }
+  }
+
+  .tab.combat {
+    .flex-combat:nth-of-type(1) {
+      flex: 1 1 50%;
+      max-width: max-content;
+    }
+    .flex-combat:nth-of-type(2) {
+      flex: 2 1 50%;
+      max-width: max-content;
     }
   }
 

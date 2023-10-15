@@ -55,7 +55,7 @@
                         {{#each this}}
                         {{#if @first}}
                         <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
-                        <label class="trait rollable left" data-label="{{localize this.label}}" data-value="{{this.value}}">
+                        <label class="trait rollable self-right" data-label="{{localize this.label}}" data-value="{{this.value}}">
                             {{localize (concat "PENDRAGON." (capital @key))}}
                         </label>
                         <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
@@ -64,7 +64,7 @@
                         {{#if @last}}
                         <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
                         <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
-                        <label class="trait rollable right" data-label="{{localize this.label}}" data-value="{{this.value}}">
+                        <label class="trait rollable self-left" data-label="{{localize this.label}}" data-value="{{this.value}}">
                             {{localize (concat "PENDRAGON." (capital @key))}}
                         </label>                            
                         <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
@@ -130,82 +130,90 @@
                 </div>
             </div>
             <div class="flex-container">
+                <div class="flex-container flex-combat">
 
-                {{!-- Combat Skills --}}
-                <div id="combat-skills" class="skills pen-container container-grid">
-                    {{#each actor.system.skills.combat}}
-                    <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{checked this.isChecked}}/>
-                    <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
-                        {{localize (concat "PENDRAGON." (capital @key))}}
-                    </label>
-                    <input type="number" name="system.skills.combat.{{@key}}.value" value="{{this.value}}"/>
-                    {{/each}}
-                </div>
-
-                {{!-- Weapon Attacks --}}
-                <div id="weapon-attacks" class="pen-container container-grid">
-                    {{#each inventory.weapon}}
-                    <img src="{{this.img}}" title="{{this.name}}"/>
-                    <label>{{this.name}}</label>
-                    <label>
-                        {{#with (lookup ../actor.system.skills.combat system.skill)}}
-                        {{value}}
-                        {{/with}}
-                    </label>
-                    <label>{{this.system.formula}}</label>
-                    <button class="item-edit" data-item-id="{{this._id}}">=</button>
-                    <button class="item-delete" data-item-id="{{this._id}}">-</button>
-                    {{/each}}
-                    <button class="item-create" data-type="weapon">+</button>
-                </div>
-
-                {{!-- Health --}}
-                <div id="health" class="pen-container">
-                    <h3>
-                        <abbr title="{{localize "PENDRAGON.HitPoints"}}">
-                            {{localize "PENDRAGON.HitPointsShort"}}
-                        </abbr>
-                        <input type="number" name="system.hp.value" value="{{actor.system.hp.value}}"/> / {{actor.system.hp.max}}
-                    </h3>
-                    <h5>
-                        Debilitated
-                        <input type="checkbox" name="system.debilitated" {{checked actor.system.debilitated}}/>
-                    </h5>
-                    <h4>
-                        Aggravated
-                        <input type="number" name="system.damage.aggravated" value="{{actor.system.damage.aggravated}}"/>
-                    </h4>
-                    <h4>
-                        Deterioration
-                        <input type="number" name="system.damage.deterioration" value="{{actor.system.damage.deterioration}}"/>
-                    </h4>
-                    <h5>{{localize "PENDRAGON.Healing"}}: {{actor.system.derived.healing}}</h4>
-                    <h5>{{localize "PENDRAGON.Knockdown"}}: {{actor.system.derived.knockdown}}</h4>
-                    <h5>{{localize "PENDRAGON.MajorWound"}}: {{actor.system.derived.majorWound}}</h4>
-                    <h5>{{localize "PENDRAGON.Unconcious"}}: {{actor.system.derived.unconscious}}</h4>
-                </div>
-
-                {{!-- Wounds --}}
-                <table id="wounds" class="pen-table pen-container">
-                    <thead>
-                        <tr>
-                            <th><abbr title="{{localize "PENDRAGON.Damage"}}">{{localize "PENDRAGON.DamageShort"}}</abbr></th>
-                            <th>{{localize "PENDRAGON.Wound"}}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{#each actor.system.wounds}}
-                        <tr>
-                            <td>
-                                <input type="number" name="system.wounds.{{@key}}.damage" value="{{this.damage}}"/>
-                            </td>
-                            <td>
-                                <input type="text" name="system.wounds.{{@key}}.description" value="{{this.description}}" />
-                            </td>
-                        </tr>
+                    {{!-- Weapon Attacks --}}
+                    <div id="weapon-attacks" class="pen-container container-grid">
+                        {{#each inventory.weapon}}
+                        <img src="{{this.img}}" title="{{this.name}}"/>
+                        <label>{{this.name}}</label>
+                        <label>
+                            {{#with (lookup ../actor.system.skills.combat system.skill)}}
+                            {{value}}
+                            {{/with}}
+                        </label>
+                        <label>{{this.system.formula}}</label>
+                        <button class="item-edit" data-item-id="{{this._id}}">=</button>
+                        <button class="item-delete" data-item-id="{{this._id}}">-</button>
                         {{/each}}
-                    </tbody>
-                </table>
+                        <button class="item-create" data-type="weapon">+</button>
+                    </div>
+
+                    {{!-- Combat Skills --}}
+                    <div id="combat-skills" class="skills pen-container container-grid">
+                        {{#each actor.system.skills.combat}}
+                        <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{checked this.isChecked}}/>
+                        <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
+                            {{localize (concat "PENDRAGON." (capital @key))}}
+                        </label>
+                        <input type="number" name="system.skills.combat.{{@key}}.value" value="{{this.value}}"/>
+                        {{/each}}
+                    </div>
+
+                </div>
+                <div class="flex-container flex-combat">
+
+                    {{!-- Health --}}
+                    <div id="health" class="pen-container">
+                        <h3>
+                            <abbr title="{{localize "PENDRAGON.HitPoints"}}">
+                                {{localize "PENDRAGON.HitPointsShort"}}
+                            </abbr>
+                            <input type="number" name="system.hp.value" value="{{actor.system.hp.value}}"/> / {{actor.system.hp.max}}
+                        </h3>
+                        <h5>
+                            Debilitated
+                            <input type="checkbox" name="system.debilitated" {{checked actor.system.debilitated}}/>
+                        </h5>
+                        <h4>
+                            Aggravated
+                            <input type="number" name="system.damage.aggravated" value="{{actor.system.damage.aggravated}}"/>
+                        </h4>
+                        <h4>
+                            Deterioration
+                            <input type="number" name="system.damage.deterioration" value="{{actor.system.damage.deterioration}}"/>
+                        </h4>
+                        <div id="health-derived" class="container-grid">    
+                            <span class="self-left">{{localize "PENDRAGON.Healing"}}</span><span>{{actor.system.derived.healing}}</span>
+                            <span class="self-left">{{localize "PENDRAGON.Knockdown"}}</span><span>{{actor.system.derived.knockdown}}</span>
+                            <span class="self-left">{{localize "PENDRAGON.MajorWound"}}</span><span>{{actor.system.derived.majorWound}}</span>
+                            <span class="self-left">{{localize "PENDRAGON.Unconcious"}}</span><span>{{actor.system.derived.unconscious}}</span>
+                        </div>
+                    </div>
+
+                    {{!-- Wounds --}}
+                    <table id="wounds" class="pen-table pen-container">
+                        <thead>
+                            <tr>
+                                <th><abbr title="{{localize "PENDRAGON.Damage"}}">{{localize "PENDRAGON.DamageShort"}}</abbr></th>
+                                <th>{{localize "PENDRAGON.Wound"}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each actor.system.wounds}}
+                            <tr>
+                                <td>
+                                    <input type="number" name="system.wounds.{{@key}}.damage" value="{{this.damage}}"/>
+                                </td>
+                                <td>
+                                    <input type="text" name="system.wounds.{{@key}}.description" value="{{this.description}}" />
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+
+                </div>
             </div>
         </div>
 
