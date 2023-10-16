@@ -5,6 +5,9 @@
   /* || OTHER */
   /* Sheet Tabs */
 }
+.pendragon .align-center {
+  align-items: center;
+}
 .pendragon .pen-grid {
   display: grid;
   width: fit-content;
@@ -22,6 +25,7 @@
 .pendragon .pen-container {
   outline: black solid 2px;
   margin: 1em;
+  padding: 0.2em;
 }
 .pendragon input[type="text"] {
   background: #0000;
@@ -135,6 +139,19 @@
 }
 .pendragon .tab.play .passions {
   grid-template-columns: 28px 28px 1fr 28px 15px 15px;
+}
+.pendragon .tab.combat .combat-main {
+  align-items: center;
+}
+.pendragon .tab.combat .combat-main .move-armor {
+  justify-items: start;
+  align-tracks: center;
+}
+.pendragon .tab.combat .combat-main .move-armor .move {
+  grid-row: 1;
+}
+.pendragon .tab.combat .combat-main .move-armor .armor {
+  grid-row: 2;
 }
 .pendragon .tab.combat .flex-combat {
   max-width: max-content;

@@ -1,5 +1,6 @@
 .pendragon {
   /* || UTILITIES */
+  .align-center {align-items: center;}
 
 
   /* || CONTAINERS */
@@ -22,6 +23,7 @@
   .pen-container {
     outline: black solid 2px;
     margin: 1em;
+    padding: 0.2em;
   }
 
   /* || GENERAL STYLES */
@@ -174,6 +176,20 @@
   }
 
   .tab.combat {
+    .combat-main {
+      align-items: center;
+      .move-armor {
+        justify-items: start;
+        align-tracks: center;
+        .move {
+          grid-row: 1;
+        }
+        .armor {
+          grid-row: 2;
+        }
+      }
+    }
+
     .flex-combat {
       max-width: max-content;
       &:nth-of-type(1) {

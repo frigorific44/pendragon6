@@ -104,11 +104,11 @@
 
         {{!-- Combat Tab --}}
         <div class="tab combat" data-group="primary" data-tab="combat">
-            <div class="flex-container">
+            <div class="combat-main flex-container">
 
                 {{!-- Characteristics --}}
                 {{#each actor.system.characteristics}}
-                <div class="resource">
+                <div class="characteristics">
                     <label for="system.characteristics.{{@key}}.value">
                         <abbr title="{{localize (concat "PENDRAGON." (capital @key) )}}">
                             {{localize (concat "PENDRAGON." (capital @key) "Short")}}
@@ -119,16 +119,12 @@
                 {{/each}}
 
                 {{!-- Movement and Armor --}}
-                <div class="flexcol">
-                    <span>
-                        {{localize "PENDRAGON.Movement"}} {{actor.system.derived.movement}}
-                    </span>
-                    <span>
-                        {{localize "PENDRAGON.Armor"}} {{actor.system.armor.total}}
-                        <a class="armor-components">
-                            <i class="fas fa-caret-down"></i>
-                        </a>
-                    </span>
+                <div class="move-armor pen-grid pen-container">
+                    <span class="move">{{localize "PENDRAGON.Movement"}}</span>
+                    <span class="move">{{actor.system.derived.movement}}</span>
+                    <span class="armor">{{localize "PENDRAGON.Armor"}}</span>
+                    <span class="armor">{{actor.system.armor.total}}</span>
+                    <a class="armor armor-components"><i class="fas fa-caret-down"></i></a>
                 </div>
             </div>
             <div class="flex-container">
