@@ -38,8 +38,21 @@
     text-align: center;
   }
 
+  // .pen-number {
+  //   position: relative;
+  //   &:after {
+  //     content: "";
+  //     position: absolute;
+  //     margin-left:-28px;
+  //     width:28px;
+  //     height:28px;
+  //     transform:rotate(45deg);
+  //     border: 1px solid #000; /* to see where it is */
+  //   }
+  // }
+
   input[type="checkbox"] {
-    transform: scale(0.75)
+    width: 12px;
   }
 
   .pen-grid > .item-create {
@@ -147,11 +160,7 @@
       grid-template-columns: 1fr min-content;
     }
     .traits {
-      grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
-      .trait-plus {
-        width: 20px;
-        height: 20px;
-      }
+      grid-template-columns: 28px 1fr 28px max-content 28px 1fr 28px;
       label:nth-of-type(odd) {
         justify-self: end;
       }
@@ -160,22 +169,23 @@
       }
     }
     .passions {
-      grid-template-columns: 28px 28px 1fr 28px 28px 28px;
+      grid-template-columns: 28px 28px 1fr 28px 15px 15px;
     }
   }
 
   .tab.combat {
-    .flex-combat:nth-of-type(1) {
-      flex: 1 1 50%;
+    .flex-combat {
       max-width: max-content;
-    }
-    .flex-combat:nth-of-type(2) {
-      flex: 2 1 50%;
-      max-width: max-content;
+      &:nth-of-type(1) {
+        flex: 1 1 min-content;
+      }
+      &:nth-of-type(2) {
+        flex: 2 1 min-content;
+      }
     }
 
     .weapon-attacks {
-      grid-template-columns: 28px 1fr 28px auto 28px 28px;
+      grid-template-columns: 28px 1fr 28px auto 15px 15px;
     }
 
     .health {

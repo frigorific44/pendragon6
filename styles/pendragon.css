@@ -35,7 +35,7 @@
   text-align: center;
 }
 .pendragon input[type="checkbox"] {
-  transform: scale(0.75);
+  width: 12px;
 }
 .pendragon .pen-grid > .item-create {
   grid-column-start: 1;
@@ -125,11 +125,7 @@
   grid-template-columns: 1fr min-content;
 }
 .pendragon .tab.play .traits {
-  grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
-}
-.pendragon .tab.play .traits .trait-plus {
-  width: 20px;
-  height: 20px;
+  grid-template-columns: 28px 1fr 28px max-content 28px 1fr 28px;
 }
 .pendragon .tab.play .traits label:nth-of-type(odd) {
   justify-self: end;
@@ -138,18 +134,19 @@
   justify-self: start;
 }
 .pendragon .tab.play .passions {
-  grid-template-columns: 28px 28px 1fr 28px 28px 28px;
+  grid-template-columns: 28px 28px 1fr 28px 15px 15px;
+}
+.pendragon .tab.combat .flex-combat {
+  max-width: max-content;
 }
 .pendragon .tab.combat .flex-combat:nth-of-type(1) {
-  flex: 1 1 50%;
-  max-width: max-content;
+  flex: 1 1 min-content;
 }
 .pendragon .tab.combat .flex-combat:nth-of-type(2) {
-  flex: 2 1 50%;
-  max-width: max-content;
+  flex: 2 1 min-content;
 }
 .pendragon .tab.combat .weapon-attacks {
-  grid-template-columns: 28px 1fr 28px auto 28px 28px;
+  grid-template-columns: 28px 1fr 28px auto 15px 15px;
 }
 .pendragon .tab.combat .health .health-derived {
   grid-template-columns: 1fr 28px;
