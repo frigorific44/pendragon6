@@ -41,6 +41,9 @@
   grid-column-start: 1;
   grid-column-end: -1;
 }
+.pendragon a.active > i.far {
+  font-weight: 900;
+}
 .pendragon .window-content {
   height: 100%;
   padding: 5px;
