@@ -2,7 +2,7 @@
     {{log this}}
     {{!-- Sheet Header --}}
     <header class="sheet-header">
-        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="150" width="100" />
         <div class="header-fields">
             <h1 class="charname">
                 <input name="name" type="text" value="{{actor.name}}" placeholder="Name" />
@@ -50,12 +50,12 @@
                 <div class="flex-container">
 
                     {{!-- Traits --}}
-                    <div id="traits" class="pen-container container-grid">
+                    <div id="traits" class="pen-container pen-grid">
                         {{#each actor.system.traits}}
                         {{#each this}}
                         {{#if @first}}
                         <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
-                        <label class="trait rollable self-right" data-label="{{localize this.label}}" data-value="{{this.value}}">
+                        <label class="trait rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
                             {{localize (concat "PENDRAGON." (capital @key))}}
                         </label>
                         <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
@@ -64,7 +64,7 @@
                         {{#if @last}}
                         <button class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}">+</button>
                         <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" id="trait-input-{{@key}}" disabled/>
-                        <label class="trait rollable self-left" data-label="{{localize this.label}}" data-value="{{this.value}}">
+                        <label class="trait rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
                             {{localize (concat "PENDRAGON." (capital @key))}}
                         </label>                            
                         <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
@@ -74,7 +74,7 @@
                     </div>
 
                     {{!-- Passions --}}
-                    <div id="passions" class="pen-container container-grid">
+                    <div id="passions" class="pen-container pen-grid">
                         {{#each inventory.passion}}
                             <input class="item-checkbox" type="checkbox" data-item-id="{{this._id}}" {{checked this.system.isChecked}}/>
                             <img src="{{this.img}}" title="{{this.name}}"/>
@@ -88,7 +88,7 @@
                 </div>
 
                 {{!-- General Skills --}}
-                <div id="general-skills" class="skills pen-container container-grid" >
+                <div class="skills pen-container pen-grid" >
                     {{#each actor.system.skills.general}}
                     <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{checked this.isChecked}}/>
                     <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
@@ -133,7 +133,7 @@
                 <div class="flex-container flex-combat">
 
                     {{!-- Weapon Attacks --}}
-                    <div id="weapon-attacks" class="pen-container container-grid">
+                    <div id="weapon-attacks" class="pen-container pen-grid">
                         {{#each inventory.weapon}}
                         <img src="{{this.img}}" title="{{this.name}}"/>
                         <label>{{this.name}}</label>
@@ -150,7 +150,7 @@
                     </div>
 
                     {{!-- Combat Skills --}}
-                    <div id="combat-skills" class="skills pen-container container-grid">
+                    <div id="combat-skills" class="skills pen-container pen-grid">
                         {{#each actor.system.skills.combat}}
                         <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{checked this.isChecked}}/>
                         <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
@@ -183,11 +183,11 @@
                             Deterioration
                             <input type="number" name="system.damage.deterioration" value="{{actor.system.damage.deterioration}}"/>
                         </h4>
-                        <div id="health-derived" class="container-grid">    
-                            <span class="self-left">{{localize "PENDRAGON.Healing"}}</span><span>{{actor.system.derived.healing}}</span>
-                            <span class="self-left">{{localize "PENDRAGON.Knockdown"}}</span><span>{{actor.system.derived.knockdown}}</span>
-                            <span class="self-left">{{localize "PENDRAGON.MajorWound"}}</span><span>{{actor.system.derived.majorWound}}</span>
-                            <span class="self-left">{{localize "PENDRAGON.Unconcious"}}</span><span>{{actor.system.derived.unconscious}}</span>
+                        <div id="health-derived" class="pen-grid">    
+                            <span>{{localize "PENDRAGON.Healing"}}</span><span>{{actor.system.derived.healing}}</span>
+                            <span>{{localize "PENDRAGON.Knockdown"}}</span><span>{{actor.system.derived.knockdown}}</span>
+                            <span>{{localize "PENDRAGON.MajorWound"}}</span><span>{{actor.system.derived.majorWound}}</span>
+                            <span>{{localize "PENDRAGON.Unconcious"}}</span><span>{{actor.system.derived.unconscious}}</span>
                         </div>
                     </div>
 
