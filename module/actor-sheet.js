@@ -15,7 +15,7 @@ export class PendragonActorSheet extends ActorSheet {
       height: 600,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}],
       scrollY: [".play", ".combat", ".possessions"],
-      dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}]
+      // dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}]
     });
   }
 
