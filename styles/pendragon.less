@@ -95,7 +95,7 @@
       }
     }
 
-    #personal {
+    .personal {
       width: 300px;
       display: grid;
       grid-template-columns: 2fr 3fr;
@@ -113,12 +113,12 @@
         height: 1.2em;
         font-size: 1em;
       }
-      #features {
+      .features {
         grid-column: 1 / span 2;
       }
     }
 
-    #joust {
+    .joust {
       .flex-container {
         align-items: baseline;
       }
@@ -141,12 +141,12 @@
   }
 
   .tab.play {
-    #play-grid {
+    .play-grid {
       display: grid;
       align-items: start;
       grid-template-columns: 1fr min-content;
     }
-    #traits {
+    .traits {
       grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
       .trait-plus {
         width: 20px;
@@ -159,7 +159,7 @@
         justify-self: start;
       }
     }
-    #passions {
+    .passions {
       grid-template-columns: 28px 28px 1fr 28px 28px 28px;
     }
   }
@@ -174,18 +174,20 @@
       max-width: max-content;
     }
 
-    #weapon-attacks {
+    .weapon-attacks {
       grid-template-columns: 28px 1fr 28px auto 28px 28px;
     }
 
-    #health-derived {
-      grid-template-columns: 1fr 28px;
-      :nth-child(odd) {
-        justify-self: start;
+    .health {
+      .health-derived {
+        grid-template-columns: 1fr 28px;
+        :nth-child(odd) {
+          justify-self: start;
+        }
       }
     }
 
-    #wounds {
+    .wounds {
       width: 12em;
       thead > tr {
         :nth-child(1) { width: 30px;}

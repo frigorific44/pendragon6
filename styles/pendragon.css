@@ -81,29 +81,29 @@
   height: 100%;
   margin: 0;
 }
-.pendragon .sheet-header #personal {
+.pendragon .sheet-header .personal {
   width: 300px;
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-gap: 0.2em;
   align-content: space-between;
 }
-.pendragon .sheet-header #personal div {
+.pendragon .sheet-header .personal div {
   display: flex;
   align-items: baseline;
 }
-.pendragon .sheet-header #personal label {
+.pendragon .sheet-header .personal label {
   font-size: 0.8em;
   padding-right: 0.5em;
 }
-.pendragon .sheet-header #personal input {
+.pendragon .sheet-header .personal input {
   height: 1.2em;
   font-size: 1em;
 }
-.pendragon .sheet-header #personal #features {
+.pendragon .sheet-header .personal .features {
   grid-column: 1 / span 2;
 }
-.pendragon .sheet-header #joust .flex-container {
+.pendragon .sheet-header .joust .flex-container {
   align-items: baseline;
 }
 .pendragon .resource {
@@ -119,25 +119,25 @@
 .pendragon .skills label {
   justify-self: end;
 }
-.pendragon .tab.play #play-grid {
+.pendragon .tab.play .play-grid {
   display: grid;
   align-items: start;
   grid-template-columns: 1fr min-content;
 }
-.pendragon .tab.play #traits {
+.pendragon .tab.play .traits {
   grid-template-columns: 28px 1fr 28px 28px 28px 28px 1fr 28px;
 }
-.pendragon .tab.play #traits .trait-plus {
+.pendragon .tab.play .traits .trait-plus {
   width: 20px;
   height: 20px;
 }
-.pendragon .tab.play #traits label:nth-of-type(odd) {
+.pendragon .tab.play .traits label:nth-of-type(odd) {
   justify-self: end;
 }
-.pendragon .tab.play #traits label:nth-of-type(even) {
+.pendragon .tab.play .traits label:nth-of-type(even) {
   justify-self: start;
 }
-.pendragon .tab.play #passions {
+.pendragon .tab.play .passions {
   grid-template-columns: 28px 28px 1fr 28px 28px 28px;
 }
 .pendragon .tab.combat .flex-combat:nth-of-type(1) {
@@ -148,19 +148,19 @@
   flex: 2 1 50%;
   max-width: max-content;
 }
-.pendragon .tab.combat #weapon-attacks {
+.pendragon .tab.combat .weapon-attacks {
   grid-template-columns: 28px 1fr 28px auto 28px 28px;
 }
-.pendragon .tab.combat #health-derived {
+.pendragon .tab.combat .health .health-derived {
   grid-template-columns: 1fr 28px;
 }
-.pendragon .tab.combat #health-derived :nth-child(odd) {
+.pendragon .tab.combat .health .health-derived :nth-child(odd) {
   justify-self: start;
 }
-.pendragon .tab.combat #wounds {
+.pendragon .tab.combat .wounds {
   width: 12em;
 }
-.pendragon .tab.combat #wounds thead > tr :nth-child(1) {
+.pendragon .tab.combat .wounds thead > tr :nth-child(1) {
   width: 30px;
 }
 .pendragon .tabs {
