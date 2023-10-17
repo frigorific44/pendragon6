@@ -80,8 +80,8 @@
                         {{#each inventory.passion}}
                             <input class="item-checkbox" type="checkbox" data-item-id="{{this._id}}" {{checked this.system.isChecked}}/>
                             <img src="{{this.img}}" title="{{this.name}}"/>
-                            <label>{{this.name}}{{#if this.system.target}} ({{this.system.target}}){{/if}}</label>
-                            <input type="number" value="{{this.system.value}}"/>
+                            <label class="item-name">{{this.name}}{{#if this.system.target}} ({{this.system.target}}){{/if}}</label>
+                            <span>{{this.system.value}}</span>
                             <a class="item-edit" data-item-id="{{this._id}}"><i class="fas fa-pen-to-square"></i></a>
                             <a class="item-delete" data-item-id="{{this._id}}"><i class="fas fa-xmark"></i></a>
                         {{/each}}
@@ -111,7 +111,7 @@
                 <div class="characteristics">
                     <label for="system.characteristics.{{@key}}.value">
                         <abbr title="{{localize (concat "PENDRAGON." (capital @key) )}}">
-                            {{localize (concat "PENDRAGON." (capital @key) "Short")}}
+                            {{localize (concat "PENDRAGON." (capital @key) "Short")}} 
                         </abbr>
                     </label>
                     <input type="number" name="system.characteristics.{{@key}}.value" value="{{this.value}}"/>
@@ -134,7 +134,7 @@
                     <div class="weapon-attacks pen-container pen-grid">
                         {{#each inventory.weapon}}
                         <img src="{{this.img}}" title="{{this.name}}"/>
-                        <label>{{this.name}}</label>
+                        <label class="item-name">{{this.name}}</label>
                         <label>
                             {{#with (lookup ../actor.system.skills.combat system.skill)}}
                             {{value}}
@@ -148,7 +148,7 @@
                     </div>
 
                     {{!-- Combat Skills --}}
-                    <div id="combat-skills" class="skills pen-container pen-grid">
+                    <div class="skills pen-container pen-grid">
                         {{#each actor.system.skills.combat}}
                         <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{checked this.isChecked}}/>
                         <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">

@@ -11,6 +11,7 @@
     justify-items: center;
     align-items: center;
     column-gap: 0.5em;
+    row-gap: 0.2em;
   }
 
   .flex-container {
@@ -55,6 +56,14 @@
 
   input[type="checkbox"] {
     width: 12px;
+  }
+
+  .item-name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 8em;
+    justify-self: start;
   }
 
   .pen-grid > .item-create {
@@ -171,7 +180,8 @@
       }
     }
     .passions {
-      grid-template-columns: 28px 28px 1fr 28px 15px 15px;
+      grid-template-columns: 28px 28px min-content 28px 15px 15px;
+      .item-name {max-width: 11em;}
     }
   }
 
@@ -201,7 +211,7 @@
     }
 
     .weapon-attacks {
-      grid-template-columns: 28px 1fr 28px auto 15px 15px;
+      grid-template-columns: 28px min-content 28px auto 15px 15px;
     }
 
     .health {
