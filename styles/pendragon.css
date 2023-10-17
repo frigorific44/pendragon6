@@ -8,6 +8,12 @@
 .pendragon .align-center {
   align-items: center;
 }
+.pendragon .summarize {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 8em;
+}
 .pendragon .pen-grid {
   display: grid;
   width: fit-content;
@@ -41,13 +47,6 @@
 }
 .pendragon input[type="checkbox"] {
   width: 12px;
-}
-.pendragon .item-name {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: 8em;
-  justify-self: start;
 }
 .pendragon .pen-grid > .item-create {
   grid-column-start: 1;
@@ -148,7 +147,7 @@
 .pendragon .tab.play .passions {
   grid-template-columns: 28px 28px min-content 28px 15px 15px;
 }
-.pendragon .tab.play .passions .item-name {
+.pendragon .tab.play .passions .summarize {
   max-width: 11em;
 }
 .pendragon .tab.combat .combat-main {
@@ -174,7 +173,10 @@
   flex: 2 1 min-content;
 }
 .pendragon .tab.combat .weapon-attacks {
-  grid-template-columns: 28px min-content 28px auto 15px 15px;
+  grid-template-columns: 28px min-content min-content min-content 15px 15px;
+}
+.pendragon .tab.combat .weapon-attacks .summarize.formula {
+  max-width: 3em;
 }
 .pendragon .tab.combat .health .health-derived {
   grid-template-columns: 1fr 28px;
