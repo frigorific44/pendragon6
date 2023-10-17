@@ -173,6 +173,14 @@ Losses: Integer
 
 #### Glory
 
+##### Passive
+
+Ideals, Fair Appeal, Traits (,) and Passions, Estate Glory
+
+Source
+
+- Value: Integer
+
 #### Squire
 
 Name: String

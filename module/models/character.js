@@ -96,6 +96,23 @@ export class CharacterData extends foundry.abstract.DataModel {
                 loses: new NumberField({
                     required: true, nullable: false, integer: true, min: 0, initial: 0
                 })
+            }),
+            glory: new SchemaField({
+                passive: new MappingField(new SchemaField({
+                    value: new NumberField({
+                        required: true, nullable: false, integer: true, initial: 0
+                    })
+                }), {initialKeys: CONFIG.PENDRAGON.passive_glory, initialKeysOnly: true})
+            }),
+            history: new SchemaField({
+                currentYear: new NumberField({
+                    integer: true
+                }),
+                knightly: new MappingField(new SchemaField({
+                    value: new NumberField({
+                        required: true, nullable: false, integer: true, initial: 0
+                    })
+                }), {initialKeys: CONFIG.PENDRAGON.knightly_events, initialKeysOnly: true})
             })
         }
     }

@@ -106,3 +106,29 @@ PENDRAGON.armor_parts = [
     "helmet",
     "shield"
 ]
+
+/**
+ * The set of knightly events
+ * @type {Array}
+ */
+PENDRAGON.knightly_events = [
+    "born",
+    "squired",
+    "knighted",
+    "landed",
+    "roundTable",
+    "ennobled",
+    "died"
+]
+
+/**
+ * Sources of passive Glory
+ * @type {Array}
+ */
+PENDRAGON.passive_glory = [
+    "traits",
+    "passions",
+    "ideals", 
+    "fairAppeal",
+    "estate"
+]
