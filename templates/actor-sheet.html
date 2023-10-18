@@ -51,12 +51,12 @@
                 <div class="flex-container">
 
                     {{!-- Traits --}}
-                    <div class="traits pen-container pen-grid">
+                    <div class="traits pen-container pen-grid" data-category="Trait">
                         {{#each actor.system.traits}}
                         {{#each this}}
                         {{#if @first}}
                         <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
-                        <label class="trait rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
+                        <label class="rollable">
                             {{localize (concat "PENDRAGON." (capital @key))}}
                         </label>
                         <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" disabled/>
@@ -67,7 +67,7 @@
                             <a class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}"><i class="fas fa-caret-right fa-xl"></i></a>
                         </span>
                         <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" disabled/>
-                        <label class="trait rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
+                        <label class="rollable">
                             {{localize (concat "PENDRAGON." (capital @key))}}
                         </label>                            
                         <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
@@ -77,12 +77,12 @@
                     </div>
 
                     {{!-- Passions --}}
-                    <div class="passions pen-container pen-grid">
+                    <div class="passions pen-container pen-grid" data-category="Passion">
                         {{#each inventory.passion}}
                             <input class="item-checkbox" type="checkbox" data-item-id="{{this._id}}" {{checked this.system.isChecked}}/>
                             <img src="{{this.img}}" title="{{this.name}}"/>
-                            <label class="summarize">{{this.name}}{{#if this.system.target}} ({{this.system.target}}){{/if}}</label>
-                            <span>{{this.system.value}}</span>
+                            <label class="summarize rollable">{{this.name}}{{#if this.system.target}} ({{this.system.target}}){{/if}}</label>
+                            <input type="number" value="{{this.system.value}}" disabled/>
                             <a class="item-edit" data-item-id="{{this._id}}"><i class="fas fa-pen-to-square"></i></a>
                             <a class="item-delete" data-item-id="{{this._id}}"><i class="fas fa-xmark"></i></a>
                         {{/each}}
@@ -91,7 +91,7 @@
                 </div>
 
                 {{!-- General Skills --}}
-                <div class="skills pen-container pen-grid" >
+                <div class="skills pen-container pen-grid" data-category="Skill">
                     {{#each actor.system.skills.general}}
                     <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{checked this.isChecked}}/>
                     <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
@@ -149,7 +149,7 @@
                     </div>
 
                     {{!-- Combat Skills --}}
-                    <div class="skills pen-container pen-grid">
+                    <div class="skills pen-container pen-grid" data-category="Skill">
                         {{#each actor.system.skills.combat}}
                         <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{checked this.isChecked}}/>
                         <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">

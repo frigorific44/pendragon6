@@ -1,4 +1,5 @@
 import ArmorDialogue from "./armor-dialogue.js";
+import RollDialogue from "./roll-dialogue.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -59,7 +60,8 @@ export class PendragonActorSheet extends ActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
-    html.find(".traits").on("click", ".rollable", this._onTraitRoll.bind(this));
+    // html.find(".traits").on("click", ".rollable", this._onTraitRoll.bind(this));
+    html.find(".rollable").on("click", this._onSheetRoll.bind(this));
     html.find(".traits").on("click", ".trait-plus", this._onTraitAdd.bind(this));
 
     // Render the item sheet for viewing/editing prior to the editable check.
@@ -98,6 +100,22 @@ export class PendragonActorSheet extends ActorSheet {
       const itemId = ev.currentTarget.dataset.itemId;
       this.actor.deleteEmbeddedDocuments("Item",[itemId]);
     });
+  }
+
+  /**
+   * Listen for sheet's rollable buttons.
+   * @param {MouseEvent} event The originating left click
+   */
+  _onSheetRoll(event) {
+    event.preventDefault();
+    console.log("Hi!");
+    const category = event.currentTarget.closest(".pen-container").dataset.category;
+    const label = $.trim($(event.currentTarget).text());
+
+    const prev = $(event.currentTarget).prev("input[type=number]");
+    const valueSelection = $(event.currentTarget).next().add(prev);
+    const value = $(event.currentTarget).next("input[type=number]").add(prev).eq(0).val();
+    new RollDialogue(this.actor, category, label, value).render(true);
   }
 
   /**
