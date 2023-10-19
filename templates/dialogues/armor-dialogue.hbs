@@ -1,12 +1,13 @@
-<div>
+<form>
     {{#each parts}}
-    <div>
-        <h3>{{localize (concat "PENDRAGON." (capital @key))}}</h2>
-        <div class="flex-container" data-part="{{@key}}">
-            <input type="text" value="{{this.type}}" data-field="type" placeholder="{{localize "PENDRAGON.Type"}}" />
-            <input type="number" value="{{this.value}}" data-field="value" />
-            <input type="checkbox" {{checked this.worn}} data-field="worn" />
-        </div>
+    <h3>{{localize (concat "PENDRAGON." (capital @key))}}</h2>
+    <div class="flex-container" data-part="{{@key}}">
+        <input type="text" name="system.armor.parts.{{@key}}.type" value="{{this.type}}" placeholder="{{localize "PENDRAGON.Type"}}" />
+        <input type="number" name="system.armor.parts.{{@key}}.value" value="{{this.value}}" />
+        <input type="checkbox" name="system.armor.parts.{{@key}}.worn" {{checked this.worn}} />
     </div>
     {{/each}}
-</div>
+    <button type="submit" name="submit">
+        <i class="fas fa-check"></i> OK
+    </button>
+</form>
