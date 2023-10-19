@@ -1,12 +1,12 @@
+/** Class for a dialogue to edit a sheet's armor parts. */
 export default class ArmorDialogue extends Application {
-    constructor(actor, parts, ...args) {
+    constructor(actor, ...args) {
         super(...args);
         this.actor = actor;
-        // this.parts = parts;
     }
 
     /**
-     * Extend and override the default options used by the 5e Actor Sheet
+     * Extend and override the default options.
      * @returns {Object}
      */ 
 	static get defaultOptions() {
@@ -27,7 +27,7 @@ export default class ArmorDialogue extends Application {
   activateListeners(html) {
     super.activateListeners(html);
 
-    html.find('input').change(ev => this._onChangePart(ev));
+    html.find('input').on("change", ev => this._onChangePart(ev));
   }
 
   async _onChangePart(event) {
@@ -43,8 +43,11 @@ export default class ArmorDialogue extends Application {
     let updateData = {};
     updateData[`system.armor.parts.${partKey}.${partField}`] = fieldValue;
     await this.actor.update(updateData);
-
-    this.render();
   }
-  
+
+  /** @override */
+  async close(options) {
+    await super.close(options);
+  }
+
 }
