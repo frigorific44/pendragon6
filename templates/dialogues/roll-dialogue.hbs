@@ -1,7 +1,18 @@
-<div>
-    <h2>{{category}}: {{label}} ({{value}})</h2>
+<form>
+    <header>
+        <h2>{{category}}: {{label}} ({{value}})</h2>
+    </header>
     {{!-- Category: Specific
     ${Category} Modifiers: []
     Reflexive Modifiers: []
     Roll Type Selector --}}
-</div>
+    {{log rollModes}}
+    <select name="rollMode">
+        {{selectOptions rollModes localize=true selected=defaultRollMode}}
+    </select>
+    <footer class="sheet-footer flexrow">
+        <button type="submit" name="submit">
+            Roll
+        </button>
+    </footer>
+</form>
