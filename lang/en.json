@@ -56,6 +56,7 @@
   "PENDRAGON.Shield": "Shield",
   "PENDRAGON.ArmorComponents": "Armor Components",
 
+  "PENDRAGON.Health": "Health",
   "PENDRAGON.HitPoints": "Hit Points",
   "PENDRAGON.HitPointsShort": "HP",
   "PENDRAGON.Healing": "Healing",
@@ -70,6 +71,7 @@
   "PENDRAGON.DamageShort": "DMG",
   "PENDRAGON.Wounds": "Wounds",
 
+  "PENDRAGON.Traits": "Traits",
   "PENDRAGON.Chaste": "Chaste",
   "PENDRAGON.Lustful": "Lustful",
   "PENDRAGON.Energetic": "Energetic",
