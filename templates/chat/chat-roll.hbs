@@ -1,4 +1,4 @@
-<h4><strong>{{category}}: {{label}} — {{base}}{{#if modifiers}} + {{modifiers}}{{/if}}</strong></h4>
+<h4><strong>{{category}}: {{label}} — {{base}}{{#if modifiers}}{{formatNumber modifiers sign=true}}{{/if}}</strong></h4>
 <div class="result">
     Result: <span class="{{degree}}">{{localize (concat "PENDRAGON." (capital degree))}}</span>
 </div>
