@@ -108,7 +108,6 @@ export class PendragonActorSheet extends ActorSheet {
    */
   _onSheetRoll(event) {
     event.preventDefault();
-    console.log("Hi!");
     const category = event.currentTarget.closest(".pen-container").dataset.category;
     const label = $.trim($(event.currentTarget).text());
 
