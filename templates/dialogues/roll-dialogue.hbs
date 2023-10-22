@@ -1,18 +1,15 @@
 <form>
     <header>
-        <h2>{{category}}: {{label}} ({{value}})</h2>
+        <h2>{{category}}: {{label}} ({{base}})</h2>
     </header>
-    {{!-- Category: Specific
-    ${Category} Modifiers: []
-    Reflexive Modifiers: []
-    Roll Type Selector --}}
-    {{log rollModes}}
-    <select name="rollMode">
-        {{selectOptions rollModes localize=true selected=defaultRollMode}}
-    </select>
+    <div class="flexcol">
+        <span>{{localize "PENDRAGON.ReflexiveModifiers"}} {{numberInput 0 name="reflexive" step=1}}</span>
+        <span>{{localize "PENDRAGON.OtherModifiers"}} {{numberInput 0 name="other" step=1}}</span>
+        <select name="rollMode">
+            {{selectOptions rollModes localize=true selected=defaultRollMode}}
+        </select>
+    </div>
     <footer class="sheet-footer flexrow">
-        <button type="submit" name="submit">
-            Roll
-        </button>
+        <button type="submit" name="submit">Roll</button>
     </footer>
 </form>

@@ -230,3 +230,15 @@
   min-width: 460px;
   min-height: 400px;
 }
+.chat-message > .message-header > .flavor-text .result .criticalSuccess {
+  color: blue;
+}
+.chat-message > .message-header > .flavor-text .result .success {
+  color: green;
+}
+.chat-message > .message-header > .flavor-text .result .failure {
+  color: orangered;
+}
+.chat-message > .message-header > .flavor-text .result .fumble {
+  color: red;
+}

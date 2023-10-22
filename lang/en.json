@@ -1,4 +1,9 @@
 {
+  "PENDRAGON.CriticalSuccess": "Critical Success",
+  "PENDRAGON.Success": "Success",
+  "PENDRAGON.Failure": "Failure",
+  "PENDRAGON.Fumble": "Fumble",
+
   "PENDRAGON.Type": "Type",
 
   "PENDRAGON.ItemCreate": "Create Item",
@@ -132,5 +137,7 @@
   "PENDRAGON.Sword": "Sword",
   "PENDRAGON.ThrownWeapon": "Thrown Weapon",
 
-  "PENDRAGON.RollOptions": "Roll Options"
+  "PENDRAGON.RollOptions": "Roll Options",
+  "PENDRAGON.ReflexiveModifiers": "Reflexive Modifiers",
+  "PENDRAGON.OtherModifiers": "Other Modifiers"
 }
