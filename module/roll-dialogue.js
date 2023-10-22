@@ -36,11 +36,6 @@ export default class RollDialogue extends FormApplication {
     };
   }
 
-  /** @inheritdoc */
-  activateListeners(html) {
-    super.activateListeners(html);
-  }
-
   /** 
    * Use the result of the form to roll to chat.
    * @override
@@ -54,14 +49,18 @@ export default class RollDialogue extends FormApplication {
     }));
   }
 
+  /**
+   * Display a roll in chat.
+   * @param {object} options 
+   */
   static async rollToChat({
-    base=0, 
-    reflexive=0, 
-    other=0, 
-    rollMode=game.settings.get('core', 'rollMode'),
-    category="",
-    label="",
-    actorOverride=undefined
+    base = 0, 
+    reflexive = 0, 
+    other = 0, 
+    rollMode = game.settings.get('core', 'rollMode'),
+    category = "",
+    label = "",
+    actorOverride = undefined
   }) {
     // The total of the modifiers
     const modifiers = other + reflexive;
@@ -89,18 +88,21 @@ export default class RollDialogue extends FormApplication {
 
     const chatData = {
       user: game.user.id,
-      // type: CONST.CHAT_MESSAGE_TYPES.ROLL,
       content: "Content, baby!",
       speaker: speaker,
       flavor: flavor,
       sound: CONFIG.sounds.dice,
-      // roll: rollReturn.roll,
-      // rollMode: rollMode
     }
 
     roll.toMessage(chatData, {rollMode: rollMode});
   }
 
+  /**
+   * Returns the string correlating to the degree of success based on the result and the value being rolled against.
+   * @param {number} result
+   * @param {number} value 
+   * @returns {string}
+   */
   static degreeOfSuccess(result, value) {
     const diff = Math.max(value - 20, 0);
 
