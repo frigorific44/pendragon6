@@ -25,7 +25,7 @@ export class PendragonItemSheet extends ItemSheet {
    */
   get template() {
     const path = "systems/pendragon6/templates/items";
-    return `${path}/${this.item.type}-sheet.html`;
+    return `${path}/${this.item.type}-sheet.hbs`;
   }
 
   /** @inheritdoc */
