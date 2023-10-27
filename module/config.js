@@ -12,6 +12,7 @@ PENDRAGON.maxWounds = 8;
 
 /**
  * The set of personal features of a character.
+ * This config affects the data model.
  * @type {Array}
  */
 PENDRAGON.personal = [
@@ -26,6 +27,7 @@ PENDRAGON.personal = [
 
 /**
  * The set of Traits used within the system.
+ * This config affects the data model.
  * @type {Array}
  */
 PENDRAGON.traits = [
@@ -46,6 +48,7 @@ PENDRAGON.traits = [
 
 /**
  * The set of Characteristics used within the system.
+ * This config affects the data model.
  * @type {Array}
  */
 PENDRAGON.characteristics = [
@@ -58,6 +61,7 @@ PENDRAGON.characteristics = [
 
 /**
  * The set of Skills used within the system.
+ * This config affects the data model.
  * @type {Array}
  */
 PENDRAGON.general_skills = [
@@ -97,7 +101,8 @@ PENDRAGON.combat_skills = [
 ];
 
 /**
- * Armor components which make up the total Armor Points
+ * Armor components which make up the total Armor Points.
+ * This config affects the data model.
  * @type {Array}
  */
 PENDRAGON.armor_parts = [
@@ -108,7 +113,8 @@ PENDRAGON.armor_parts = [
 ]
 
 /**
- * The set of knightly events
+ * The set of knightly events.
+ * This config affects the data model.
  * @type {Array}
  */
 PENDRAGON.knightly_events = [
@@ -122,7 +128,8 @@ PENDRAGON.knightly_events = [
 ]
 
 /**
- * Sources of passive Glory
+ * Sources of passive Glory.
+ * This config affects the data model.
  * @type {Array}
  */
 PENDRAGON.passive_glory = [
