@@ -137,5 +137,13 @@
 
   "PENDRAGON.RollOptions": "Roll Options",
   "PENDRAGON.ReflexiveModifiers": "Reflexive Modifiers",
-  "PENDRAGON.OtherModifiers": "Other Modifiers"
+  "PENDRAGON.OtherModifiers": "Other Modifiers",
+
+  "PENDRAGON.Born": "Born",
+  "PENDRAGON.Squired": "Squired",
+  "PENDRAGON.Knighted": "Knighted",
+  "PENDRAGON.Landed": "Landed",
+  "PENDRAGON.RoundTable": "Round Table",
+  "PENDRAGON.Ennobled": "Ennobled",
+  "PENDRAGON.Died": "Died"
 }
