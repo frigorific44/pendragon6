@@ -1,5 +1,6 @@
 .pendragon {
   /* || VARIABLES */
+  @gap-large: 1em;
   @gap: 0.5em;
   @gap-small: 0.2em;
 
@@ -11,6 +12,10 @@
     white-space: nowrap;
     overflow: hidden;
     max-width: 8em;
+  }
+
+  .underline {
+    border-bottom: 1px solid;
   }
 
   /* || CONTAINERS */
@@ -31,6 +36,14 @@
     align-items: flex-start;
   }
 
+  .flex-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: @gap @gap-large;
+  }
+
   .pen-container {
     outline: black solid 2px;
     margin: 14px;
@@ -42,7 +55,7 @@
     background: #0000;
     border: 0;
     border-radius: 0;
-    border-bottom: 1px solid;
+    .underline();
   }
 
   input[type="number"] {

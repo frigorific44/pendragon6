@@ -15,6 +15,9 @@
   overflow: hidden;
   max-width: 8em;
 }
+.pendragon .underline {
+  border-bottom: 1px solid;
+}
 .pendragon .pen-grid {
   display: grid;
   width: fit-content;
@@ -29,6 +32,13 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: flex-start;
+}
+.pendragon .flex-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5em 1em;
 }
 .pendragon .pen-container {
   outline: black solid 2px;
