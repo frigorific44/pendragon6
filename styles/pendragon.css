@@ -209,6 +209,12 @@
 .pendragon .tab.combat .wounds thead > tr :nth-child(1) {
   width: 30px;
 }
+.pendragon .tab.history .passive-glory {
+  grid-template-columns: min-content 28px;
+}
+.pendragon .tab.history .passive-glory label {
+  justify-self: start;
+}
 .pendragon .tabs {
   flex: 0 0 40px;
   border-top: 1px solid #AAA;

@@ -22,6 +22,7 @@
   "PENDRAGON.Value": "Value",
 
   "PENDRAGON.PassionTarget": "Target of Passion",
+  "PENDRAGON.Passions": "Passions",
 
   "PENDRAGON.Formula": "Formula",
   "PENDRAGON.Skill": "Skill",
@@ -145,5 +146,9 @@
   "PENDRAGON.Landed": "Landed",
   "PENDRAGON.RoundTable": "Round Table",
   "PENDRAGON.Ennobled": "Ennobled",
-  "PENDRAGON.Died": "Died"
+  "PENDRAGON.Died": "Died",
+
+  "PENDRAGON.Ideals": "Ideals",
+  "PENDRAGON.FairAppeal": "Fair Appeal",
+  "PENDRAGON.Estate": "Estate"
 }

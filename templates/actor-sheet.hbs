@@ -223,12 +223,20 @@
 
         {{!-- History Tab --}}
         <div class="tab history" data-group="primary" data-tab="history">
+            {{!-- Knightly Events --}}
             <div class="flex-list">
                 {{#each actor.system.history.knightly}}
                 <span>
                     <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
                     <span class="underline" type="text" name="system.history.knightly.{{@key}}.value" value="{{this.value}}" data-edit="system.history.knightly.{{@key}}.value" contenteditable="true"/>{{this.value}}</span>
                 </span>
+                {{/each}}
+            </div>
+            {{!-- Passive Glory --}}
+            <div class="passive-glory pen-container pen-grid">
+                {{#each actor.system.glory.passive}}
+                <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
+                <input type="number" name="system.glory.passive.{{@key}}.value" value="{{this.value}}" />
                 {{/each}}
             </div>
         </div>
