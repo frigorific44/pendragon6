@@ -109,8 +109,8 @@ export class CharacterData extends foundry.abstract.DataModel {
                     integer: true
                 }),
                 knightly: new MappingField(new SchemaField({
-                    value: new NumberField({
-                        required: true, nullable: false, integer: true, initial: 0
+                    value: new StringField({
+                        required: true, nullable: false, initial: ""
                     })
                 }), {initialKeys: CONFIG.PENDRAGON.knightly_events, initialKeysOnly: true})
             })
