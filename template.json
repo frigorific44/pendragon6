@@ -5,10 +5,11 @@
   "character": {}
 },
 "Item": {
-  "types": ["item","passion","weapon"],
+  "types": ["item","passion","weapon","event"],
   "htmlFields": ["description"],
   "item": {},
   "passion": {},
-  "weapon": {}
+  "weapon": {},
+  "event": {}
 }
 }

@@ -17,6 +17,7 @@
   "PENDRAGON.NewItemName": "New Item",
   "PENDRAGON.NewPassionName": "New Passion",
   "PENDRAGON.NewWeaponName": "New Weapon",
+  "PENDRAGON.NewEventName": "New Event",
 
   "PENDRAGON.Experience": "Experience",
   "PENDRAGON.Value": "Value",
@@ -136,6 +137,8 @@
   "PENDRAGON.Sword": "Sword",
   "PENDRAGON.ThrownWeapon": "Thrown Weapon",
 
+  "PENDRAGON.Weapons": "Weapons",
+
   "PENDRAGON.RollOptions": "Roll Options",
   "PENDRAGON.ReflexiveModifiers": "Reflexive Modifiers",
   "PENDRAGON.OtherModifiers": "Other Modifiers",
@@ -150,5 +153,9 @@
 
   "PENDRAGON.Ideals": "Ideals",
   "PENDRAGON.FairAppeal": "Fair Appeal",
-  "PENDRAGON.Estate": "Estate"
+  "PENDRAGON.Estate": "Estate",
+
+  "PENDRAGON.Events": "Events",
+  "PENDRAGON.Date": "Date",
+  "PENDRAGON.Glory": "Glory"
 }
