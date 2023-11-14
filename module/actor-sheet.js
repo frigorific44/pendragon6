@@ -11,7 +11,7 @@ export class PendragonActorSheet extends ActorSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["pendragon", "sheet", "actor"],
-      template: "systems/pendragon6/templates/actor-sheet.hbs",
+      template: "systems/pendragon6/templates/actors/actor-sheet.hbs",
       width: 600,
       height: 600,
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}],

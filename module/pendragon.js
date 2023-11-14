@@ -12,6 +12,7 @@ import { PendragonItemSheet } from "./item-sheet.js";
 import { PendragonActorSheet } from "./actor-sheet.js";
 import { CharacterData } from "./models/character.js"
 import { PendragonToken, PendragonTokenDocument } from "./token.js";
+import { registerTemplates } from "./register-templates.js";
 
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
@@ -49,6 +50,9 @@ Hooks.once("init", async function() {
   Actors.registerSheet("pendragon", PendragonActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("pendragon", PendragonItemSheet, { makeDefault: true });
+
+  // Register template partials
+  registerTemplates();
 
   /**
    * Slugify a string.

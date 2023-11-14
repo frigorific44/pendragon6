@@ -105,15 +105,7 @@
                     <h2 class="header">
                         {{localize "PENDRAGON.GeneralSkills"}}
                     </h2>
-                    <div class="skills pen-container pen-grid" data-category="Skill">
-                        {{#each actor.system.skills.general}}
-                        <input type="checkbox" name="system.skills.general.{{@key}}.isChecked" {{checked this.isChecked}}/>
-                        <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
-                            {{localize (concat "PENDRAGON." (capital @key))}}
-                        </label>
-                        <input type="number" name="system.skills.general.{{@key}}.value" value="{{this.value}}"/>
-                        {{/each}}
-                    </div>
+                    {{> "systems/pendragon6/templates/actors/partials/skills.hbs" skillGroup="general"}}
                 </section>
             </div>
         </div>
@@ -173,15 +165,7 @@
                         <h2 class="header">
                             {{localize "PENDRAGON.CombatSkills"}}
                         </h2>
-                        <div class="skills pen-container pen-grid" data-category="Skill">
-                            {{#each actor.system.skills.combat}}
-                            <input type="checkbox" name="system.skills.combat.{{@key}}.isChecked" {{checked this.isChecked}}/>
-                            <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
-                                {{localize (concat "PENDRAGON." (capital @key))}}
-                            </label>
-                            <input type="number" name="system.skills.combat.{{@key}}.value" value="{{this.value}}"/>
-                            {{/each}}
-                        </div>
+                        {{> "systems/pendragon6/templates/actors/partials/skills.hbs" skillGroup="combat"}}
                     </section>
 
                 </div>
