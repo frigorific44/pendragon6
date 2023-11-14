@@ -1,0 +1,46 @@
+<div class="tab combat" data-group="primary" data-tab="combat">
+    <div class="combat-main flex-container">
+
+        {{!-- Characteristics --}}
+        {{> "systems/pendragon6/templates/actors/partials/characteristics.hbs"}}
+
+        {{!-- Movement and Armor --}}
+        {{> "systems/pendragon6/templates/actors/partials/move-and-armor.hbs"}}
+    </div>
+    <div class="flex-container">
+        <div class="flex-container flex-combat">
+
+            {{!-- Weapon Attacks --}}
+            <section>
+                <h2 class="header">
+                    {{localize "PENDRAGON.Weapons"}}
+                    <button class="item-create" data-type="weapon"><i class="fas fa-plus"></i></button>
+                </h2>
+                {{> "systems/pendragon6/templates/actors/partials/weapons.hbs"}}
+            </section>
+
+            {{!-- Combat Skills --}}
+            <section>
+                <h2 class="header">
+                    {{localize "PENDRAGON.CombatSkills"}}
+                </h2>
+                {{> "systems/pendragon6/templates/actors/partials/skills.hbs" skillGroup="combat"}}
+            </section>
+
+        </div>
+        <div class="flex-container flex-combat">
+
+            {{!-- Health --}}
+            <section>
+                <h2 class="header">
+                    {{localize "PENDRAGON.Health"}}
+                </h2>
+                {{> "systems/pendragon6/templates/actors/partials/health.hbs"}}
+            </section>
+
+            {{!-- Wounds --}}
+            {{> "systems/pendragon6/templates/actors/partials/wounds.hbs"}}
+
+        </div>
+    </div>
+</div>

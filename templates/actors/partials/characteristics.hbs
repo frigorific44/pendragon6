@@ -1,0 +1,10 @@
+{{#each actor.system.characteristics}}
+<div class="characteristics">
+    <label for="system.characteristics.{{@key}}.value">
+        <abbr title="{{localize (concat "PENDRAGON." (capital @key) )}}">
+            {{localize (concat "PENDRAGON." (capital @key) "Short")}} 
+        </abbr>
+    </label>
+    <input type="number" name="system.characteristics.{{@key}}.value" value="{{this.value}}"/>
+</div>
+{{/each}}

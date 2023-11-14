@@ -1,5 +1,4 @@
 <form class="flexcol {{cssClass}}" autocomplete="off">
-    {{log this}}
     {{!-- Sheet Header --}}
     <header class="sheet-header">
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="150" width="100" />
@@ -11,25 +10,10 @@
             <div class="flex-container">
 
                 {{!-- Personal --}}
-                <div class="personal">
-                    {{#each actor.system.personal}}
-                    <div {{#ifEquals @key "distinctiveFeatures"}}class="features"{{/ifEquals}}>
-                        <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
-                        <input type="text" name="system.personal.{{@key}}.value" value="{{this.value}}" />
-                    </div>
-                    {{/each}}
-                </div>
+                {{> "systems/pendragon6/templates/actors/partials/personal.hbs"}}
 
                 {{!-- Scores --}}
-                <div class="joust">
-                    <h3>{{localize "PENDRAGON.JoustScore"}}</h3>
-                    <div class="flex-container">
-                        <h4>{{localize "PENDRAGON.Wins"}}</h4>
-                        <input type="number" name="system.joust.wins" value="{{actor.system.joust.wins}}"/>
-                        <h4>{{localize "PENDRAGON.Loses"}}</h4>
-                        <input type="number" name="system.joust.loses" value="{{actor.system.joust.loses}}"/>
-                    </div>
-                </div>
+                {{> "systems/pendragon6/templates/actors/partials/joust.hbs"}}
             </div>
         </div>
     </header>
@@ -46,249 +30,15 @@
     <section class="sheet-body">
 
         {{!-- Play Tab --}}
-        <div class="tab play" data-group="primary" data-tab="play">
-            <div class="play-grid">
-                <div class="flex-container">
-
-                    {{!-- Traits --}}
-                    <section>
-                        <h2 class="header">
-                            {{localize "PENDRAGON.Traits"}}
-                        </h2>
-                        <div class="traits pen-container pen-grid" data-category="Trait">
-                            {{#each actor.system.traits}}
-                            {{#each this}}
-                            {{#if @first}}
-                            <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
-                            <label class="rollable">
-                                {{localize (concat "PENDRAGON." (capital @key))}}
-                            </label>
-                            <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" disabled/>
-                            <span class="flexrow">
-                                <a class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}"><i class="fas fa-caret-left fa-xl"></i></a>
-                            {{/if}}
-                            {{#if @last}}
-                                <a class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}"><i class="fas fa-caret-right fa-xl"></i></a>
-                            </span>
-                            <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" disabled/>
-                            <label class="rollable">
-                                {{localize (concat "PENDRAGON." (capital @key))}}
-                            </label>                            
-                            <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
-                            {{/if}}
-                            {{/each}}
-                            {{/each}}
-                        </div>
-                    </section>
-
-                    {{!-- Passions --}}
-                    <section>
-                        <h2 class="header">
-                            {{localize "PENDRAGON.Passions"}}
-                            <button class="item-create" data-type="passion"><i class="fas fa-plus"></i></button>
-                        </h2>
-                        <div class="passions pen-container pen-grid" data-category="Passion">
-                            {{#each inventory.passion}}
-                                <input class="item-checkbox" type="checkbox" data-item-id="{{this._id}}" {{checked this.system.isChecked}}/>
-                                <img src="{{this.img}}" title="{{this.name}}"/>
-                                <label class="summarize rollable">{{this.name}}{{#if this.system.target}} ({{this.system.target}}){{/if}}</label>
-                                <input type="number" value="{{this.system.value}}" disabled/>
-                                <a class="item-edit" data-item-id="{{this._id}}"><i class="fas fa-pen-to-square"></i></a>
-                                <a class="item-delete" data-item-id="{{this._id}}"><i class="fas fa-xmark"></i></a>
-                            {{/each}}
-                        </div>
-                    </section>
-                </div>
-
-                {{!-- General Skills --}}
-                <section>
-                    <h2 class="header">
-                        {{localize "PENDRAGON.GeneralSkills"}}
-                    </h2>
-                    {{> "systems/pendragon6/templates/actors/partials/skills.hbs" skillGroup="general"}}
-                </section>
-            </div>
-        </div>
+        {{> "systems/pendragon6/templates/actors/tabs/play-tab.hbs"}}
 
         {{!-- Combat Tab --}}
-        <div class="tab combat" data-group="primary" data-tab="combat">
-            <div class="combat-main flex-container">
-
-                {{!-- Characteristics --}}
-                {{#each actor.system.characteristics}}
-                <div class="characteristics">
-                    <label for="system.characteristics.{{@key}}.value">
-                        <abbr title="{{localize (concat "PENDRAGON." (capital @key) )}}">
-                            {{localize (concat "PENDRAGON." (capital @key) "Short")}} 
-                        </abbr>
-                    </label>
-                    <input type="number" name="system.characteristics.{{@key}}.value" value="{{this.value}}"/>
-                </div>
-                {{/each}}
-
-                {{!-- Movement and Armor --}}
-                <div class="move-armor pen-grid pen-container">
-                    <span class="move">{{localize "PENDRAGON.Movement"}}</span>
-                    <span class="move">{{actor.system.derived.movement}}</span>
-                    <span class="armor">{{localize "PENDRAGON.Armor"}}</span>
-                    <span class="armor">{{actor.system.armor.total}}</span>
-                    <a class="armor armor-components"><i class="fas fa-caret-down"></i></a>
-                </div>
-            </div>
-            <div class="flex-container">
-                <div class="flex-container flex-combat">
-
-                    {{!-- Weapon Attacks --}}
-                    <section>
-                        <h2 class="header">
-                            {{localize "PENDRAGON.Weapons"}}
-                            <button class="item-create" data-type="weapon"><i class="fas fa-plus"></i></button>
-                        </h2>
-                        <div class="weapon-attacks pen-container pen-grid">
-                            {{#each inventory.weapon}}
-                            <img src="{{this.img}}" title="{{this.name}}"/>
-                            <label class="summarize">{{this.name}}</label>
-                            <label>
-                                {{#with (lookup ../actor.system.skills.combat system.skill)}}
-                                {{value}}
-                                {{/with}}
-                            </label>
-                            <label class="summarize formula">{{this.system.formula}}</label>
-                            <a class="item-edit" data-item-id="{{this._id}}"><i class="fas fa-pen-to-square"></i></a>
-                            <a class="item-delete" data-item-id="{{this._id}}"><i class="fas fa-xmark"></i></a>
-                            {{/each}}
-                        </div>
-                    </section>
-
-                    {{!-- Combat Skills --}}
-                    <section>
-                        <h2 class="header">
-                            {{localize "PENDRAGON.CombatSkills"}}
-                        </h2>
-                        {{> "systems/pendragon6/templates/actors/partials/skills.hbs" skillGroup="combat"}}
-                    </section>
-
-                </div>
-                <div class="flex-container flex-combat">
-
-                    {{!-- Health --}}
-                    <section>
-                        <h2 class="header">
-                            {{localize "PENDRAGON.Health"}}
-                        </h2>
-                        <div class="health pen-container">
-                            <h3>
-                                <abbr title="{{localize "PENDRAGON.HitPoints"}}">
-                                    {{localize "PENDRAGON.HitPointsShort"}}
-                                </abbr>
-                                <input type="number" name="system.hp.value" value="{{actor.system.hp.value}}"/> / {{actor.system.hp.max}}
-                            </h3>
-                            <h5>
-                                Debilitated
-                                <input type="checkbox" name="system.debilitated" {{checked actor.system.debilitated}}/>
-                            </h5>
-                            <h4>
-                                Aggravated
-                                <input type="number" name="system.damage.aggravated" value="{{actor.system.damage.aggravated}}"/>
-                            </h4>
-                            <h4>
-                                Deterioration
-                                <input type="number" name="system.damage.deterioration" value="{{actor.system.damage.deterioration}}"/>
-                            </h4>
-                            <div class="health-derived pen-grid">    
-                                <span>{{localize "PENDRAGON.Healing"}}</span><span>{{actor.system.derived.healing}}</span>
-                                <span>{{localize "PENDRAGON.Knockdown"}}</span><span>{{actor.system.derived.knockdown}}</span>
-                                <span>{{localize "PENDRAGON.MajorWound"}}</span><span>{{actor.system.derived.majorWound}}</span>
-                                <span>{{localize "PENDRAGON.Unconcious"}}</span><span>{{actor.system.derived.unconscious}}</span>
-                            </div>
-                        </div>
-                    </section>
-
-                    {{!-- Wounds --}}
-                    <table class="wounds pen-table pen-container">
-                        <thead>
-                            <tr>
-                                <th><abbr title="{{localize "PENDRAGON.Damage"}}">{{localize "PENDRAGON.DamageShort"}}</abbr></th>
-                                <th>{{localize "PENDRAGON.Wound"}}</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {{#each actor.system.wounds}}
-                            <tr>
-                                <td>
-                                    <input type="number" name="system.wounds.{{@key}}.damage" value="{{this.damage}}"/>
-                                </td>
-                                <td>
-                                    <input type="text" name="system.wounds.{{@key}}.description" value="{{this.description}}" />
-                                </td>
-                            </tr>
-                            {{/each}}
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
-        </div>
+        {{> "systems/pendragon6/templates/actors/tabs/combat-tab.hbs"}}
 
         {{!-- Possessions Tab --}}
-        <div class="tab possessions" data-group="primary" data-tab="possessions">
-
-        </div>
+        {{> "systems/pendragon6/templates/actors/tabs/possessions-tab.hbs"}}
 
         {{!-- History Tab --}}
-        <div class="tab history" data-group="primary" data-tab="history">
-            {{!-- Events --}}
-            <section>
-                <h2 class="header">
-                    {{localize "PENDRAGON.Events"}}
-                    <button class="item-create" data-type="event"><i class="fas fa-plus"></i></button>
-                </h2>
-                <table class="events pen-table pen-container">
-                    <thead>
-                        <tr>
-                            <th>{{localize "PENDRAGON.Date"}}</th>
-                            <th></th>
-                            <th>{{localize "PENDRAGON.Glory"}}</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{#each inventory.event}}
-                        <tr>
-                            <td>
-                                {{this.system.date}}
-                            </td>
-                            <td>
-                                {{this.name}}
-                            </td>
-                            <td>
-                                {{this.system.glory}}
-                            </td>
-                            <td>
-                                <a class="item-edit" data-item-id="{{this._id}}"><i class="fas fa-pen-to-square"></i></a>
-                                <a class="item-delete" data-item-id="{{this._id}}"><i class="fas fa-xmark"></i></a>
-                            </td>
-                        </tr>
-                        {{/each}}
-                    </tbody>
-                </table>
-            </section>
-            {{!-- Knightly Events --}}
-            <div class="flex-list">
-                {{#each actor.system.history.knightly}}
-                <span>
-                    <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
-                    <span class="underline" type="text" name="system.history.knightly.{{@key}}.value" value="{{this.value}}" data-edit="system.history.knightly.{{@key}}.value" contenteditable="true"/>{{this.value}}</span>
-                </span>
-                {{/each}}
-            </div>
-            {{!-- Passive Glory --}}
-            <div class="passive-glory pen-container pen-grid">
-                {{#each actor.system.glory.passive}}
-                <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
-                <input type="number" name="system.glory.passive.{{@key}}.value" value="{{this.value}}" />
-                {{/each}}
-            </div>
-        </div>
+        {{> "systems/pendragon6/templates/actors/tabs/history-tab.hbs"}}
     </section>
 </form>

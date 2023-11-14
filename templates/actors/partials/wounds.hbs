@@ -1,0 +1,20 @@
+<table class="wounds pen-table pen-container">
+    <thead>
+        <tr>
+            <th><abbr title="{{localize "PENDRAGON.Damage"}}">{{localize "PENDRAGON.DamageShort"}}</abbr></th>
+            <th>{{localize "PENDRAGON.Wound"}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each actor.system.wounds}}
+        <tr>
+            <td>
+                <input type="number" name="system.wounds.{{@key}}.damage" value="{{this.damage}}"/>
+            </td>
+            <td>
+                <input type="text" name="system.wounds.{{@key}}.description" value="{{this.description}}" />
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
