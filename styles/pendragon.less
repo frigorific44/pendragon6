@@ -6,6 +6,10 @@
 
   @section-margin: 14px;
 
+  // Grid column widths for fixed elements
+  @check-col: 20px;
+  @num-col: 28px;
+
   /* || UTILITIES */
   .align-center {align-items: center;}
 
@@ -212,7 +216,7 @@
   }
 
   .skills {
-    grid-template-columns: 28px 1fr 28px;
+    grid-template-columns: @check-col 1fr @num-col;
     label {
       justify-self: end;
     }
@@ -225,7 +229,7 @@
       grid-template-columns: 1fr min-content;
     }
     .traits {
-      grid-template-columns: 28px 1fr 28px max-content 28px 1fr 28px;
+      grid-template-columns: @check-col 1fr @num-col max-content @num-col 1fr @check-col;
       label:nth-of-type(odd) {
         justify-self: end;
       }
@@ -234,7 +238,7 @@
       }
     }
     .passions {
-      grid-template-columns: 28px 28px min-content 28px 15px 15px;
+      grid-template-columns: @check-col 28px min-content @num-col 15px 15px;
       .summarize {max-width: 11em;}
     }
   }
@@ -289,7 +293,7 @@
 
   .tab.history {
     .passive-glory {
-      grid-template-columns: min-content 28px;
+      grid-template-columns: min-content @num-col;
       label {
         justify-self: start;
       }

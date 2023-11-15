@@ -174,7 +174,7 @@
   width: max-content;
 }
 .pendragon .skills {
-  grid-template-columns: 28px 1fr 28px;
+  grid-template-columns: 20px 1fr 28px;
 }
 .pendragon .skills label {
   justify-self: end;
@@ -185,7 +185,7 @@
   grid-template-columns: 1fr min-content;
 }
 .pendragon .tab.play .traits {
-  grid-template-columns: 28px 1fr 28px max-content 28px 1fr 28px;
+  grid-template-columns: 20px 1fr 28px max-content 28px 1fr 20px;
 }
 .pendragon .tab.play .traits label:nth-of-type(odd) {
   justify-self: end;
@@ -194,7 +194,7 @@
   justify-self: start;
 }
 .pendragon .tab.play .passions {
-  grid-template-columns: 28px 28px min-content 28px 15px 15px;
+  grid-template-columns: 20px 28px min-content 28px 15px 15px;
 }
 .pendragon .tab.play .passions .summarize {
   max-width: 11em;
