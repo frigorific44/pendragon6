@@ -1,0 +1,8 @@
+<div class="flex-list">
+    {{#each actor.system.history.knightly}}
+    <span>
+        <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
+        <span class="underline" type="text" name="system.history.knightly.{{@key}}.value" value="{{this.value}}" data-edit="system.history.knightly.{{@key}}.value" contenteditable="true"/>{{this.value}}</span>
+    </span>
+    {{/each}}
+</div>

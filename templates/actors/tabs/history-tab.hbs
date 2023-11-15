@@ -5,50 +5,10 @@
             {{localize "PENDRAGON.Events"}}
             <button class="item-create" data-type="event"><i class="fas fa-plus"></i></button>
         </h2>
-        <table class="events pen-table pen-container">
-            <thead>
-                <tr>
-                    <th>{{localize "PENDRAGON.Date"}}</th>
-                    <th></th>
-                    <th>{{localize "PENDRAGON.Glory"}}</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                {{#each inventory.event}}
-                <tr>
-                    <td>
-                        {{this.system.date}}
-                    </td>
-                    <td>
-                        {{this.name}}
-                    </td>
-                    <td>
-                        {{this.system.glory}}
-                    </td>
-                    <td>
-                        <a class="item-edit" data-item-id="{{this._id}}"><i class="fas fa-pen-to-square"></i></a>
-                        <a class="item-delete" data-item-id="{{this._id}}"><i class="fas fa-xmark"></i></a>
-                    </td>
-                </tr>
-                {{/each}}
-            </tbody>
-        </table>
+        {{> "systems/pendragon6/templates/actors/partials/events.hbs"}}
     </section>
     {{!-- Knightly Events --}}
-    <div class="flex-list">
-        {{#each actor.system.history.knightly}}
-        <span>
-            <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
-            <span class="underline" type="text" name="system.history.knightly.{{@key}}.value" value="{{this.value}}" data-edit="system.history.knightly.{{@key}}.value" contenteditable="true"/>{{this.value}}</span>
-        </span>
-        {{/each}}
-    </div>
+    {{> "systems/pendragon6/templates/actors/partials/knightly-events.hbs"}}
     {{!-- Passive Glory --}}
-    <div class="passive-glory pen-container pen-grid">
-        {{#each actor.system.glory.passive}}
-        <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
-        <input type="number" name="system.glory.passive.{{@key}}.value" value="{{this.value}}" />
-        {{/each}}
-    </div>
+    {{> "systems/pendragon6/templates/actors/partials/passive-glory.hbs"}}
 </div>

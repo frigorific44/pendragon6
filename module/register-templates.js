@@ -17,7 +17,10 @@ export function registerTemplates() {
         "systems/pendragon6/templates/actors/partials/health.hbs",
         "systems/pendragon6/templates/actors/partials/move-and-armor.hbs",
         "systems/pendragon6/templates/actors/partials/personal.hbs",
-        "systems/pendragon6/templates/actors/partials/characteristics.hbs"
+        "systems/pendragon6/templates/actors/partials/characteristics.hbs",
+        "systems/pendragon6/templates/actors/partials/passive-glory.hbs",
+        "systems/pendragon6/templates/actors/partials/knightly-events.hbs",
+        "systems/pendragon6/templates/actors/partials/events.hbs"
     ];
 
     loadTemplates(templatePaths);
