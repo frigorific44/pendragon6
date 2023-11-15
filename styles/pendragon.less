@@ -21,6 +21,13 @@
   }
 
   /* || CONTAINERS */
+  .pen-grid > li {
+    grid-template-columns: subgrid;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    .pen-grid();
+  }
+
   .pen-grid {
     display: grid;
     width: fit-content;
@@ -241,13 +248,9 @@
         }
       }
       .move-armor {
-        justify-items: start;
-        align-tracks: center;
-        .move {
-          grid-row: 1;
-        }
-        .armor {
-          grid-row: 2;
+        grid-template-columns: repeat(3, max-content);
+        li {
+          justify-items: start;
         }
       }
     }

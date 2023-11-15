@@ -1,7 +1,11 @@
-<div class="move-armor pen-grid pen-container">
-    <span class="move">{{localize "PENDRAGON.Movement"}}</span>
-    <span class="move">{{actor.system.derived.movement}}</span>
-    <span class="armor">{{localize "PENDRAGON.Armor"}}</span>
-    <span class="armor">{{actor.system.armor.total}}</span>
-    <a class="armor armor-components"><i class="fas fa-caret-down"></i></a>
-</div>
+<ol class="move-armor pen-grid pen-container">
+    <li>
+        <span>{{localize "PENDRAGON.Movement"}}</span>
+        <span>{{actor.system.derived.movement}}</span>
+    </li>
+    <li>
+        <span>{{localize "PENDRAGON.Armor"}}</span>
+        <span>{{actor.system.armor.total}}</span>
+        <a class="armor armor-components"><i class="fas fa-caret-down"></i></a>
+    </li>
+</ol>

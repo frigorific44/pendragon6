@@ -1,24 +1,26 @@
-<div class="traits pen-container pen-grid" data-category="Trait">
+<ol class="traits pen-container pen-grid" data-category="Trait">
     {{#each actor.system.traits}}
-    {{#each this}}
-    {{#if @first}}
-    <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
-    <label class="rollable">
-        {{localize (concat "PENDRAGON." (capital @key))}}
-    </label>
-    <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" disabled/>
-    <span class="flexrow">
-        <a class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}"><i class="fas fa-caret-left fa-xl"></i></a>
-    {{/if}}
-    {{#if @last}}
-        <a class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}"><i class="fas fa-caret-right fa-xl"></i></a>
-    </span>
-    <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" disabled/>
-    <label class="rollable">
-        {{localize (concat "PENDRAGON." (capital @key))}}
-    </label>                            
-    <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
-    {{/if}}
+    <li>
+        {{#each this}}
+        {{#if @first}}
+        <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
+        <label class="rollable">
+            {{localize (concat "PENDRAGON." (capital @key))}}
+        </label>
+        <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" disabled/>
+        <span class="flexrow">
+            <a class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}"><i class="fas fa-caret-left fa-xl"></i></a>
+        {{/if}}
+        {{#if @last}}
+            <a class="trait-plus" data-dual="{{@../key}}" data-trait="{{@key}}"><i class="fas fa-caret-right fa-xl"></i></a>
+        </span>
+        <input type="number" name="system.traits.{{@../index}}.{{@key}}.value" value="{{this.value}}" disabled/>
+        <label class="rollable">
+            {{localize (concat "PENDRAGON." (capital @key))}}
+        </label>                            
+        <input type="checkbox" name="system.traits.{{@../index}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
+        {{/if}}
+        {{/each}}
+    </li>
     {{/each}}
-    {{/each}}
-</div>
+</ol>

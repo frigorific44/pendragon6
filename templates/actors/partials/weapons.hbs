@@ -1,14 +1,16 @@
-<div class="weapon-attacks pen-container pen-grid">
+<ol class="weapon-attacks pen-container pen-grid">
     {{#each inventory.weapon}}
-    <img src="{{this.img}}" title="{{this.name}}"/>
-    <label class="summarize">{{this.name}}</label>
-    <label>
-        {{#with (lookup ../actor.system.skills.combat system.skill)}}
-        {{value}}
-        {{/with}}
-    </label>
-    <label class="summarize formula">{{this.system.formula}}</label>
-    <a class="item-edit" data-item-id="{{this._id}}"><i class="fas fa-pen-to-square"></i></a>
-    <a class="item-delete" data-item-id="{{this._id}}"><i class="fas fa-xmark"></i></a>
+    <li>
+        <img src="{{this.img}}" title="{{this.name}}"/>
+        <label class="summarize">{{this.name}}</label>
+        <label>
+            {{#with (lookup ../actor.system.skills.combat system.skill)}}
+            {{value}}
+            {{/with}}
+        </label>
+        <label class="summarize formula">{{this.system.formula}}</label>
+        <a class="item-edit" data-item-id="{{this._id}}"><i class="fas fa-pen-to-square"></i></a>
+        <a class="item-delete" data-item-id="{{this._id}}"><i class="fas fa-xmark"></i></a>
+    </li>
     {{/each}}
-</div>
+</ol>

@@ -1,10 +1,12 @@
-<div class="passions pen-container pen-grid" data-category="Passion">
+<ol class="passions pen-container pen-grid" data-category="Passion">
     {{#each inventory.passion}}
+    <li>
         <input class="item-checkbox" type="checkbox" data-item-id="{{this._id}}" {{checked this.system.isChecked}}/>
         <img src="{{this.img}}" title="{{this.name}}"/>
         <label class="summarize rollable">{{this.name}}{{#if this.system.target}} ({{this.system.target}}){{/if}}</label>
         <input type="number" value="{{this.system.value}}" disabled/>
         <a class="item-edit" data-item-id="{{this._id}}"><i class="fas fa-pen-to-square"></i></a>
         <a class="item-delete" data-item-id="{{this._id}}"><i class="fas fa-xmark"></i></a>
+    </li>
     {{/each}}
-</div>
+</ol>

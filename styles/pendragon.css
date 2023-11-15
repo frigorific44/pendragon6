@@ -18,6 +18,18 @@
 .pendragon .underline {
   border-bottom: 1px solid;
 }
+.pendragon .pen-grid > li {
+  grid-template-columns: subgrid;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: grid;
+  width: fit-content;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  column-gap: 0.5em;
+  row-gap: 0.2em;
+}
 .pendragon .pen-grid {
   display: grid;
   width: fit-content;
@@ -194,14 +206,10 @@
   margin-right: 0.2em;
 }
 .pendragon .tab.combat .combat-main .move-armor {
+  grid-template-columns: repeat(3, max-content);
+}
+.pendragon .tab.combat .combat-main .move-armor li {
   justify-items: start;
-  align-tracks: center;
-}
-.pendragon .tab.combat .combat-main .move-armor .move {
-  grid-row: 1;
-}
-.pendragon .tab.combat .combat-main .move-armor .armor {
-  grid-row: 2;
 }
 .pendragon .tab.combat .flex-combat {
   max-width: max-content;

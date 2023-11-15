@@ -1,9 +1,11 @@
-<div class="skills pen-container pen-grid" data-category="Skill">
+<ol class="skills pen-container pen-grid" data-category="Skill">
     {{#each (lookup actor.system.skills skillGroup)}}
-    <input type="checkbox" name="system.skills.{{../skillGroup}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
-    <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
-        {{localize (concat "PENDRAGON." (capital @key))}}
-    </label>
-    <input type="number" name="system.skills.{{../skillGroup}}.{{@key}}.value" value="{{this.value}}"/>
+    <li>
+        <input type="checkbox" name="system.skills.{{../skillGroup}}.{{@key}}.isChecked" {{checked this.isChecked}}/>
+        <label class="rollable" data-label="{{localize this.label}}" data-value="{{this.value}}">
+            {{localize (concat "PENDRAGON." (capital @key))}}
+        </label>
+        <input type="number" name="system.skills.{{../skillGroup}}.{{@key}}.value" value="{{this.value}}"/>
+    </li>
     {{/each}}
-</div>
+</ol>

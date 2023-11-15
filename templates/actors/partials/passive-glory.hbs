@@ -1,6 +1,8 @@
-<div class="passive-glory pen-container pen-grid">
+<ol class="passive-glory pen-container pen-grid">
     {{#each actor.system.glory.passive}}
-    <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
-    <input type="number" name="system.glory.passive.{{@key}}.value" value="{{this.value}}" />
+    <li>
+        <label>{{localize (concat "PENDRAGON." (capital @key))}}</label>
+        <input type="number" name="system.glory.passive.{{@key}}.value" value="{{this.value}}" />
+    </li>
     {{/each}}
-</div>
+</ol>
