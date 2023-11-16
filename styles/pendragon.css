@@ -80,6 +80,11 @@
   margin: 14px;
   padding: 3px;
 }
+.pendragon ul,
+.pendragon ol {
+  padding: 0;
+  margin: 0;
+}
 .pendragon table {
   table-layout: fixed;
 }
@@ -266,8 +271,14 @@
 .pendragon .tab.combat .weapon-attacks .summarize.formula {
   max-width: 3em;
 }
+.pendragon .tab.combat .health .other-damage {
+  grid-template-columns: max-content 28px;
+}
+.pendragon .tab.combat .health .other-damage li {
+  justify-items: end;
+}
 .pendragon .tab.combat .health .health-derived {
-  grid-template-columns: 1fr 28px;
+  grid-template-columns: max-content 28px;
 }
 .pendragon .tab.combat .health .health-derived :nth-child(odd) {
   justify-self: start;

@@ -5,18 +5,20 @@
         </abbr>
         <input type="number" name="system.hp.value" value="{{actor.system.hp.value}}"/> / {{actor.system.hp.max}}
     </span>
-    <span>
+    <div>
         Debilitated
         <input type="checkbox" name="system.debilitated" {{checked actor.system.debilitated}}/>
-    </span>
-    <span>
-        Aggravated
-        <input type="number" name="system.damage.aggravated" value="{{actor.system.damage.aggravated}}"/>
-    </span>
-    <span>
-        Deterioration
-        <input type="number" name="system.damage.deterioration" value="{{actor.system.damage.deterioration}}"/>
-    </span>
+    </div>
+    <ol class="other-damage pen-grid">
+        <li>
+            <span>{{localize "PENDRAGON.Aggravated"}}</span>
+            <input type="number" name="system.damage.aggravated" value="{{actor.system.damage.aggravated}}"/>
+        </li>
+        <li>
+            <span>{{localize "PENDRAGON.Deterioration"}}</span>
+            <input type="number" name="system.damage.deterioration" value="{{actor.system.damage.deterioration}}"/>
+        </li>
+    </ol>
     <ol class="health-derived pen-grid">    
         <li><span>{{localize "PENDRAGON.Healing"}}</span><span>{{actor.system.derived.healing}}</span></li>
         <li><span>{{localize "PENDRAGON.Knockdown"}}</span><span>{{actor.system.derived.knockdown}}</span></li>
