@@ -1,22 +1,22 @@
 <div class="health pen-container">
-    <h3>
+    <span>
         <abbr title="{{localize "PENDRAGON.HitPoints"}}">
             {{localize "PENDRAGON.HitPointsShort"}}
         </abbr>
         <input type="number" name="system.hp.value" value="{{actor.system.hp.value}}"/> / {{actor.system.hp.max}}
-    </h3>
-    <h5>
+    </span>
+    <span>
         Debilitated
         <input type="checkbox" name="system.debilitated" {{checked actor.system.debilitated}}/>
-    </h5>
-    <h4>
+    </span>
+    <span>
         Aggravated
         <input type="number" name="system.damage.aggravated" value="{{actor.system.damage.aggravated}}"/>
-    </h4>
-    <h4>
+    </span>
+    <span>
         Deterioration
         <input type="number" name="system.damage.deterioration" value="{{actor.system.damage.deterioration}}"/>
-    </h4>
+    </span>
     <ol class="health-derived pen-grid">    
         <li><span>{{localize "PENDRAGON.Healing"}}</span><span>{{actor.system.derived.healing}}</span></li>
         <li><span>{{localize "PENDRAGON.Knockdown"}}</span><span>{{actor.system.derived.knockdown}}</span></li>
