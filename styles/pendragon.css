@@ -2,67 +2,11 @@
   font-family: 'Caudex', Times, "Time New Roman", Garamond, serif;
 }
 @font-face {
-  font-family: 'Almendra';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/almendra/v26/H4ckBXKAlMnTn0CskyY6.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Caudex';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/caudex/v17/esDQ311QOP6BJUrIyg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/cormorantgaramond/v16/co3bmX5slCNuHLi8bLeY9MK7whWMhyjorg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'EB Garamond';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ebgaramond/v27/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-6_RUAw.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Enriqueta';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/enriqueta/v17/goksH6L7AUFrRvV44HVTSw.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Felipa';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/felipa/v25/FwZa7-owz1Eu4F_wSA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Forum';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/forum/v18/6aey4Ky-Vb8Ew_IW.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Gilda Display';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/gildadisplay/v18/t5tmIRoYMoaYG0WEOh7HwMeR7Tk.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Grenze Gotisch';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/grenzegotisch/v18/Fh4hPjjqNDz1osh_jX9YfjudpBJBNV5y5wf_k1i5Lz9UcA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Hina Mincho';
@@ -72,81 +16,11 @@
   src: url(https://fonts.gstatic.com/s/hinamincho/v12/2sDaZGBRhpXa2Jjz5w5LAGW8.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Lancelot';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lancelot/v26/J7acnppxBGtQEulG4JY4.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Lora';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/lora/v32/0QI6MX1D_JOuGQbT0gvTJPa787weuyJG.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Piazzolla';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/piazzolla/v35/N0b52SlTPu5rIkWIZjVKKtYtfxYqZ4RJBFzFfYUjkSDdlqZgy7LYxnLy.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Quattrocento';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/quattrocento/v21/OZpEg_xvsDZQL_LKIF7q4jPHxA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Quintessential';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/quintessential/v22/fdNn9sOGq31Yjnh3qWU14DdtjY5w.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Radley';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/radley/v22/LYjDdGzinEIjCN19oA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Rufina';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/rufina/v15/Yq6V-LyURyLy-aKyow.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Simonetta';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/simonetta/v27/x3dickHVYrCU5BU15c4BfA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Tapestry';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/tapestry/v4/SlGTmQecrosEYXhaGBIk.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Texturina';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/texturina/v28/c4mM1nxpEtL3pXiAulRTkY-HGmNEX1b9NspjMwhAgliHhVrXy2eYGvUg.ttf) format('truetype');
 }
 .pendragon .align-center {
   align-items: center;
