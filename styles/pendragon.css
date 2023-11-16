@@ -160,6 +160,10 @@
 .pendragon .underline {
   border-bottom: 1px solid;
 }
+.pendragon .vl {
+  border-right: 1px solid var(--color-underline-header);
+  height: 2em;
+}
 .pendragon .pen-grid > li {
   grid-template-columns: subgrid;
   grid-column-start: 1;
@@ -222,7 +226,6 @@
 .pendragon .header {
   position: relative;
   margin: 0 14px;
-  font-family: 'Lora', Georgia, serif;
 }
 .pendragon .header button {
   position: absolute;
@@ -316,7 +319,17 @@
   grid-column: 1 / span 2;
 }
 .pendragon .sheet-header .joust .flex-container {
-  align-items: baseline;
+  align-items: center;
+  column-gap: 0.2em;
+}
+.pendragon .sheet-header .joust .flex-container input {
+  background: #0000;
+  border: 0;
+  border-radius: 0;
+  text-decoration: underline;
+}
+.pendragon .sheet-header .joust .flex-container .vl {
+  margin-right: 0.5em;
 }
 .pendragon .resource {
   width: 100%;
