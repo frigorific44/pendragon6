@@ -1,5 +1,7 @@
 .pendragon {
-  // || VARIABLES
+  /*
+  * VARIABLES
+  */
   @gap-large: 1em;
   @gap: 0.5em;
   @gap-small: 0.2em;
@@ -13,7 +15,9 @@
   @check-col: 20px;
   @num-col: 28px;
 
-  // || UTILITIES
+  /*
+  * UTILITIES
+  */
   .align-center {align-items: center;}
 
   .summarize {
@@ -38,7 +42,9 @@
     height: 2em;
   }
 
-  // || CONTAINERS
+  /*
+  * CONTAINERS
+  */
   .pen-grid > li {
     grid-template-columns: subgrid;
     grid-column-start: 1;
@@ -80,7 +86,9 @@
     padding: 3px;
   }
 
-  // || GENERAL STYLES
+  /*
+  * GENERAL STYLES
+  */
   ul, ol {
     padding: 0;
     margin: 0;
@@ -129,19 +137,6 @@
     font-family: @display;
   } 
 
-  // .pen-number {
-  //   position: relative;
-  //   &:after {
-  //     content: "";
-  //     position: absolute;
-  //     margin-left:-28px;
-  //     width:28px;
-  //     height:28px;
-  //     transform:rotate(45deg);
-  //     border: 1px solid #000; /* to see where it is */
-  //   }
-  // }
-
   input[type="checkbox"] {
     width: 12px;
   }
@@ -159,8 +154,9 @@
     min-width: 2em;
   }
 
-  // || OTHER
-
+  /*
+  * OTHER
+  */
   .window-content {
     height: 100%;
     padding: 5px;
@@ -381,7 +377,9 @@
   }
 }
 
-// || Sheet Minimums
+/*
+* SHEET MINIMUMS
+*/
 
 .pendragon.sheet.actor {
   min-width: 560px;

@@ -1,5 +1,20 @@
 .pendragon {
+  /*
+  * VARIABLES
+  */
+  /*
+  * UTILITIES
+  */
+  /*
+  * CONTAINERS
+  */
+  /*
+  * GENERAL STYLES
+  */
   font-family: 'Caudex', Times, "Time New Roman", Garamond, serif;
+  /*
+  * OTHER
+  */
 }
 @font-face {
   font-family: 'Caudex';
@@ -335,6 +350,9 @@
 .pendragon.dialogue .flex-container {
   flex-wrap: nowrap;
 }
+/*
+* SHEET MINIMUMS
+*/
 .pendragon.sheet.actor {
   min-width: 560px;
   min-height: 420px;
