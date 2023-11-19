@@ -208,18 +208,16 @@
       width: 300px;
       display: grid;
       grid-template-columns: 2fr 3fr;
-      grid-gap: 0.2em;
+      grid-gap: @gap-small;
       div {
         display: flex;
         align-items: baseline;
       }
       label {
-        font-size: 0.8em;
         padding-right: 0.5em;
       }
       input {
         height: 1.2em;
-        font-size: 1em;
       }
       .features {
         grid-column: 1 / span 2;
@@ -335,6 +333,9 @@
   }
 
   .tab.history {
+    table {
+      margin: @section-margin 0;
+    }
     .passive-glory {
       grid-template-columns: min-content @num-col;
       label {
