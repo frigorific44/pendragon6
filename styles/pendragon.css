@@ -69,12 +69,7 @@
   grid-column-start: 1;
   grid-column-end: -1;
   display: grid;
-  width: fit-content;
-  justify-content: center;
   justify-items: center;
-  align-items: center;
-  column-gap: 0.5em;
-  row-gap: 0.2em;
 }
 .pendragon .pen-grid {
   display: grid;
