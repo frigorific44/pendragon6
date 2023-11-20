@@ -329,8 +329,11 @@
   }
 
   .tab.history {
-    table {
-      margin: @section-margin 0;
+    .events {
+      grid-template-columns: max-content 1fr repeat(2, max-content);
+      span:nth-of-type(2) {
+        max-width: 100%
+      }
     }
     .passive-glory {
       grid-template-columns: min-content @num-col;

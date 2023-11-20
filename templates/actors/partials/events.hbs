@@ -1,29 +1,19 @@
-<table class="events pen-table pen-container">
-    <thead>
-        <tr>
-            <th>{{localize "PENDRAGON.Date"}}</th>
-            <th></th>
-            <th>{{localize "PENDRAGON.Glory"}}</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each inventory.event}}
-        <tr>
-            <td>
-                {{this.system.date}}
-            </td>
-            <td>
-                {{this.name}}
-            </td>
-            <td>
-                {{this.system.glory}}
-            </td>
-            <td>
-                <a class="item-edit" data-item-id="{{this._id}}"><i class="fas fa-pen-to-square"></i></a>
-                <a class="item-delete" data-item-id="{{this._id}}"><i class="fas fa-xmark"></i></a>
-            </td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+<ol class="events pen-grid pen-container">
+    <li>
+        <span>{{localize "PENDRAGON.Date"}}</span>
+        <span></span>
+        <span>{{localize "PENDRAGON.Glory"}}</span>
+        <span></span>
+    </li>
+    {{#each inventory.event}}
+    <li>
+        <span class="summarize">{{this.system.date}}</span>
+        <span class="summarize">{{this.name}}</span>
+        <span>{{this.system.glory}}</span>
+        <span>
+            <a class="item-edit" data-item-id="{{this._id}}"><i class="fas fa-pen-to-square"></i></a>
+            <a class="item-delete" data-item-id="{{this._id}}"><i class="fas fa-xmark"></i></a>
+        </span>
+    </li>
+    {{/each}}
+</ol>
