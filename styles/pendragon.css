@@ -320,6 +320,9 @@
 .pendragon .tab.history .passive-glory label {
   justify-self: start;
 }
+.pendragon .tab.history footer {
+  flex-wrap: nowrap;
+}
 .pendragon .tabs {
   flex: 0 0 40px;
   border-top: 1px solid #AAA;
