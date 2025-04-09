@@ -2,9 +2,11 @@
 
 An implementation of the Pendragon game system for Foundry VTT, developed in anticipation of the release of Pendragon 6th Edition. As the rulebooks are yet unreleased, certain portions may be speculative. Currently the project is in an unfinished state, so it is only recommended to install the system for development and contribution purposes.
 
+[pendragon_demo.webm](https://github.com/user-attachments/assets/1e9f6807-a8c8-46fd-bc9a-962ccf168778)
+
 ## Usage
 
-The system can be installed in Foundry VTT using the following manifest: ``
+The system can be installed in Foundry VTT using the following manifest: https://raw.githubusercontent.com/frigorific44/pendragon6/refs/heads/main/system.json
 
 ## Contributing
 
